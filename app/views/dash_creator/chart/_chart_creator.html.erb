@@ -1,0 +1,224 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        Super Amazing Chart Creator
+      </div>
+      <div class="card-block" id="chart-creator" style="margin:20px 50px;">
+
+      </div>
+      <div class="card-footer">
+        <button type="submit" class="pull-left btn btn-success" id="chart-submit-btn">Draw Chart</button>
+        <a href="#" data-toggle="modal" data-target="#delete_charts_modal" class="pull-right btn btn-sm btn-danger" id="chart-unsave-btn"><%=t :delete_charts%></a>
+        <a href="#" data-toggle="modal" data-target="#edit_chart_modal" class="pull-right btn btn-sm btn-primary" id="chart-edit-btn"><%=t :modify_chart%></a>
+        <a href="#" data-toggle="modal" data-target="#save_chart_modal" class="pull-right btn btn-sm btn-success"><%=t :save_new_chart%></a>
+        <%= select_tag 'charts', options_for_select([]), prompt: 'Choose a chart', id: 'chart-select', class: 'form-control pull-right', style: 'width: 20%; margin-right: 10%;' %>
+      </div>
+    </div>
+    <!--/.card-->
+  </div>
+</div>
+
+<script>
+    var charts = <%= raw @charts %>;
+
+    // TODO: JSON handling ??
+    // TODO: for date charts, always calculate day values and then gather ? so that changing day/week/month display doesn't need a reload
+    // TODO: if only bar/line change don't refresh
+    // TODO: Stats creator: take a filter, simply return the count of objects
+    // TODO: minicolors issue ?? Too much JS to handle for the browser when many color fields in chart creator
+
+    // Style presets
+    var minicolors_swatches = [
+        'rgb(255, 99, 132)',
+        'rgb(54, 162, 235)',
+        'rgb(255, 206, 86)',
+        'rgb(75, 192, 192)',
+        'rgb(153, 102, 255)',
+        'rgb(255, 159, 64)',
+        'rgb(216, 247, 147)',
+        'rgb(52, 85, 17)',
+        'rgb(220, 255, 253)',
+        'rgb(1, 17, 10)',
+        'rgb(219, 153, 90)',
+        'rgb(153, 134, 80)'
+    ];
+    var minicolors_options = {theme: 'bootstrap', format: 'rgb', swatches: minicolors_swatches};
+
+    $('#chart-creator').chartCreator({
+        models_data: <%= raw @models_data.to_json %>,
+        attributes_aliases: <%= raw DashCreator.attributes_aliases.to_json %>,
+        displayed_model_names: <%= raw DashCreator.displayed_model_names.to_json %>,
+        displayed_attribute_names: <%= raw DashCreator.displayed_attribute_names.to_json %>,
+        filter_creator: $('#filter-creator'),
+        minicolors_options: minicolors_options
+    });
+    var chart_creator = $('#chart-creator').data('chartCreator');
+
+
+    // --------------- Send chart data to controller ---------------
+    chart_creator.labelOptionsContainer.on('click', '#pluck-labels-btn', labelsFromPluck);
+    function labelsFromPluck() {
+        var limit = chart_creator.labelOptionsContainer.find('[name="pluck-num"]').val();
+
+        var x = chart_creator.xContainer.find('[name="x-axis"]').val().split('-');
+        var model, attribute;
+        if (x[1] === 'has' || x[1] === 'ref') {
+            model = capitalizedArray(x[0]).join('');
+            attribute = chart_creator.labelOptionsContainer.find('#x-sub').val().split('-')[0];
+        }
+        else {
+            model = chart_creator.yContainer.find('[name="y-axis"]:first').val();
+            attribute = x[0];
+        }
+
+        var params = {
+            model: model,
+            attribute: attribute,
+            limit: limit
+        };
+
+        $.post('<%= pluck_labels_path %>', params, function(data) {
+            var labels = data['labels'];
+
+            chart_creator.labelOptionsContainer.find('[name="labels-num"]').val(labels.length).change();
+            chart_creator.labelOptionsContainer.find('.limit-label').each(function() {
+                $(this).val(labels.shift());
+            });
+        });
+    }
+
+
+    // --------------- Send chart data to controller ---------------
+    // Send data for controller chart actions
+    function sendChartDataCreate(chart_data) {
+        $.post("<%= create_chart_path %>", chart_data);
+    }
+
+    function sendChartDataSave(chart_data) {
+        $.post("<%= save_chart_path %>", chart_data);
+    }
+
+    function sendChartDataEdit(chart_data) {
+        $.post("<%= edit_chart_path %>", chart_data);
+    }
+
+    // Handle submit
+    $('#chart-submit-btn').click(function() {
+        var chart_data = chart_creator.getChartData();
+        chart_data['refresh'] = false;
+        sendChartDataCreate(chart_data);
+    });
+
+
+    // --------------- Save, unsave, show saved charts ---------------
+    var chart_id = '';
+
+    // Save a chart config
+    $(document).on('click', '#save-chart-btn', function() {
+        var chart_data = chart_creator.getChartData();
+
+        // Get the chart name
+        chart_data['chart_name'] = $('.modal#save_chart_modal').find('[name="chart-name"]').val();
+
+        // Post data with chart-save request
+        sendChartDataSave(chart_data);
+    });
+
+    // Prepare modal display for edit
+    $('#chart-edit-btn').click(function() {
+        var confirm_edit_chart_btn = $('#confirm-edit-chart-btn');
+
+        var h3_div = $('.modal#edit_chart_modal .modal-body #edit-message');
+        h3_div.empty();
+        confirm_edit_chart_btn.prop('disabled', false);
+
+        var h3_div_text;
+        if (chart_id !== '') {
+            h3_div_text = 'Are you sure you want to edit chart ';
+            for (var i = 0; i < charts.length; i++) {
+                var chart_name = charts[i][0], id = charts[i][1];
+                if (chart_id === id) {
+                    h3_div_text += chart_name;
+                    break;
+                }
+            }
+            h3_div_text += ' ?'
+        }
+        else {
+            h3_div_text = 'No chart to edit.';
+            confirm_edit_chart_btn.prop('disabled', true);
+        }
+        h3_div.text(h3_div_text);
+    });
+
+    // Prepare and send new chart data on chart edit confirm
+    $(document).on('click', '#confirm-edit-chart-btn', function() {
+        var chart_data = chart_creator.getChartData();
+        chart_data['chart_id'] = chart_id;
+
+        sendChartDataEdit(chart_data);
+    });
+
+    // Prepare list of charts for delete charts modal
+    $('#chart-unsave-btn').click(function() {
+        var checkbox_list = $('#charts-checkbox-list');
+        // First empty the checkbox list
+        checkbox_list.children().remove();
+
+        // Append charts list to div in modal
+        var checkbox_string_start = '<div class="col-sm-12"><div class="form-group">'
+            + '<input type="checkbox" class="form-control" name="chart" value="';
+        for (var i = 0; i < charts.length; i++) {
+            var chart_name = charts[i][0], id = charts[i][1];
+            var chart_string = checkbox_string_start + id + '"><label>' + chart_name + '</label><br>';
+            $(chart_string).appendTo(checkbox_list);
+        }
+        $('</div></div>').appendTo(checkbox_list);
+    });
+
+    // Delete charts
+    $(document).on('click', '#delete-charts-btn', function() {
+        // Get the charts ids
+        var charts_ids = [];
+        $(this).closest('.modal').find('[type="checkbox"]:checked').each(function() {
+            charts_ids.push($(this).attr("value"));
+        });
+
+        var params = {charts_ids: charts_ids};
+
+        $.post("<%= delete_charts_path %>", params, function() {
+            // Remove from charts list
+            for (var i = 0; i < charts.length; i++) {
+                var id = charts[i][1];
+                if ($.inArray(id, charts_ids) !== -1) {
+                    charts.splice(i, 1);
+                    i--;
+                }
+            }
+        });
+    });
+
+    $('select#chart-select')
+        .focusin(displayChartList)
+        .change(displayChart);
+
+    // Display chart select list
+    function displayChartList() {
+        $(this).children().not('[value=""]').remove();
+        for (var i = 0; i < charts.length; i++) {
+            var chart_name = charts[i][0], id = charts[i][1];
+            $('<option value="' + id + '">' + chart_name + '</option>').appendTo($('#chart-select'));
+        }
+    }
+
+    // Display chosen chart
+    function displayChart() {
+        if ($(this).val() === '') { return false; }
+
+        chart_id = $(this).val();
+        var params = {chart_id: chart_id};
+
+        $.post("<%= get_chart_path %>", params);
+    }
+</script>

@@ -1,0 +1,38 @@
+<% mods = filter_data(data) %>
+
+var result_container = $('#result-container');
+
+var results_string = '<%= raw "#{render 'result_tables', {mods: mods}}".gsub("\n", '') %>';
+result_container.children().remove();
+$(results_string).appendTo(result_container);
+
+function calcColumns() {
+    <% mods.each do |model, objects| %>
+
+    var columns = [];
+    result_container.find("[name=<%= model %>]:checked").each(function() {
+        columns.push($(this).val());
+    });
+
+    var ids = <%= raw objects.map{ |o| o.id } %>;
+
+    var params = {
+        model: "<%= model %>",
+        columns: columns,
+        ids: ids
+    };
+    var url_params = $.param(params);
+
+    var a_string = '<a href="/download_csv?' + url_params + '" target="_blank" class="btn btn-primary" data-turbolinks="false">Download CSV</a>';
+    var download_csv_container = result_container.find("#<%= model %>-csv-btn-container");
+    download_csv_container.children().remove();
+    $(a_string).appendTo(download_csv_container);
+
+    <% end %>
+}
+
+calcColumns();
+
+result_container
+    .off("click")
+    .on("click", '[type="checkbox"]', calcColumns);

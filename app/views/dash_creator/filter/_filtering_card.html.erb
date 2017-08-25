@@ -1,0 +1,140 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        Filters
+      </div>
+      <div class="card-block" id="filter-creator">
+      </div>
+      <div class="card-footer">
+        <button type="submit" class="pull-left btn btn-success" id="apply-btn">Apply filtering</button>
+        <a href="#" data-toggle="modal" data-target="#delete_filters_modal" class="pull-right btn btn-sm btn-danger" id="unsave-btn"><%=t :delete_filters%></a>
+        <a href="#" data-toggle="modal" data-target="#save_filter_modal" class="pull-right btn btn-sm btn-success"><%=t :save_filter%></a>
+        <select name="filters" id="filter-select" class="form-control pull-right" style="width: 20%; margin-right: 10%;">
+          <option value="">Choose a filter</option>
+        </select>
+      </div>
+    </div>
+    <!--/.card-->
+  </div>
+</div>
+
+<div class="container" id="result-container">
+</div>
+
+<script>
+    // --------------- Add/remove columns to result tables ---------------
+
+    $('div#result-container').on('change', 'input[type="checkbox"]', function() {
+        var name = $(this).attr("name"), value = $(this).attr("value");
+        var change_column = $('#result-container').find('table[name="' + name + '"]').find('[value="' + value + '"]');
+        if (this.checked) {change_column.show();}
+        else {change_column.hide();}
+    });
+</script>
+
+<script>
+    var filters = <%= raw @filters %>;
+
+    var models_data = <%= raw @models_data.to_json %>;
+
+    $('#filter-creator').filterCreator({
+        models_data: models_data,
+        attributes_aliases: <%= raw DashCreator.attributes_aliases.to_json %>,
+        displayed_model_names: <%= raw DashCreator.displayed_model_names.to_json %>,
+        displayed_attribute_names: <%= raw DashCreator.displayed_attribute_names.to_json %>
+    });
+    var filter_creator = $('#filter-creator').data('filterCreator');
+
+
+    // --------------- Send data ---------------
+    $('#apply-btn').click(sendFilterData);
+    function sendFilterData() {
+        var params = {filters: filter_creator.getFiltersData()};
+
+        // Post filters
+        $.post("<%= filtering_result_path %>", params);
+    }
+
+
+    // --------------- Save & delete saved filters ---------------
+    // Save a filter config
+    $(document).on('click', '#save-filter-btn', function() {
+        var params = {filters: filter_creator.getFiltersData()};
+
+        // Get the filter name
+        params['filter_name'] = $('.modal').find('[name="filter-name"]').val();
+
+        $.post("<%= save_filter_path %>", params, function(data) {
+            // Add to filters list
+            filters.push([params['filter_name'], data['filter_id']]);
+        });
+    });
+
+    // Prepare list of filters for delete filters modal
+    $('#unsave-btn').click(function() {
+        var filters_checkbox_list = $('#filters-checkbox-list');
+        // First empty the checkbox list
+        filters_checkbox_list.children().remove();
+
+        // Append filters list to div in modal
+        var checkbox_string_start = '<div class="col-sm-12"><div class="form-group">'
+            + '<input type="checkbox" class="form-control" name="filter" value="';
+        for (var i = 0; i < filters.length; i++) {
+            var filter_name = filters[i][0], filter_id = filters[i][1];
+            var filter_string = checkbox_string_start + filter_id + '"><label>' + filter_name + '</label><br>';
+            $(filter_string).appendTo(filters_checkbox_list);
+        }
+        $('</div></div>').appendTo(filters_checkbox_list);
+    });
+
+    // Delete filters configs
+    $(document).on('click', '#delete-filters-btn', function() {
+        // Get the filters ids
+        var filters_ids = [];
+        $(this).closest('.modal').find('[type="checkbox"]:checked').each(function() {
+            filters_ids.push($(this).attr("value"));
+        });
+
+        var params = {filters_ids: filters_ids};
+
+        $.post("<%= delete_filters_path %>", params, function() {
+            // Remove from filters list
+            for (var i = 0; i < filters.length; i++) {
+                var filter_id = filters[i][1];
+                if ($.inArray(filter_id, filters_ids) !== -1) {
+                    filters.splice(i, 1);
+                    i--;
+                }
+            }
+        });
+    });
+
+
+    // --------------- Display save filter ---------------
+    $('select#filter-select')
+        .focusin(displaySavedFilters)
+        .change(displayFilter);
+
+    // Display saved configs
+    function displaySavedFilters() {
+        $(this).children().not('[value=""]').remove();
+        for (var i = 0; i < filters.length; i++) {
+            var filter_name = filters[i][0], filter_id = filters[i][1];
+            $('<option value="' + filter_id + '">' + filter_name + '</option>').appendTo($('#filter-select'));
+        }
+    }
+
+    // Display chosen config (rebuild)
+    function displayFilter() {
+        var filter_id = $(this).val();
+        if (filter_id === '')
+            return false;
+
+        var params = {filter_id: filter_id};
+
+        $.post("<%= get_filter_path %>", params, function(data) {
+            filter_creator.buildFilters(data);
+        });
+    }
+</script>

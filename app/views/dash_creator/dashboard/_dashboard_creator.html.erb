@@ -1,0 +1,182 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        Crazy Dashboard Creator
+      </div>
+      <div class="card-block" id="dashboard-creator" style="margin:20px 50px;">
+
+      </div>
+      <div class="card-footer">
+        <a href="#" data-toggle="modal" data-target="#delete_dashboards_modal" class="pull-right btn btn-sm btn-danger" id="dashboard-unsave-btn"><%=t :delete_dashboards%></a>
+        <a href="#" data-toggle="modal" data-target="#edit_dashboard_modal" class="pull-right btn btn-sm btn-primary" id="dashboard-edit-btn"><%=t :modify_dashboard%></a>
+        <a href="#" data-toggle="modal" data-target="#save_dashboard_modal" class="pull-right btn btn-sm btn-success"><%=t :save_new_dashboard%></a>
+        <%= select_tag 'dashboards', options_for_select([]), prompt: 'Choose a dashboard', id: 'dashboard-select', class: 'form-control pull-right', style: 'width: 20%; margin-right: 10%;' %>
+      </div>
+    </div>
+    <!--/.card-->
+  </div>
+
+  <!--<div class="col-md-12">-->
+    <!--<div class="card" id="crazy-dashboard-creator-objects">-->
+      <!--<div class="card-header">-->
+        <!--Dashboard Objects-->
+      <!--</div>-->
+      <!--<div class="card-block" style="margin:20px 50px;">-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-12 px-2">-->
+            <!--<table>-->
+              <!--<thead>-->
+              <!--<tr>-->
+                <!--<th><%=t :name%></th>-->
+                <!--<th><%=t :code%></th>-->
+                <!--<th><%=t :information%></th>-->
+                <!--<th><%=t :options%></th>-->
+                <!--<th><%=t :edit%></th>-->
+                <!--<th><%=t :delete%></th>-->
+              <!--</thead>-->
+              <!--<tbody>-->
+              <!---->
+              <!--</tbody>-->
+            <!--</table>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;/.card&ndash;&gt;-->
+  <!--</div>-->
+</div>
+
+<script>
+    var dashboards = <%= raw @dashboards %>;
+
+    <% objects_data = {} %>
+    <% @dashboard_objects.each do |o| %>
+        <% objects_data[o.code] = {name: o.name, info: o.info, objects: @model_objects[o.code] } %>
+    <% end %>
+
+    $('#dashboard-creator').dashboardCreator({
+        objects_data: <%= raw objects_data.to_json %>
+    });
+    var dashboard_creator = $('#dashboard-creator').data('dashboardCreator');
+
+
+    // --------------- Dashboard model handling ---------------
+
+    var dashboard_id = '';
+
+    // Save dashboard
+    $(document).on('click', '#save-dashboard-btn', function() {
+        var params = {options: dashboard_creator.getDashboardData()};
+
+        // Get the dashboard name
+        params['dashboard_name'] = $('.modal#save_dashboard_modal').find('[name="dashboard-name"]').val();
+
+        $.post("<%= save_dashboard_path %>", params, function(data) {
+            // Add to dashboards list
+            dashboard_id = data['dashboard_id'];
+            dashboards.push([params['dashboard_name'], dashboard_id]);
+        });
+    });
+
+    // Prepare modal display for edit
+    $('#dashboard-edit-btn').click(function() {
+        var confirm_edit_dashboard_btn = $('#confirm-edit-dashboard-btn');
+
+        var message_div = $('.modal#edit_dashboard_modal .modal-body #edit-message');
+        message_div.empty();
+        confirm_edit_dashboard_btn.prop('disabled', false);
+
+        var message;
+        if (dashboard_id !== '') {
+            message = 'Are you sure you want to edit dashboard ';
+            for (var i = 0; i < dashboards.length; i++) {
+                var dashboard_name = dashboards[i][0], id = dashboards[i][1];
+                if (dashboard_id === id) {
+                    message += dashboard_name;
+                    break;
+                }
+            }
+            message += ' ?'
+        }
+        else {
+            message = 'No dashboard to edit.';
+            confirm_edit_dashboard_btn.prop('disabled', true);
+        }
+        message_div.text(message);
+    });
+
+    // Prepare and send new dashboard data on dashboard edit confirm
+    $(document).on('click', '#confirm-edit-dashboard-btn', function() {
+        var params = {options: dashboard_creator.getDashboardData()};
+        params['dashboard_id'] = dashboard_id;
+
+        $.post("<%= edit_dashboard_path %>", params);
+    });
+
+    // Prepare list of dashboards for delete dashboards modal
+    $('#dashboard-unsave-btn').click(function() {
+        var dashboards_checkbox_list = $('#dashboards-checkbox-list');
+        // First empty the checkbox list
+        dashboards_checkbox_list.children().remove();
+
+        // Append dashboards list to div in modal
+        var checkbox_string_start = '<div class="col-sm-12"><div class="form-group">'
+            + '<input type="checkbox" class="form-control" name="dashboard" value="';
+        for (var i = 0; i < dashboards.length; i++) {
+            var dashboard_name = dashboards[i][0], id = dashboards[i][1];
+            var dashboard_string = checkbox_string_start + id + '"><label>' + dashboard_name + '</label><br>';
+            $(dashboard_string).appendTo(dashboards_checkbox_list);
+        }
+        $('</div></div>').appendTo(dashboards_checkbox_list);
+    });
+
+    // Delete dashboards configs
+    $(document).on('click', '#delete-dashboards-btn', function() {
+        // Get the dashboards ids
+        var dashboards_ids = [];
+        $(this).closest('.modal').find('[name="dashboard"]:checked').each(function() {
+            dashboards_ids.push($(this).attr("value"));
+        });
+
+        var params = {dashboards_ids: dashboards_ids};
+
+        $.post("<%= delete_dashboards_path %>s", params, function() {
+            // Remove from dashboards list
+            for (var i = 0; i < dashboards.length; i++) {
+                var id = dashboards[i][1];
+                if ($.inArray(id, dashboards_ids) !== -1) {
+                    dashboards.splice(i, 1);
+                    i--;
+                }
+            }
+        });
+    });
+
+
+    $('#dashboard-select')
+        .focusin(displaySavedDashboards)
+        .change(displayDashboard);
+
+    // Display saved configs
+    function displaySavedDashboards() {
+        $(this).children('option').not('[value=""]').remove();
+        for (var i = 0; i < dashboards.length; i++) {
+            var dashboard_name = dashboards[i][0], id = dashboards[i][1];
+            $('<option value="' + id + '">' + dashboard_name + '</option>').appendTo($('#dashboard-select'));
+        }
+    }
+
+    // Display chosen config (rebuild)
+    function displayDashboard() {
+        if ($(this).val() === '') { return false; }
+
+        dashboard_id = $(this).val();
+        var params = {dashboard_id: dashboard_id};
+
+        $.post("<%= get_dashboard_path %>", params, function(data) {
+            dashboard_creator.buildDashboard(data);
+        });
+    }
+</script>

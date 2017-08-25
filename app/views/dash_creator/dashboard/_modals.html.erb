@@ -1,0 +1,74 @@
+<div class="modal fade" id="save_dashboard_modal" tabindex="-1" role="dialog" aria-labelledby="Save Dashboard Modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><%=t :save_dashboard%></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label><%=t :name%></label>
+              <input type="text" name="dashboard-name" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="pull-right btn btn-success" id="save-dashboard-btn" data-dismiss="modal">Submit</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div class="modal fade" id="delete_dashboards_modal" tabindex="-1" role="dialog" aria-labelledby="Delete Dashboards Modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><%=t :delete_dashboards%></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row" id="dashboards-checkbox-list">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="pull-right btn btn-success" id="delete-dashboards-btn" data-dismiss="modal">Submit</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div class="modal fade" id="edit_dashboard_modal" tabindex="-1" role="dialog" aria-labelledby="Edit Dashboard Modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><%=t :edit_dashboard%></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3 id="edit-message"></h3>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="pull-left btn btn-success" id="confirm-edit-dashboard-btn" data-dismiss="modal">Confirm</button>
+        <button type="submit" class="pull-right btn btn-danger" id="cancel-edit-dashboard-btn" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

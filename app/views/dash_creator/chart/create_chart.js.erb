@@ -1,0 +1,53 @@
+var in_creator = $('#chart-creator').length !== 0;
+
+// Rebuild all chart creator fields if in creator
+if (in_creator) {
+    var chart_creator = $('#chart-creator').data('chartCreator');
+    <% unless filters_data.nil? %>
+    chart_creator.filter_creator.data('filterCreator').buildFilters(<%= raw filters_data.to_json %>);
+    <% end %>
+    chart_creator.buildChartFields(<%= raw chart_data.to_json %>);
+}
+
+<% # Get main chart type %>
+<% main_type = chart_data['types'][0] %>
+<% main_type = 'mixed' if main_type == 'bar' || main_type == 'line' %>
+
+<% options = chart_data['options'] == '' ? {} : chart_data['options'] %>
+
+<% # Get data from redis if exists or query it %>
+<% processed_data = chart_processed_data_from_redis(chart_data) %>
+
+// Build chart script & append it to chart wrapper div
+<% function_name = "plot_#{main_type}_chart" %>
+var chart_script_string = '<%= raw public_send(function_name, id, processed_data, options).gsub("\n", '') %>';
+
+var chart_wrapper_div = in_creator ? $('.chart-wrapper') : $('.chart-wrapper[data-id="<%= id %>"]');
+
+chart_wrapper_div.children().remove();
+$(chart_script_string).appendTo(chart_wrapper_div);
+
+// Refresh option
+chart_wrapper_div
+    .off('click')                                           // Remove previous binded refresh event
+    .on('click', '#chart-refresh-btn', refreshChart);       // Bind refresh event
+
+function refreshChart() {
+    if (in_creator) {
+        var chart_data = chart_creator.getChartData();
+        chart_data['refresh'] = true;
+        sendChartDataCreate(chart_data);
+    }
+    else {
+        var params = {
+            chart_id: '<%= id %>',
+            refresh: 'true'
+        };
+        $.post("<%= get_chart_path %>", params);
+    }
+}
+
+chart_wrapper_div.find('span#last-updated').text('Last updated: ' + "<%= processed_data['last_updated'] %>");
+
+
+<% $redis.keys.each {|k| $redis.del(k)}   # To delete what is stored in redis %>

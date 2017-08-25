@@ -1,0 +1,13 @@
+<div class="animated fadeIn">
+  <% @dashboards.each do |d| %>
+      <%= link_to d[0], dashboard_path(d[1]) %><br>
+  <% end %>
+
+  <%= render 'dash_creator/filter/filtering_card' %>
+  <%= render 'dash_creator/chart/chart_creator' %>
+  <%= render 'dash_creator/dashboard/dashboard_creator' %>
+</div>
+
+<%= render 'dash_creator/filter/modals' %>
+<%= render 'dash_creator/chart/modals' %>
+<%= render 'dash_creator/dashboard/modals' %>

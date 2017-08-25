@@ -1,0 +1,44 @@
+<% unless mods.nil? %>
+  <% mods.each do |model, objects| %>
+    <% next if objects.nil? || objects.empty? %>
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="text-center"><%= model %></h3><br>
+
+        <div id="<%= model %>-csv-btn-container">
+
+        </div>
+      </div>
+      <div class="col-md-2">
+        <% objects.first.attributes.each do |pairkv| %>
+            <input type="checkbox" name="<%= model %>" value="<%= pairkv[0] %>" checked="checked">
+            <label><%= pairkv[0].to_s.humanize %></label><br>
+        <% end %>
+      </div>
+      <div class="col-md-10">
+        <table class="table table-hover table-outline mb-0 hidden-sm-down" name="<%= model %>">
+          <thead class="thead-default">
+          <tr>
+            <% objects.first.attributes.each do |pairkv| %>
+                <th class="text-center" value="<%= pairkv[0] %>"><%= pairkv[0].to_s.humanize %></th>
+            <% end %>
+          </tr>
+          </thead>
+
+          <tbody>
+          <% objects.each do |object| %>
+              <tr>
+                <% object.attributes.each do |key, value| %>
+                    <td value="<%= key %>"><%= value %></td>
+                <% end %>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <% if mods.length > 1 %>
+        <hr><br>
+    <% end %>
+  <% end %>
+<% end %>

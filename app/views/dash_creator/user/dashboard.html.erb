@@ -1,0 +1,11 @@
+<% # Display d saved dashboard %>
+<% # Create cards from display options %>
+<% # Display charts in cards from charts ids %>
+
+<div class="animated fadeIn">
+  <div class="row">
+    <% @dashboard.options.each do |index, section| %>
+        <%= render 'section_card', {section: section} %>
+    <% end %>
+  </div>
+</div>
