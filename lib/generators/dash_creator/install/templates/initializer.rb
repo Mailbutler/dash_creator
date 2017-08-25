@@ -5,8 +5,9 @@ DashCreator.configure do |config|
   config.use_pgcrypto = true
 
   # Use redis to store charts data (to avoid heavy refreshing each time)
-  # The main app must use redis for this to work
-  config.use_redis = true
+  # Set it to nil if you do not use redis or if you do not want charts data to be stored
+  $redis = Redis::Namespace.new("app_chart_cache", :redis => Redis.new)
+  config.redis_store_variable = $redis
 
   # The name of the class the filters, charts and dashboards belong to
   config.user_class = 'User'

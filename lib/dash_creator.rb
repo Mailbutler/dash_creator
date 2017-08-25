@@ -6,7 +6,7 @@ module DashCreator
 
   class Configuration
     mattr_accessor :use_pgcrypto
-    mattr_accessor :use_redis
+    mattr_accessor :redis_store_variable
     mattr_accessor :user_class
     mattr_accessor :except_models
     mattr_accessor :except_attributes
@@ -16,7 +16,7 @@ module DashCreator
     mattr_accessor :displayed_attribute_names
 
     self.use_pgcrypto = true
-    self.use_redis = true
+    self.redis_store_variable = nil
     self.user_class = 'User'
     self.except_models = []
     self.except_attributes = []
@@ -43,8 +43,8 @@ module DashCreator
     self.configuration.use_pgcrypto
   end
 
-  def self.use_redis
-    self.configuration.use_redis
+  def self.redis_store_variable
+    self.configuration.redis_store_variable
   end
 
   def self.user_class

@@ -18,5 +18,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 5.1"
   s.add_dependency "jquery-rails", "~> 4.3"
+  s.add_dependency "redis", "~> 3.3"
   s.add_dependency "redis-namespace", "~> 1.5"
 end

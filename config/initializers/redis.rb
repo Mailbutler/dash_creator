@@ -1,1 +1,0 @@
-$redis = DashCreator.use_redis ? Redis::Namespace.new("mb_chart_cache", :redis => Redis.new) : nil

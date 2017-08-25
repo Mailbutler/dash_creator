@@ -706,9 +706,9 @@ module DashCreator
     def chart_processed_data_from_redis(chart_data)
       redis_data = nil
       style = chart_data.delete('style')
-      unless chart_data['refresh'] == 'true' || $redis.nil?
+      unless chart_data['refresh'] == 'true' || DashCreator.redis_store_variable.nil?
         redis_chart_data = encode_chart_data(chart_data)
-        redis_data = $redis.get(redis_chart_data)
+        redis_data = DashCreator.redis_store_variable.get(redis_chart_data)
       end
 
       unless redis_data.nil?
@@ -719,7 +719,7 @@ module DashCreator
         processed_data['last_updated'] = DateTime.now.strftime('%d/%m/%Y - %T')
 
         # Add chart data to redis
-        $redis[redis_chart_data] = processed_data.to_json unless $redis.nil?
+        DashCreator.redis_store_variable[redis_chart_data] = processed_data.to_json unless DashCreator.redis_store_variable.nil?
       end
 
       processed_data['style'] = style

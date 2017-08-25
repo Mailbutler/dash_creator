@@ -42,10 +42,11 @@ In this initializer you can define several options used by the gem:
   - displayed_model_names: change displayed names for models
   - displayed_model_attributes: change displayed names for attributes for each model
   
-Ex: in Contact model
+For example, we have in Contact model:
 ```ruby
 belongs_to :owner, class_name: 'User', foreign_key: 'owned_by'
 ```
+
 Then we should provide in the initializer:
 ```ruby
 config.attributes_aliases = {
@@ -70,14 +71,16 @@ For the moment the following types are handled:
 - numeric: integer, float, decimal
 - string, text
 - boolean
-- datetime
+- datetime, date
 
 ## Known bugs
 Don't plot charts using filters with a defined number of records.
 Result will be wrong and not limited to the wanted number.
 
 ## TODO List
-It is possible not to use redis, but it would be good to find an alternative to redis to store chart_data
+It would be good to find an alternative to redis to store chart_data
+
+Not possible to use without redis for the moment because of redis initializer
 
 Add a share chart function (send chart id with a temporary hash stored in redis), export chart as image
 
