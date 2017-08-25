@@ -32,8 +32,6 @@ It will add to your project:
 
 ## Usage
 
-Don't use charts with num_records for the moment
-
 In config/initializers you will find a dash_creator.rb file after having run the generator.
 In this initializer you can define several options used by the gem:
   - user_class: the name of the app's user model that will own the dashboards
@@ -51,7 +49,7 @@ belongs_to :owner, class_name: 'User', foreign_key: 'owned_by'
 Then we should provide in the initializer:
 ```ruby
 config.attributes_aliases = {
-    owned_by: 'owner_id'
+    owned_by: 'user_id'
 }
 config.columns_aliases = {
     owner_id: 'owned_by'
@@ -74,19 +72,9 @@ For the moment the following types are handled:
 - boolean
 - datetime
 
-TODO: Time type ? To link with numeric maybe ?
-
-TODO: Explain the DashboardObject usage, what about customized partials ? Change chart's one ?
-
-TODO: add specs in initializer on DashCreator variables format
-
-TODO: should work with any database as it relies on field types
-
-## Contributing
-Contribution directions go here.
-
-## License
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+## Known bugs
+Don't plot charts using filters with a defined number of records.
+Result will be wrong and not limited to the wanted number.
 
 ## TODO List
 It is possible not to use redis, but it would be good to find an alternative to redis to store chart_data
@@ -105,10 +93,18 @@ Customize everything on your chart:
 - bar (horizontal, stacked groups, several colors for non date)
 - line (style, stepped, stacked??)
 
-Add a choice on uuid crypted models ? list of the models with or without
-Add a choice on using uuids or not for DashCreator models ?
-
 Probably some stuff to do with acts_as_dashboard_object: self defined partials
+
 different filters for same model at once
 
-Handle JSON ?
+Time type ? To link with numeric maybe ?
+
+Explain the DashboardObject usage, what about customized partials ? Change chart's one ?
+
+should work with any database as it relies on field types --> find a way to provide same db gems as main app
+
+## Contributing
+Contribution directions go here.
+
+## License
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
