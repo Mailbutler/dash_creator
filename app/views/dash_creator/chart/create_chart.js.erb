@@ -50,4 +50,4 @@ function refreshChart() {
 chart_wrapper_div.find('span#last-updated').text('Last updated: ' + "<%= processed_data['last_updated'] %>");
 
 
-<% $redis.keys.each {|k| $redis.del(k)}   # To delete what is stored in redis %>
+<% # DashCreator.redis_store_variable.keys.each {|k| $redis.del(k)}   # To delete what is stored in redis %>
