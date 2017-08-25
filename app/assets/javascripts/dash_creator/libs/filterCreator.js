@@ -256,12 +256,9 @@
                         parent.attr("data-type", "boolean");
                         break;
 
-                    case 'jsonb':
-                        creator.addJsonAttribute(parent, attribute_name_to_display);
-                        parent.attr("data-type", "jsonb");
-                        break;
-
                     default:
+                        creator.addErrorMessage(parent, attribute_name_to_display, type);
+                        parent.attr("data-type", "error");
                         break;
                 }
             });
@@ -437,16 +434,13 @@
             $(boolean_field_string + '<hr>').appendTo(parent);
         },
 
-        addJsonAttribute: function(parent, attribute_name_to_display) {
+        addErrorMessage: function(parent, attribute_name_to_display, type) {
             var attribute = parent.attr("data-attribute");
 
-            var json_field_string = '<label>' + attribute_name_to_display + ': JSON to handle !</label><br>';
+            var error_message = '<label>' + attribute_name_to_display + ': type ' + type + ' is not handled</label><br>';
 
-            // Think about how to handle this
-            // Default json for each field ? Default in DB ?
-
-            // Append attribute filter field
-            $(json_field_string + '<hr>').appendTo(parent);
+            // Append error message
+            $(error_message + '<hr>').appendTo(parent);
         },
 
 

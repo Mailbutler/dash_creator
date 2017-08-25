@@ -74,7 +74,7 @@ For the moment the following types are handled:
 - boolean
 - datetime
 
-TODO: date & time types ? Date easy to add, but time ?
+TODO: Time type ? To link with numeric maybe ?
 
 TODO: Explain the DashboardObject usage, what about customized partials ? Change chart's one ?
 

@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4f60083-18c5-4bdd-8487-2efe2eb938c3" name="Default" comment="" />
+    <list default="true" id="d4f60083-18c5-4bdd-8487-2efe2eb938c3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/filterCreator.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/filterCreator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb" />
+    </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -20,8 +27,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="15">
-                <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="113" />
+              <first_editor relative-caret-position="825">
+                <caret line="76" column="38" lean-forward="false" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="38" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -29,12 +36,146 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dash_creator.gemspec" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dash_creator.gemspec" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dash_creator.gemspec">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
               <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_controller.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dash_creator.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/dash_creator.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="810">
+              <caret line="54" column="62" lean-forward="true" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filterCreator.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/filterCreator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="346">
+              <caret line="387" column="18" lean-forward="false" selection-start-line="387" selection-start-column="12" selection-end-line="387" selection-end-column="18" />
+              <folding>
+                <element signature="e#2187#2244#0" expanded="false" />
+                <element signature="e#2297#4297#0" expanded="false" />
+                <element signature="e#4359#4625#0" expanded="false" />
+                <element signature="e#4794#5377#0" expanded="false" />
+                <element signature="e#5463#6130#0" expanded="false" />
+                <element signature="e#11852#14216#0" expanded="false" />
+                <element signature="e#14289#15153#0" expanded="false" />
+                <element signature="e#15225#16188#0" expanded="false" />
+                <element signature="e#16260#17519#0" expanded="false" />
+                <element signature="e#19484#20152#0" expanded="false" />
+                <element signature="e#20628#20975#0" expanded="false" />
+                <element signature="e#21070#22121#0" expanded="false" />
+                <element signature="e#22183#24508#0" expanded="false" />
+                <element signature="e#24616#24888#0" expanded="false" />
+                <element signature="e#24955#25689#0" expanded="false" />
+                <element signature="e#25763#26272#0" expanded="false" />
+                <element signature="e#26332#27226#0" expanded="false" />
+                <element signature="e#27294#27532#0" expanded="false" />
+                <element signature="e#27599#28124#0" expanded="false" />
+                <element signature="e#28191#28384#0" expanded="false" />
+                <element signature="e#28448#28879#0" expanded="false" />
+                <element signature="e#28942#30129#0" expanded="false" />
+                <element signature="e#30192#30938#0" expanded="false" />
+                <element signature="e#31000#31289#0" expanded="false" />
+                <element signature="e#31374#31630#0" expanded="false" />
+                <element signature="e#31677#31787#0" expanded="false" />
+                <element signature="e#31947#32003#0" expanded="false" />
+                <marker date="1503663859115" expanded="true" signature="2602:2633" ph="..." />
+                <marker date="1503663859115" expanded="true" signature="9266:9277" ph="..." />
+                <marker date="1503663859115" expanded="true" signature="12390:12479" ph="..." />
+                <marker date="1503663859115" expanded="true" signature="12561:12567" ph=" " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chartCreator.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="222" column="10" lean-forward="true" selection-start-line="222" selection-start-column="10" selection-end-line="222" selection-end-column="10" />
+              <folding>
+                <element signature="e#6195#6351#0" expanded="false" />
+                <element signature="e#6394#7806#0" expanded="false" />
+                <element signature="e#7851#10176#0" expanded="false" />
+                <element signature="e#10269#10540#0" expanded="false" />
+                <element signature="e#10585#11974#0" expanded="false" />
+                <element signature="e#12021#12266#0" expanded="false" />
+                <element signature="e#12331#13816#0" expanded="false" />
+                <element signature="e#13850#14068#0" expanded="false" />
+                <element signature="e#14105#14604#0" expanded="false" />
+                <element signature="e#14706#15219#0" expanded="false" />
+                <element signature="e#15264#16707#0" expanded="false" />
+                <element signature="e#16752#19748#0" expanded="false" />
+                <element signature="e#19792#21129#0" expanded="false" />
+                <element signature="e#21176#21725#0" expanded="false" />
+                <element signature="e#21771#22676#0" expanded="false" />
+                <element signature="e#22715#23033#0" expanded="false" />
+                <element signature="e#23100#24890#0" expanded="false" />
+                <element signature="e#24938#27666#0" expanded="false" />
+                <element signature="e#27717#28528#0" expanded="false" />
+                <element signature="e#28575#29994#0" expanded="false" />
+                <element signature="e#30042#30864#0" expanded="false" />
+                <element signature="e#30911#31724#0" expanded="false" />
+                <element signature="e#31771#32584#0" expanded="false" />
+                <element signature="e#32636#32953#0" expanded="false" />
+                <element signature="e#32996#35071#0" expanded="false" />
+                <element signature="e#35119#36462#0" expanded="false" />
+                <element signature="e#36511#36978#0" expanded="false" />
+                <element signature="e#37025#37948#0" expanded="false" />
+                <element signature="e#37994#38980#0" expanded="false" />
+                <element signature="e#39024#39948#0" expanded="false" />
+                <element signature="e#39995#43728#0" expanded="false" />
+                <element signature="e#43821#44365#0" expanded="false" />
+                <element signature="e#49718#50589#0" expanded="false" />
+                <element signature="e#50640#50849#0" expanded="false" />
+                <element signature="e#50965#51190#0" expanded="false" />
+                <element signature="e#51234#52133#0" expanded="false" />
+                <element signature="e#52173#52718#0" expanded="false" />
+                <element signature="e#52773#53845#0" expanded="false" />
+                <element signature="e#53900#54354#0" expanded="false" />
+                <element signature="e#54408#56151#0" expanded="false" />
+                <element signature="e#56205#56435#0" expanded="false" />
+                <element signature="e#56486#57120#0" expanded="false" />
+                <element signature="e#57170#58929#0" expanded="false" />
+                <element signature="e#58979#59531#0" expanded="false" />
+                <element signature="e#59585#60728#0" expanded="false" />
+                <element signature="e#60824#62787#0" expanded="false" />
+                <element signature="e#62849#63134#0" expanded="false" />
+                <element signature="e#63237#64980#0" expanded="false" />
+                <marker date="1503664042212" expanded="true" signature="1679:1764" ph="..." />
+                <marker date="1503664042212" expanded="true" signature="1863:1896" ph="..." />
+                <marker date="1503664042212" expanded="true" signature="1979:2153" ph="..." />
+                <marker date="1503664042212" expanded="true" signature="2622:2638" ph="..." />
+                <marker date="1503664042212" expanded="true" signature="3231:3247" ph="..." />
+                <marker date="1503664042212" expanded="true" signature="3326:3346" ph="..." />
+                <marker date="1503664042212" expanded="true" signature="3709:3729" ph="..." />
+                <marker date="1503664042212" expanded="true" signature="10684:10700" ph="..." />
+                <marker date="1503664042212" expanded="true" signature="37118:37137" ph="..." />
+                <marker date="1503664042212" expanded="true" signature="38087:38106" ph="..." />
+                <marker date="1503664042212" expanded="true" signature="39117:39136" ph="..." />
+                <marker date="1503664042212" expanded="true" signature="63410:63499" ph="..." />
+                <marker date="1503664042212" expanded="true" signature="63577:63583" ph=" " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,7 +192,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>capitalizedArray</find>
       <find>attribute</find>
       <find>capitalize</find>
       <find>capitali</find>
@@ -81,6 +221,7 @@
       <find>displayed_attrib</find>
       <find>displayed_attribu</find>
       <find>alert</find>
+      <find>switch</find>
     </findStrings>
     <replaceStrings>
       <replace>user.dash_creator_filters</replace>
@@ -97,6 +238,9 @@
       <replace>classify()</replace>
       <replace>underscore()</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -134,7 +278,6 @@
         <option value="$PROJECT_DIR$/lib/generators/dash_creator/install/templates/create_dash_creator_dashboards.rb" />
         <option value="$PROJECT_DIR$/config/initializers/dash_creator.rb" />
         <option value="$PROJECT_DIR$/config/initializers/redis.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb" />
         <option value="$PROJECT_DIR$/app/helpers/dash_creator/filter_helper.rb" />
         <option value="$PROJECT_DIR$/app/helpers/dash_creator/chart_helper.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20170822135017_create_dash_creator_filters.rb" />
@@ -145,13 +288,14 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/stringHelpers.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/application.js" />
         <option value="$PROJECT_DIR$/app/views/dash_creator/chart/_chart_creator.html.erb" />
-        <option value="$PROJECT_DIR$/lib/dash_creator.rb" />
         <option value="$PROJECT_DIR$/app/views/dash_creator/filter/_filtering_card.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/filterCreator.js" />
         <option value="$PROJECT_DIR$/lib/generators/dash_creator/install/install_generator.rb" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/dash_creator.gemspec" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/lib/dash_creator.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/filterCreator.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js" />
       </list>
     </option>
   </component>
@@ -167,6 +311,7 @@
     <option name="width" value="1936" />
     <option name="height" value="1176" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -524,6 +669,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dash_creator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dash_creator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dash_creator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -830,12 +1005,12 @@
       <workItem from="1503409680810" duration="3776000" />
       <workItem from="1503473370376" duration="26140000" />
       <workItem from="1503559981086" duration="26513000" />
-      <workItem from="1503646745822" duration="13916000" />
+      <workItem from="1503646745822" duration="15253000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70345000" />
+    <option name="totallyTimeSpent" value="71682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1176" extended-state="6" />
@@ -845,7 +1020,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1224,117 +1399,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="15" selection-end-column="22" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#6195#6351#0" expanded="false" />
-            <element signature="e#6394#7806#0" expanded="false" />
-            <element signature="e#7851#10176#0" expanded="false" />
-            <element signature="e#10269#10540#0" expanded="false" />
-            <element signature="e#10585#11974#0" expanded="false" />
-            <element signature="e#12021#12266#0" expanded="false" />
-            <element signature="e#12331#13816#0" expanded="false" />
-            <element signature="e#13850#14068#0" expanded="false" />
-            <element signature="e#14105#14604#0" expanded="false" />
-            <element signature="e#14706#15219#0" expanded="false" />
-            <element signature="e#15264#16707#0" expanded="false" />
-            <element signature="e#16752#19748#0" expanded="false" />
-            <element signature="e#19792#21129#0" expanded="false" />
-            <element signature="e#21176#21725#0" expanded="false" />
-            <element signature="e#21771#22676#0" expanded="false" />
-            <element signature="e#22715#23033#0" expanded="false" />
-            <element signature="e#23100#24823#0" expanded="false" />
-            <element signature="e#24871#27599#0" expanded="false" />
-            <element signature="e#27650#28461#0" expanded="false" />
-            <element signature="e#28508#29927#0" expanded="false" />
-            <element signature="e#29975#30797#0" expanded="false" />
-            <element signature="e#30844#31657#0" expanded="false" />
-            <element signature="e#31704#32517#0" expanded="false" />
-            <element signature="e#32560#34635#0" expanded="false" />
-            <element signature="e#34683#36026#0" expanded="false" />
-            <element signature="e#36075#36542#0" expanded="false" />
-            <element signature="e#36589#37512#0" expanded="false" />
-            <element signature="e#37558#38544#0" expanded="false" />
-            <element signature="e#38588#39512#0" expanded="false" />
-            <element signature="e#39559#43292#0" expanded="false" />
-            <element signature="e#43385#43929#0" expanded="false" />
-            <element signature="e#49282#50153#0" expanded="false" />
-            <element signature="e#50204#50413#0" expanded="false" />
-            <element signature="e#50529#50754#0" expanded="false" />
-            <element signature="e#50798#51697#0" expanded="false" />
-            <element signature="e#51737#52282#0" expanded="false" />
-            <element signature="e#52337#53409#0" expanded="false" />
-            <element signature="e#53464#53918#0" expanded="false" />
-            <element signature="e#53972#55715#0" expanded="false" />
-            <element signature="e#55769#55999#0" expanded="false" />
-            <element signature="e#56050#56684#0" expanded="false" />
-            <element signature="e#56734#58493#0" expanded="false" />
-            <element signature="e#58543#59095#0" expanded="false" />
-            <element signature="e#59149#60292#0" expanded="false" />
-            <element signature="e#60388#62351#0" expanded="false" />
-            <element signature="e#62413#62698#0" expanded="false" />
-            <element signature="e#62801#64544#0" expanded="false" />
-            <marker date="1503660337899" expanded="true" signature="1679:1764" ph="..." />
-            <marker date="1503660337899" expanded="true" signature="1863:1896" ph="..." />
-            <marker date="1503660337899" expanded="true" signature="1979:2153" ph="..." />
-            <marker date="1503660337899" expanded="true" signature="2622:2638" ph="..." />
-            <marker date="1503660337899" expanded="true" signature="3231:3247" ph="..." />
-            <marker date="1503660337899" expanded="true" signature="3326:3346" ph="..." />
-            <marker date="1503660337899" expanded="true" signature="3709:3729" ph="..." />
-            <marker date="1503660337899" expanded="true" signature="10684:10700" ph="..." />
-            <marker date="1503660337899" expanded="true" signature="36682:36701" ph="..." />
-            <marker date="1503660337899" expanded="true" signature="37651:37670" ph="..." />
-            <marker date="1503660337899" expanded="true" signature="38681:38700" ph="..." />
-            <marker date="1503660337899" expanded="true" signature="62974:63063" ph="..." />
-            <marker date="1503660337899" expanded="true" signature="63141:63147" ph=" " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/filterCreator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding>
-            <element signature="e#2187#2244#0" expanded="false" />
-            <element signature="e#2297#4297#0" expanded="false" />
-            <element signature="e#4359#4625#0" expanded="false" />
-            <element signature="e#4794#5377#0" expanded="false" />
-            <element signature="e#5463#6130#0" expanded="false" />
-            <element signature="e#14350#15214#0" expanded="false" />
-            <element signature="e#15286#16249#0" expanded="false" />
-            <element signature="e#16321#17580#0" expanded="false" />
-            <element signature="e#17656#19469#0" expanded="false" />
-            <element signature="e#19545#20213#0" expanded="false" />
-            <element signature="e#20286#20681#0" expanded="false" />
-            <element signature="e#20793#21140#0" expanded="false" />
-            <element signature="e#21235#22286#0" expanded="false" />
-            <element signature="e#22348#24673#0" expanded="false" />
-            <element signature="e#24781#25053#0" expanded="false" />
-            <element signature="e#25120#25854#0" expanded="false" />
-            <element signature="e#25928#26437#0" expanded="false" />
-            <element signature="e#26497#27391#0" expanded="false" />
-            <element signature="e#27459#27697#0" expanded="false" />
-            <element signature="e#27764#28289#0" expanded="false" />
-            <element signature="e#28356#28549#0" expanded="false" />
-            <element signature="e#28613#29044#0" expanded="false" />
-            <element signature="e#29107#30294#0" expanded="false" />
-            <element signature="e#30357#31103#0" expanded="false" />
-            <element signature="e#31165#31454#0" expanded="false" />
-            <element signature="e#31539#31795#0" expanded="false" />
-            <element signature="e#31842#31952#0" expanded="false" />
-            <element signature="e#32112#32168#0" expanded="false" />
-            <marker date="1503660337957" expanded="true" signature="2602:2633" ph="..." />
-            <marker date="1503660337957" expanded="true" signature="9266:9277" ph="..." />
-            <marker date="1503660337957" expanded="true" signature="12451:12540" ph="..." />
-            <marker date="1503660337957" expanded="true" signature="12622:12628" ph=" " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/dash_creator/chart/_chart_creator.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -1351,22 +1415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/dash_creator.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/generators/dash_creator/install/install_generator.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -1375,21 +1423,147 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dash_creator.gemspec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
-            <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="113" />
+          <first_editor relative-caret-position="825">
+            <caret line="76" column="38" lean-forward="false" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="38" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dash_creator.gemspec">
+    <entry file="file://$PROJECT_DIR$/lib/dash_creator.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        <state relative-caret-position="810">
+          <caret line="54" column="62" lean-forward="true" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/filterCreator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="387" column="18" lean-forward="false" selection-start-line="387" selection-start-column="12" selection-end-line="387" selection-end-column="18" />
+          <folding>
+            <element signature="e#2187#2244#0" expanded="false" />
+            <element signature="e#2297#4297#0" expanded="false" />
+            <element signature="e#4359#4625#0" expanded="false" />
+            <element signature="e#4794#5377#0" expanded="false" />
+            <element signature="e#5463#6130#0" expanded="false" />
+            <element signature="e#11852#14216#0" expanded="false" />
+            <element signature="e#14289#15153#0" expanded="false" />
+            <element signature="e#15225#16188#0" expanded="false" />
+            <element signature="e#16260#17519#0" expanded="false" />
+            <element signature="e#19484#20152#0" expanded="false" />
+            <element signature="e#20628#20975#0" expanded="false" />
+            <element signature="e#21070#22121#0" expanded="false" />
+            <element signature="e#22183#24508#0" expanded="false" />
+            <element signature="e#24616#24888#0" expanded="false" />
+            <element signature="e#24955#25689#0" expanded="false" />
+            <element signature="e#25763#26272#0" expanded="false" />
+            <element signature="e#26332#27226#0" expanded="false" />
+            <element signature="e#27294#27532#0" expanded="false" />
+            <element signature="e#27599#28124#0" expanded="false" />
+            <element signature="e#28191#28384#0" expanded="false" />
+            <element signature="e#28448#28879#0" expanded="false" />
+            <element signature="e#28942#30129#0" expanded="false" />
+            <element signature="e#30192#30938#0" expanded="false" />
+            <element signature="e#31000#31289#0" expanded="false" />
+            <element signature="e#31374#31630#0" expanded="false" />
+            <element signature="e#31677#31787#0" expanded="false" />
+            <element signature="e#31947#32003#0" expanded="false" />
+            <marker date="1503663859115" expanded="true" signature="2602:2633" ph="..." />
+            <marker date="1503663859115" expanded="true" signature="9266:9277" ph="..." />
+            <marker date="1503663859115" expanded="true" signature="12390:12479" ph="..." />
+            <marker date="1503663859115" expanded="true" signature="12561:12567" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="222" column="10" lean-forward="true" selection-start-line="222" selection-start-column="10" selection-end-line="222" selection-end-column="10" />
+          <folding>
+            <element signature="e#6195#6351#0" expanded="false" />
+            <element signature="e#6394#7806#0" expanded="false" />
+            <element signature="e#7851#10176#0" expanded="false" />
+            <element signature="e#10269#10540#0" expanded="false" />
+            <element signature="e#10585#11974#0" expanded="false" />
+            <element signature="e#12021#12266#0" expanded="false" />
+            <element signature="e#12331#13816#0" expanded="false" />
+            <element signature="e#13850#14068#0" expanded="false" />
+            <element signature="e#14105#14604#0" expanded="false" />
+            <element signature="e#14706#15219#0" expanded="false" />
+            <element signature="e#15264#16707#0" expanded="false" />
+            <element signature="e#16752#19748#0" expanded="false" />
+            <element signature="e#19792#21129#0" expanded="false" />
+            <element signature="e#21176#21725#0" expanded="false" />
+            <element signature="e#21771#22676#0" expanded="false" />
+            <element signature="e#22715#23033#0" expanded="false" />
+            <element signature="e#23100#24890#0" expanded="false" />
+            <element signature="e#24938#27666#0" expanded="false" />
+            <element signature="e#27717#28528#0" expanded="false" />
+            <element signature="e#28575#29994#0" expanded="false" />
+            <element signature="e#30042#30864#0" expanded="false" />
+            <element signature="e#30911#31724#0" expanded="false" />
+            <element signature="e#31771#32584#0" expanded="false" />
+            <element signature="e#32636#32953#0" expanded="false" />
+            <element signature="e#32996#35071#0" expanded="false" />
+            <element signature="e#35119#36462#0" expanded="false" />
+            <element signature="e#36511#36978#0" expanded="false" />
+            <element signature="e#37025#37948#0" expanded="false" />
+            <element signature="e#37994#38980#0" expanded="false" />
+            <element signature="e#39024#39948#0" expanded="false" />
+            <element signature="e#39995#43728#0" expanded="false" />
+            <element signature="e#43821#44365#0" expanded="false" />
+            <element signature="e#49718#50589#0" expanded="false" />
+            <element signature="e#50640#50849#0" expanded="false" />
+            <element signature="e#50965#51190#0" expanded="false" />
+            <element signature="e#51234#52133#0" expanded="false" />
+            <element signature="e#52173#52718#0" expanded="false" />
+            <element signature="e#52773#53845#0" expanded="false" />
+            <element signature="e#53900#54354#0" expanded="false" />
+            <element signature="e#54408#56151#0" expanded="false" />
+            <element signature="e#56205#56435#0" expanded="false" />
+            <element signature="e#56486#57120#0" expanded="false" />
+            <element signature="e#57170#58929#0" expanded="false" />
+            <element signature="e#58979#59531#0" expanded="false" />
+            <element signature="e#59585#60728#0" expanded="false" />
+            <element signature="e#60824#62787#0" expanded="false" />
+            <element signature="e#62849#63134#0" expanded="false" />
+            <element signature="e#63237#64980#0" expanded="false" />
+            <marker date="1503664042212" expanded="true" signature="1679:1764" ph="..." />
+            <marker date="1503664042212" expanded="true" signature="1863:1896" ph="..." />
+            <marker date="1503664042212" expanded="true" signature="1979:2153" ph="..." />
+            <marker date="1503664042212" expanded="true" signature="2622:2638" ph="..." />
+            <marker date="1503664042212" expanded="true" signature="3231:3247" ph="..." />
+            <marker date="1503664042212" expanded="true" signature="3326:3346" ph="..." />
+            <marker date="1503664042212" expanded="true" signature="3709:3729" ph="..." />
+            <marker date="1503664042212" expanded="true" signature="10684:10700" ph="..." />
+            <marker date="1503664042212" expanded="true" signature="37118:37137" ph="..." />
+            <marker date="1503664042212" expanded="true" signature="38087:38106" ph="..." />
+            <marker date="1503664042212" expanded="true" signature="39117:39136" ph="..." />
+            <marker date="1503664042212" expanded="true" signature="63410:63499" ph="..." />
+            <marker date="1503664042212" expanded="true" signature="63577:63583" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>

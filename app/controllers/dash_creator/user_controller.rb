@@ -41,7 +41,7 @@ module DashCreator
     private
     def models_data
       Rails.application.eager_load!
-      models = ApplicationRecord.descendants.select{ |m| !DashCreator.except_models.include?(m.name) }
+      models = ApplicationRecord.descendants.select{ |m| !DashCreator.except_models.include?(m.name.gsub('::', '')) }
 
       numeric_types = Numeric.descendants.map{ |n| n.name.underscore }
 
@@ -60,6 +60,7 @@ module DashCreator
             type = v.type.to_s
             type = 'numeric' if numeric_types.include?(type)
             type = 'text' if type == 'string'
+            type = 'datetime' if type == 'date'
             models_data[m.name].push(k + '-' + type) unless DashCreator.except_attributes.include?(k)
           end
         end

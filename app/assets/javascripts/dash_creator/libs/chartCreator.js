@@ -539,6 +539,7 @@
                     break;
 
                 default:
+                    this.showErrorMessage(is_sub, attribute_type);
                     break;
             }
 
@@ -704,6 +705,14 @@
                 + '<input type="radio" name="' + sub + 'labels-type" value="attribute" class="form-control">'
                 + '<label>Sub-attribute</label>'
                 + '</div></div>'
+                + '</div>';
+            $(options_string).appendTo(this.labelOptionsContainer);
+        },
+
+        showErrorMessage: function(is_sub, type) {
+            var sub = is_sub ? 'sub-' : '';
+            var options_string = '<div class="col-sm-12" id="' + sub + 'label-type-radio-div">'
+                + '<strong>Type ' + type + ' is not handled</strong>'
                 + '</div>';
             $(options_string).appendTo(this.labelOptionsContainer);
         },
