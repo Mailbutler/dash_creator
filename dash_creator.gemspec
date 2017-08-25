@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = DashCreator::VERSION
   s.authors     = ["Elie Oriol"]
   s.email       = ["elie@mailbutler.io"]
-  s.homepage    = ""
+  s.homepage    = "https://rubygems.org/gems/dash_creator"
   s.summary     = "DashCreator is a client-side dashboard creator gem."
   s.description = "DashCreator is a client-side dashboard creator gem. It can be used with any database to create filters, charts and dashboards of your own with a graphical interface."
   s.license     = "MIT"
@@ -17,8 +17,6 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 5.1"
-  s.add_dependency "pg"
-  s.add_dependency "jquery-rails"
-  s.add_dependency "redis"
-  s.add_dependency "redis-namespace"
+  s.add_dependency "jquery-rails", "~> 4.3"
+  s.add_dependency "redis-namespace", "~> 1.5"
 end

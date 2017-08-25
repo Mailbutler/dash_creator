@@ -101,8 +101,6 @@ Time type ? To link with numeric maybe ?
 
 Explain the DashboardObject usage, what about customized partials ? Change chart's one ?
 
-should work with any database as it relies on field types --> find a way to provide same db gems as main app
-
 ## Contributing
 Contribution directions go here.
 
