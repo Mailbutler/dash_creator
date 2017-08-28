@@ -96,7 +96,10 @@ module DashCreator
       scales['xAxes'][0]['ticks']['callback'] = style_options['labeling-step'] if style_options['labeling-step'] != ''
 
       # Legend
-      options['legend'] = {display: false} if style_options['legend'] == 'false'
+      legend_options = style_options['legend']
+      legend = options['legend'] = {}
+      legend['display'] = false if legend_options['display'] == 'false'
+      legend['position'] = legend_options['position']
 
       # Title
       options['title'] = {display: true, text: style_options['title']} if style_options['title'] != ''
@@ -144,7 +147,12 @@ module DashCreator
       end
 
       options = {}
-      options['legend'] = {display: false} if style_options['legend'] == 'false'
+
+      legend_options = style_options['legend']
+      legend = options['legend'] = {}
+      legend['display'] = false if legend_options['display'] == 'false'
+      legend['position'] = legend_options['position']
+
       options['title'] = {display: true, text: style_options['title']} if style_options['title'] != ''
 
       {plot_data: plot_data, options: options}

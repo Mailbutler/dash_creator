@@ -176,9 +176,24 @@
                 '</div> ' +
                 '</div> ' +
                 '<div class="col-sm-12" id="legend-div"> ' +
+                '<div class="row"> ' +
+                '<div class="col-sm-3"> ' +
                 '<div class="form-group"> ' +
                 '<label for="legend">Display legend</label> ' +
                 '<input type="checkbox" name="legend" class="form-control" checked="checked"> ' +
+                '</div> ' +
+                '</div> ' +
+                '<div class="col-sm-9"> ' +
+                '<div class="form-group"> ' +
+                '<label for="legend-pos">Legend Position</label> ' +
+                '<select name="legend-pos" class="form-control"> ' +
+                '<option value="top">Top</option> ' +
+                '<option value="right">Right</option> ' +
+                '<option value="bottom">Bottom</option> ' +
+                '<option value="left">Left</option> ' +
+                '</select> ' +
+                '</div> ' +
+                '</div> ' +
                 '</div> ' +
                 '</div> ' +
                 '<div class="col-sm-12" id="grid-div"> ' +
@@ -221,7 +236,7 @@
                 '</div> ' +
                 '<div class="col-sm-12" id="labeling-step-div"> ' +
                 '<div class="form-group"> ' +
-                '<label for="labeling-step">Labeling step</label> ' +
+                '<label for="labeling-step">X Axis Labeling step</label> ' +
                 '<input type="number" name="labeling-step" class="form-control" min="1" value="1"> ' +
                 '</div> ' +
                 '</div> ' +
@@ -1139,7 +1154,9 @@
             style_options['title'] = this.styleOptionsContainer.find('[name="title"]').val();
 
             // Legend
-            style_options['legend'] = this.styleOptionsContainer.find('[name="legend"]').is(':checked');
+            var legend_options = style_options['legend'] = {};
+            legend_options['display'] = this.styleOptionsContainer.find('[name="legend"]').is(':checked');
+            legend_options['position'] = this.styleOptionsContainer.find('[name="legend-pos"]').val();
 
             // Grid
             var grid_options = style_options['grid'] = {};
@@ -1380,9 +1397,10 @@
             var title = style_options['title'];
             this.styleOptionsContainer.find('[name="title"]').val(title);
 
-            // Legend checkbox
-            var legend = style_options['legend'] === 'true';
-            this.styleOptionsContainer.find('[name="legend"]').prop('checked', legend);
+            // Legend options
+            var legend_options = style_options['legend'];
+            this.styleOptionsContainer.find('[name="legend"]').prop('checked', legend_options['display'] === 'true');
+            this.styleOptionsContainer.find('[name="legend-pos"]').val(legend_options['position']);
 
             // Grid checkboxes
             var grid_options = style_options['grid'];

@@ -6,7 +6,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/dash_creator/chart_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/dash_creator/chart_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dash_creator/chart/_plot_chart.html.erb" afterPath="$PROJECT_DIR$/app/views/dash_creator/chart/_plot_chart.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -20,14 +19,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="685">
-                <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+              <first_editor relative-caret-position="625">
+                <caret line="94" column="37" lean-forward="true" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -38,69 +38,70 @@
       <file leaf-file-name="chartCreator.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="278" column="55" lean-forward="true" selection-start-line="278" selection-start-column="55" selection-end-line="278" selection-end-column="55" />
+            <state relative-caret-position="286">
+              <caret line="173" column="53" lean-forward="false" selection-start-line="173" selection-start-column="53" selection-end-line="173" selection-end-column="53" />
               <folding>
                 <element signature="e#6195#6351#0" expanded="false" />
                 <element signature="e#6394#7743#0" expanded="false" />
-                <element signature="e#12302#12573#0" expanded="false" />
-                <element signature="e#13996#14241#0" expanded="false" />
-                <element signature="e#14306#15791#0" expanded="false" />
-                <element signature="e#15825#16043#0" expanded="false" />
-                <element signature="e#16080#17015#0" expanded="false" />
-                <element signature="e#17117#17630#0" expanded="false" />
-                <element signature="e#17675#19118#0" expanded="false" />
-                <element signature="e#19163#22159#0" expanded="false" />
-                <element signature="e#22203#23540#0" expanded="false" />
-                <element signature="e#23587#24136#0" expanded="false" />
-                <element signature="e#24182#25087#0" expanded="false" />
-                <element signature="e#25126#25444#0" expanded="false" />
-                <element signature="e#25511#27301#0" expanded="false" />
-                <element signature="e#27349#30077#0" expanded="false" />
-                <element signature="e#30128#30939#0" expanded="false" />
-                <element signature="e#30986#32405#0" expanded="false" />
-                <element signature="e#32453#33275#0" expanded="false" />
-                <element signature="e#33322#34135#0" expanded="false" />
-                <element signature="e#34182#34995#0" expanded="false" />
-                <element signature="e#35047#35364#0" expanded="false" />
-                <element signature="e#35407#37482#0" expanded="false" />
-                <element signature="e#37530#38873#0" expanded="false" />
-                <element signature="e#38922#39389#0" expanded="false" />
-                <element signature="e#39436#40359#0" expanded="false" />
-                <element signature="e#40405#41391#0" expanded="false" />
-                <element signature="e#41435#42359#0" expanded="false" />
-                <element signature="e#42406#46139#0" expanded="false" />
-                <element signature="e#46232#46776#0" expanded="false" />
-                <element signature="e#46821#52080#0" expanded="false" />
-                <element signature="e#52129#53812#0" expanded="false" />
-                <element signature="e#53863#54072#0" expanded="false" />
-                <element signature="e#54188#54413#0" expanded="false" />
-                <element signature="e#54457#55356#0" expanded="false" />
-                <element signature="e#55396#55941#0" expanded="false" />
-                <element signature="e#55996#57068#0" expanded="false" />
-                <element signature="e#57123#57577#0" expanded="false" />
-                <element signature="e#57631#59374#0" expanded="false" />
-                <element signature="e#59428#59658#0" expanded="false" />
-                <element signature="e#59709#60343#0" expanded="false" />
-                <element signature="e#60393#62152#0" expanded="false" />
-                <element signature="e#62202#62754#0" expanded="false" />
-                <element signature="e#62808#64789#0" expanded="false" />
-                <element signature="e#64885#66848#0" expanded="false" />
-                <element signature="e#66910#67195#0" expanded="false" />
-                <element signature="e#67298#69041#0" expanded="false" />
-                <marker date="1503914622889" expanded="true" signature="1679:1764" ph="..." />
-                <marker date="1503914622889" expanded="true" signature="1863:1896" ph="..." />
-                <marker date="1503914622889" expanded="true" signature="1979:2153" ph="..." />
-                <marker date="1503914622889" expanded="true" signature="2622:2638" ph="..." />
-                <marker date="1503914622889" expanded="true" signature="3231:3247" ph="..." />
-                <marker date="1503914622889" expanded="true" signature="3326:3346" ph="..." />
-                <marker date="1503914622889" expanded="true" signature="3709:3729" ph="..." />
-                <marker date="1503914622889" expanded="true" signature="12717:12733" ph="..." />
-                <marker date="1503914622889" expanded="true" signature="39529:39548" ph="..." />
-                <marker date="1503914622889" expanded="true" signature="40498:40517" ph="..." />
-                <marker date="1503914622889" expanded="true" signature="41528:41547" ph="..." />
-                <marker date="1503914622889" expanded="true" signature="67471:67560" ph="..." />
-                <marker date="1503914622889" expanded="true" signature="67638:67644" ph=" " />
+                <element signature="e#12991#13262#0" expanded="false" />
+                <element signature="e#13307#14638#0" expanded="false" />
+                <element signature="e#14685#14930#0" expanded="false" />
+                <element signature="e#14995#16480#0" expanded="false" />
+                <element signature="e#16514#16732#0" expanded="false" />
+                <element signature="e#16769#17704#0" expanded="false" />
+                <element signature="e#17806#18319#0" expanded="false" />
+                <element signature="e#18364#19807#0" expanded="false" />
+                <element signature="e#19852#22848#0" expanded="false" />
+                <element signature="e#22892#24229#0" expanded="false" />
+                <element signature="e#24276#24825#0" expanded="false" />
+                <element signature="e#24871#25776#0" expanded="false" />
+                <element signature="e#25815#26133#0" expanded="false" />
+                <element signature="e#26200#27990#0" expanded="false" />
+                <element signature="e#28038#30766#0" expanded="false" />
+                <element signature="e#30817#31628#0" expanded="false" />
+                <element signature="e#31675#33094#0" expanded="false" />
+                <element signature="e#33142#33964#0" expanded="false" />
+                <element signature="e#34011#34824#0" expanded="false" />
+                <element signature="e#34871#35684#0" expanded="false" />
+                <element signature="e#35736#36053#0" expanded="false" />
+                <element signature="e#36096#38171#0" expanded="false" />
+                <element signature="e#38219#39562#0" expanded="false" />
+                <element signature="e#39611#40078#0" expanded="false" />
+                <element signature="e#40125#41048#0" expanded="false" />
+                <element signature="e#41094#42080#0" expanded="false" />
+                <element signature="e#42124#43048#0" expanded="false" />
+                <element signature="e#43095#46828#0" expanded="false" />
+                <element signature="e#46921#47465#0" expanded="false" />
+                <element signature="e#47510#52769#0" expanded="false" />
+                <element signature="e#52818#54669#0" expanded="false" />
+                <element signature="e#54720#54929#0" expanded="false" />
+                <element signature="e#55045#55270#0" expanded="false" />
+                <element signature="e#55314#56213#0" expanded="false" />
+                <element signature="e#56253#56798#0" expanded="false" />
+                <element signature="e#56853#57925#0" expanded="false" />
+                <element signature="e#57980#58434#0" expanded="false" />
+                <element signature="e#58488#60231#0" expanded="false" />
+                <element signature="e#60285#60515#0" expanded="false" />
+                <element signature="e#60566#61200#0" expanded="false" />
+                <element signature="e#61250#63009#0" expanded="false" />
+                <element signature="e#63059#63611#0" expanded="false" />
+                <element signature="e#63665#65772#0" expanded="false" />
+                <element signature="e#65868#67831#0" expanded="false" />
+                <element signature="e#67893#68178#0" expanded="false" />
+                <element signature="e#68281#70024#0" expanded="false" />
+                <marker date="1503916648154" expanded="true" signature="1679:1764" ph="..." />
+                <marker date="1503916648154" expanded="true" signature="1863:1896" ph="..." />
+                <marker date="1503916648154" expanded="true" signature="1979:2153" ph="..." />
+                <marker date="1503916648154" expanded="true" signature="2622:2638" ph="..." />
+                <marker date="1503916648154" expanded="true" signature="3231:3247" ph="..." />
+                <marker date="1503916648154" expanded="true" signature="3326:3346" ph="..." />
+                <marker date="1503916648154" expanded="true" signature="3709:3729" ph="..." />
+                <marker date="1503916648154" expanded="true" signature="13406:13422" ph="..." />
+                <marker date="1503916648154" expanded="true" signature="40218:40237" ph="..." />
+                <marker date="1503916648154" expanded="true" signature="41187:41206" ph="..." />
+                <marker date="1503916648154" expanded="true" signature="42217:42236" ph="..." />
+                <marker date="1503916648154" expanded="true" signature="68454:68543" ph="..." />
+                <marker date="1503916648154" expanded="true" signature="68621:68627" ph=" " />
               </folding>
             </state>
           </provider>
@@ -139,8 +140,8 @@
       <file leaf-file-name="chart_helper.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/helpers/dash_creator/chart_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="85" column="59" lean-forward="true" selection-start-line="85" selection-start-column="59" selection-end-line="85" selection-end-column="59" />
+            <state relative-caret-position="256">
+              <caret line="92" column="9" lean-forward="true" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -198,7 +199,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>this.attr</find>
       <find>data-filter-</find>
       <find>x_val</find>
       <find>-f</find>
@@ -224,10 +224,11 @@
       <find>#stac</find>
       <find>capi</find>
       <find>stac</find>
-      <find>legend</find>
       <find>type</find>
       <find>line</find>
+      <find>Labelin</find>
       <find>stacked</find>
+      <find>legend</find>
     </findStrings>
     <replaceStrings>
       <replace>user.dash_creator_filters</replace>
@@ -298,9 +299,9 @@
         <option value="$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/dash_creator/chart/_chart_creator.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/application.js" />
+        <option value="$PROJECT_DIR$/app/views/dash_creator/chart/_plot_chart.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js" />
         <option value="$PROJECT_DIR$/app/helpers/dash_creator/chart_helper.rb" />
-        <option value="$PROJECT_DIR$/app/views/dash_creator/chart/_plot_chart.html.erb" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -787,7 +788,82 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dash_creator">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dash_creator">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dash_creator">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dash_creator">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dash_creator">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="chart">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dash_creator">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="RailsProjectView" />
       <pane id="Scratches" />
     </panes>
@@ -1095,34 +1171,34 @@
       <workItem from="1503473370376" duration="26140000" />
       <workItem from="1503559981086" duration="26513000" />
       <workItem from="1503646745822" duration="23011000" />
-      <workItem from="1503907009030" duration="8967000" />
+      <workItem from="1503907009030" duration="9923000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88407000" />
+    <option name="totallyTimeSpent" value="89363000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26770833" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26770833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1521,83 +1597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="278" column="55" lean-forward="true" selection-start-line="278" selection-start-column="55" selection-end-line="278" selection-end-column="55" />
-          <folding>
-            <element signature="e#6195#6351#0" expanded="false" />
-            <element signature="e#6394#7743#0" expanded="false" />
-            <element signature="e#12302#12573#0" expanded="false" />
-            <element signature="e#13996#14241#0" expanded="false" />
-            <element signature="e#14306#15791#0" expanded="false" />
-            <element signature="e#15825#16043#0" expanded="false" />
-            <element signature="e#16080#17015#0" expanded="false" />
-            <element signature="e#17117#17630#0" expanded="false" />
-            <element signature="e#17675#19118#0" expanded="false" />
-            <element signature="e#19163#22159#0" expanded="false" />
-            <element signature="e#22203#23540#0" expanded="false" />
-            <element signature="e#23587#24136#0" expanded="false" />
-            <element signature="e#24182#25087#0" expanded="false" />
-            <element signature="e#25126#25444#0" expanded="false" />
-            <element signature="e#25511#27301#0" expanded="false" />
-            <element signature="e#27349#30077#0" expanded="false" />
-            <element signature="e#30128#30939#0" expanded="false" />
-            <element signature="e#30986#32405#0" expanded="false" />
-            <element signature="e#32453#33275#0" expanded="false" />
-            <element signature="e#33322#34135#0" expanded="false" />
-            <element signature="e#34182#34995#0" expanded="false" />
-            <element signature="e#35047#35364#0" expanded="false" />
-            <element signature="e#35407#37482#0" expanded="false" />
-            <element signature="e#37530#38873#0" expanded="false" />
-            <element signature="e#38922#39389#0" expanded="false" />
-            <element signature="e#39436#40359#0" expanded="false" />
-            <element signature="e#40405#41391#0" expanded="false" />
-            <element signature="e#41435#42359#0" expanded="false" />
-            <element signature="e#42406#46139#0" expanded="false" />
-            <element signature="e#46232#46776#0" expanded="false" />
-            <element signature="e#46821#52080#0" expanded="false" />
-            <element signature="e#52129#53812#0" expanded="false" />
-            <element signature="e#53863#54072#0" expanded="false" />
-            <element signature="e#54188#54413#0" expanded="false" />
-            <element signature="e#54457#55356#0" expanded="false" />
-            <element signature="e#55396#55941#0" expanded="false" />
-            <element signature="e#55996#57068#0" expanded="false" />
-            <element signature="e#57123#57577#0" expanded="false" />
-            <element signature="e#57631#59374#0" expanded="false" />
-            <element signature="e#59428#59658#0" expanded="false" />
-            <element signature="e#59709#60343#0" expanded="false" />
-            <element signature="e#60393#62152#0" expanded="false" />
-            <element signature="e#62202#62754#0" expanded="false" />
-            <element signature="e#62808#64789#0" expanded="false" />
-            <element signature="e#64885#66848#0" expanded="false" />
-            <element signature="e#66910#67195#0" expanded="false" />
-            <element signature="e#67298#69041#0" expanded="false" />
-            <marker date="1503914622889" expanded="true" signature="1679:1764" ph="..." />
-            <marker date="1503914622889" expanded="true" signature="1863:1896" ph="..." />
-            <marker date="1503914622889" expanded="true" signature="1979:2153" ph="..." />
-            <marker date="1503914622889" expanded="true" signature="2622:2638" ph="..." />
-            <marker date="1503914622889" expanded="true" signature="3231:3247" ph="..." />
-            <marker date="1503914622889" expanded="true" signature="3326:3346" ph="..." />
-            <marker date="1503914622889" expanded="true" signature="3709:3729" ph="..." />
-            <marker date="1503914622889" expanded="true" signature="12717:12733" ph="..." />
-            <marker date="1503914622889" expanded="true" signature="39529:39548" ph="..." />
-            <marker date="1503914622889" expanded="true" signature="40498:40517" ph="..." />
-            <marker date="1503914622889" expanded="true" signature="41528:41547" ph="..." />
-            <marker date="1503914622889" expanded="true" signature="67471:67560" ph="..." />
-            <marker date="1503914622889" expanded="true" signature="67638:67644" ph=" " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/dash_creator/chart_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="85" column="59" lean-forward="true" selection-start-line="85" selection-start-column="59" selection-end-line="85" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/dash_creator/chart/_plot_chart.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1606,11 +1605,89 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="173" column="53" lean-forward="false" selection-start-line="173" selection-start-column="53" selection-end-line="173" selection-end-column="53" />
+          <folding>
+            <element signature="e#6195#6351#0" expanded="false" />
+            <element signature="e#6394#7743#0" expanded="false" />
+            <element signature="e#12991#13262#0" expanded="false" />
+            <element signature="e#13307#14638#0" expanded="false" />
+            <element signature="e#14685#14930#0" expanded="false" />
+            <element signature="e#14995#16480#0" expanded="false" />
+            <element signature="e#16514#16732#0" expanded="false" />
+            <element signature="e#16769#17704#0" expanded="false" />
+            <element signature="e#17806#18319#0" expanded="false" />
+            <element signature="e#18364#19807#0" expanded="false" />
+            <element signature="e#19852#22848#0" expanded="false" />
+            <element signature="e#22892#24229#0" expanded="false" />
+            <element signature="e#24276#24825#0" expanded="false" />
+            <element signature="e#24871#25776#0" expanded="false" />
+            <element signature="e#25815#26133#0" expanded="false" />
+            <element signature="e#26200#27990#0" expanded="false" />
+            <element signature="e#28038#30766#0" expanded="false" />
+            <element signature="e#30817#31628#0" expanded="false" />
+            <element signature="e#31675#33094#0" expanded="false" />
+            <element signature="e#33142#33964#0" expanded="false" />
+            <element signature="e#34011#34824#0" expanded="false" />
+            <element signature="e#34871#35684#0" expanded="false" />
+            <element signature="e#35736#36053#0" expanded="false" />
+            <element signature="e#36096#38171#0" expanded="false" />
+            <element signature="e#38219#39562#0" expanded="false" />
+            <element signature="e#39611#40078#0" expanded="false" />
+            <element signature="e#40125#41048#0" expanded="false" />
+            <element signature="e#41094#42080#0" expanded="false" />
+            <element signature="e#42124#43048#0" expanded="false" />
+            <element signature="e#43095#46828#0" expanded="false" />
+            <element signature="e#46921#47465#0" expanded="false" />
+            <element signature="e#47510#52769#0" expanded="false" />
+            <element signature="e#52818#54669#0" expanded="false" />
+            <element signature="e#54720#54929#0" expanded="false" />
+            <element signature="e#55045#55270#0" expanded="false" />
+            <element signature="e#55314#56213#0" expanded="false" />
+            <element signature="e#56253#56798#0" expanded="false" />
+            <element signature="e#56853#57925#0" expanded="false" />
+            <element signature="e#57980#58434#0" expanded="false" />
+            <element signature="e#58488#60231#0" expanded="false" />
+            <element signature="e#60285#60515#0" expanded="false" />
+            <element signature="e#60566#61200#0" expanded="false" />
+            <element signature="e#61250#63009#0" expanded="false" />
+            <element signature="e#63059#63611#0" expanded="false" />
+            <element signature="e#63665#65772#0" expanded="false" />
+            <element signature="e#65868#67831#0" expanded="false" />
+            <element signature="e#67893#68178#0" expanded="false" />
+            <element signature="e#68281#70024#0" expanded="false" />
+            <marker date="1503916648154" expanded="true" signature="1679:1764" ph="..." />
+            <marker date="1503916648154" expanded="true" signature="1863:1896" ph="..." />
+            <marker date="1503916648154" expanded="true" signature="1979:2153" ph="..." />
+            <marker date="1503916648154" expanded="true" signature="2622:2638" ph="..." />
+            <marker date="1503916648154" expanded="true" signature="3231:3247" ph="..." />
+            <marker date="1503916648154" expanded="true" signature="3326:3346" ph="..." />
+            <marker date="1503916648154" expanded="true" signature="3709:3729" ph="..." />
+            <marker date="1503916648154" expanded="true" signature="13406:13422" ph="..." />
+            <marker date="1503916648154" expanded="true" signature="40218:40237" ph="..." />
+            <marker date="1503916648154" expanded="true" signature="41187:41206" ph="..." />
+            <marker date="1503916648154" expanded="true" signature="42217:42236" ph="..." />
+            <marker date="1503916648154" expanded="true" signature="68454:68543" ph="..." />
+            <marker date="1503916648154" expanded="true" signature="68621:68627" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/dash_creator/chart_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="92" column="9" lean-forward="true" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="685">
-            <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <first_editor relative-caret-position="625">
+            <caret line="94" column="37" lean-forward="true" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
             <folding />
           </first_editor>
           <second_editor />
