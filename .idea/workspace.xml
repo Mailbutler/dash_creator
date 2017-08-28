@@ -4,8 +4,9 @@
     <list default="true" id="d4f60083-18c5-4bdd-8487-2efe2eb938c3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/dash_creator/chart_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/dash_creator/chart_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dash_creator/user/_section_card.html.erb" afterPath="$PROJECT_DIR$/app/views/dash_creator/user/_section_card.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dash_creator/user/dashboard.html.erb" afterPath="$PROJECT_DIR$/app/views/dash_creator/user/dashboard.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/generators/dash_creator/install/install_generator.rb" afterPath="$PROJECT_DIR$/lib/generators/dash_creator/install/install_generator.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -22,15 +23,35 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="625">
-                <caret line="94" column="37" lean-forward="true" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
+              <first_editor relative-caret-position="660">
+                <caret line="44" column="12" lean-forward="false" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/dash_creator/user/dashboard.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="65" lean-forward="false" selection-start-line="6" selection-start-column="65" selection-end-line="6" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_section_card.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/dash_creator/user/_section_card.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,16 +128,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tether.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/tether.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_chart_creator.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/dash_creator/chart/_chart_creator.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -127,31 +138,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="54" lean-forward="true" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="chart_helper.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/helpers/dash_creator/chart_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="256">
-              <caret line="92" column="9" lean-forward="true" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_plot_chart.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/dash_creator/chart/_plot_chart.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="61" lean-forward="false" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
+              <caret line="92" column="9" lean-forward="false" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -161,7 +152,7 @@
         <entry file="file://$PROJECT_DIR$/lib/dash_creator.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="167">
-              <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+              <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -170,18 +161,18 @@
       <file leaf-file-name="initializer.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/generators/dash_creator/install/templates/initializer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+            <state relative-caret-position="120">
+              <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="9" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="install_generator.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="install_generator.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/generators/dash_creator/install/install_generator.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="60" lean-forward="true" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+            <state relative-caret-position="795">
+              <caret line="53" column="37" lean-forward="false" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -258,8 +249,6 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/dashboardCreator.js" />
         <option value="$PROJECT_DIR$/app/views/dash_creator/dashboard/_dashboard_creator.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/dash_creator/user/_section_card.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/dash_creator/user/dashboard.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/dash_creator/dashboard_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/dash_creator/filter_controller.rb" />
         <option value="$PROJECT_DIR$/lib/dash_creator/acts_as_dash_creator.rb" />
@@ -290,19 +279,21 @@
         <option value="$PROJECT_DIR$/config/initializers/redis.rb" />
         <option value="$PROJECT_DIR$/dash_creator.gemspec" />
         <option value="$PROJECT_DIR$/app/views/dash_creator/chart/create_chart.js.erb" />
-        <option value="$PROJECT_DIR$/lib/generators/dash_creator/install/install_generator.rb" />
         <option value="$PROJECT_DIR$/app/views/dash_creator/layouts/menu/_left_menu.html.erb" />
         <option value="$PROJECT_DIR$/app/views/dash_creator/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/dash_creator/user/creator.html.erb" />
         <option value="$PROJECT_DIR$/lib/dash_creator.rb" />
-        <option value="$PROJECT_DIR$/lib/generators/dash_creator/install/templates/initializer.rb" />
         <option value="$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/dash_creator/chart/_chart_creator.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/application.js" />
         <option value="$PROJECT_DIR$/app/views/dash_creator/chart/_plot_chart.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js" />
         <option value="$PROJECT_DIR$/app/helpers/dash_creator/chart_helper.rb" />
+        <option value="$PROJECT_DIR$/lib/generators/dash_creator/install/templates/initializer.rb" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/app/views/dash_creator/user/_section_card.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/dash_creator/user/dashboard.html.erb" />
+        <option value="$PROJECT_DIR$/lib/generators/dash_creator/install/install_generator.rb" />
       </list>
     </option>
   </component>
@@ -1171,12 +1162,12 @@
       <workItem from="1503473370376" duration="26140000" />
       <workItem from="1503559981086" duration="26513000" />
       <workItem from="1503646745822" duration="23011000" />
-      <workItem from="1503907009030" duration="9923000" />
+      <workItem from="1503907009030" duration="11324000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89363000" />
+    <option name="totallyTimeSpent" value="90764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1176" extended-state="6" />
@@ -1303,20 +1294,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="36" column="4" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/user/_section_card.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="76" lean-forward="false" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/user/dashboard.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1507,40 +1484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/dash_creator.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/user/creator.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="43" lean-forward="false" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
-          <folding>
-            <element signature="e#29#64#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/generators/dash_creator/install/templates/initializer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/generators/dash_creator/install/install_generator.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="60" lean-forward="true" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/dash_creator/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1565,14 +1508,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/tether.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1584,15 +1519,7 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
-          <caret line="29" column="54" lean-forward="true" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/chart/_chart_creator.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="169" column="29" lean-forward="false" selection-start-line="169" selection-start-column="28" selection-end-line="169" selection-end-column="29" />
+          <caret line="29" column="54" lean-forward="false" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
           <folding />
         </state>
       </provider>
@@ -1678,7 +1605,23 @@
     <entry file="file://$PROJECT_DIR$/app/helpers/dash_creator/chart_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
-          <caret line="92" column="9" lean-forward="true" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+          <caret line="92" column="9" lean-forward="false" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/tether.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/chart/_chart_creator.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="169" column="29" lean-forward="false" selection-start-line="169" selection-start-column="28" selection-end-line="169" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1686,11 +1629,59 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="625">
-            <caret line="94" column="37" lean-forward="true" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
+          <first_editor relative-caret-position="660">
+            <caret line="44" column="12" lean-forward="false" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/user/creator.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="43" lean-forward="false" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/user/_section_card.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/user/dashboard.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="65" lean-forward="false" selection-start-line="6" selection-start-column="65" selection-end-line="6" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/generators/dash_creator/install/templates/initializer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="9" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/dash_creator.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/generators/dash_creator/install/install_generator.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="37" lean-forward="false" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>

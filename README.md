@@ -30,9 +30,19 @@ It will add to your project:
   - user_for_dash_creator helper function in app/controllers/application_controller.rb
   - dash_creator.rb initializer in config/initializers
   
-Add a word on redis (delete otherwise won't migrate if you do not use redis)
+In the added initializer, by default Redis is used.
+If you don't use Redis, then go in the initializer and change:
+```ruby
+$redis = Redis::Namespace.new("app_chart_cache", :redis => Redis.new)
+config.redis_store_variable = $redis
+```
 
-Then migrate:
+To:
+```ruby
+config.redis_store_variable = nil
+```
+
+Then you can migrate:
 ```bash
 $ rails db:migrate
 ```
@@ -97,11 +107,11 @@ It would be good to find an alternative to redis to store chart_data
 Add a share chart function (send chart id with a temporary hash stored in redis), export chart as image
 
 Customize everything on your chart:
-- points style & size
+- points style & size for each dataset
+- line (style, stepped) for each dataset
 - tooltips (particularly add info)
-- data labelling on chart
+- data labeling on chart (values next to points)
 - bar (horizontal, several colors for non date)
-- line (style, stepped)
 
 Probably some stuff to do with acts_as_dashboard_object: self defined partials.
 Explain the DashboardObject usage, what about customized partials ? Change chart's one ?
