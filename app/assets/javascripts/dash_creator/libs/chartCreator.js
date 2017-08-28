@@ -179,25 +179,47 @@
                 '<div class="col-sm-12" id="legend-div"> ' +
                 '<div class="form-group"> ' +
                 '<label for="legend">Display legend</label> ' +
-                '<input type="checkbox" name="legend" id="legend" class="form-control" checked="checked"> ' +
+                '<input type="checkbox" name="legend" class="form-control" checked="checked"> ' +
+                '</div> ' +
+                '</div> ' +
+                '<div class="col-sm-12" id="y-axis-div"> ' +
+                '<div class="row"> ' +
+                '<div class="col-sm-4"> ' +
+                '<div class="form-group"> ' +
+                '<label for="y-axis-min">Y Axis Min</label> ' +
+                '<input type="number" name="y-axis-min" class="form-control"> ' +
+                '</div> ' +
+                '</div> ' +
+                '<div class="col-sm-4"> ' +
+                '<div class="form-group"> ' +
+                '<label for="y-axis-min">Max</label> ' +
+                '<input type="number" name="y-axis-max" class="form-control"> ' +
+                '</div> ' +
+                '</div> ' +
+                '<div class="col-sm-4"> ' +
+                '<div class="form-group"> ' +
+                '<label for="y-axis-min">Step</label> ' +
+                '<input type="number" name="y-axis-step" class="form-control"> ' +
+                '</div> ' +
+                '</div> ' +
                 '</div> ' +
                 '</div> ' +
                 '<div class="col-sm-12" id="stacked-div"> ' +
                 '<div class="form-group"> ' +
                 '<label for="stacked">Stacked</label> ' +
-                '<input type="checkbox" name="stacked" id="stacked" class="form-control"> ' +
+                '<input type="checkbox" name="stacked" class="form-control"> ' +
                 '</div> ' +
                 '</div> ' +
                 '<div class="col-sm-6"> ' +
                 '<div class="form-group color-group"> ' +
                 '<label for="dataset-color">Main variable color</label>' +
-                '<input type="text" name="dataset-color" id="dataset-color" class="form-control"> ' +
+                '<input type="text" name="dataset-color" class="form-control"> ' +
                 '</div> ' +
                 '</div> ' +
                 '<div class="col-sm-6"> ' +
                 '<div class="form-group transparency-group"> ' +
                 '<label for="transparency">Area transparency</label> ' +
-                '<input type="range" name="transparency" id="transparency" value="0" step="1" class="form-control"> ' +
+                '<input type="range" name="transparency" value="0" step="1" class="form-control"> ' +
                 '</div> ' +
                 '</div> ' +
                 '</div> ' +
@@ -303,10 +325,12 @@
             if (main_type === 'bar' || main_type === 'line') {
                 this.yContainer.find('[name="type"]').show();
                 this.styleOptionsContainer.find('#stacked-div').show();
+                this.styleOptionsContainer.find('#y-axis-div').show();
             }
             else {
                 this.yContainer.find('[name="type"]').hide();
                 this.styleOptionsContainer.find('#stacked-div').hide();
+                this.styleOptionsContainer.find('#y-axis-div').hide();
             }
 
             return main_type;
@@ -1093,6 +1117,12 @@
             // Legend
             style_options['legend'] = this.styleOptionsContainer.find('[name="legend"]').is(':checked');
 
+            // Y Axis
+            var y_axis_options = style_options['y-axis'] = {};
+            y_axis_options['min'] = this.styleOptionsContainer.find('[name="y-axis-min"]').val();
+            y_axis_options['max'] = this.styleOptionsContainer.find('[name="y-axis-max"]').val();
+            y_axis_options['step'] = this.styleOptionsContainer.find('[name="y-axis-step"]').val();
+
             // Stacked
             style_options['stacked'] = this.styleOptionsContainer.find('[name="stacked"]').is(':checked');
         },
@@ -1321,6 +1351,12 @@
             // Legend checkbox
             var legend = style_options['legend'] === 'true';
             this.styleOptionsContainer.find('[name="legend"]').prop('checked', legend);
+
+            // Y Axis options
+            var y_axis_options = style_options['y-axis'];
+            this.styleOptionsContainer.find('[name="y-axis-min"]').val(y_axis_options['min']);
+            this.styleOptionsContainer.find('[name="y-axis-max"]').val(y_axis_options['max']);
+            this.styleOptionsContainer.find('[name="y-axis-step"]').val(y_axis_options['step']);
 
             // Stacked checkbox
             var stacked = style_options['stacked'] === 'true';

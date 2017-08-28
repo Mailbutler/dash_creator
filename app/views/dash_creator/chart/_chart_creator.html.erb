@@ -64,7 +64,7 @@
         var x = chart_creator.xContainer.find('[name="x-axis"]').val().split('-');
         var model, attribute;
         if (x[1] === 'has' || x[1] === 'ref') {
-            model = capitalizedArray(x[0]).join('');
+            model = x[0].classify();
             attribute = chart_creator.labelOptionsContainer.find('#x-sub').val().split('-')[0];
         }
         else {

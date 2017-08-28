@@ -66,8 +66,23 @@ module DashCreator
       end
 
       options = {}
-      options['scales'] = {xAxes: [{stacked: true}], yAxes: [{stacked: true}]} if style_options['stacked'] == 'true'
+      scales = options['scales'] = {}
+      scales['xAxes'] = [{}]
+      scales['yAxes'] = [{}]
+      scales['yAxes'][0]['ticks'] = {}
+
+      y_axis_options = style_options['y-axis']
+      scales['yAxes'][0]['ticks']['min'] = y_axis_options['min'].to_i if y_axis_options['min'] != ''
+      scales['yAxes'][0]['ticks']['max'] = y_axis_options['max'].to_i if y_axis_options['max'] != ''
+      scales['yAxes'][0]['ticks']['stepSize'] = y_axis_options['step'].to_i if y_axis_options['step'] != ''
+
+      if style_options['stacked'] == 'true'
+        scales['xAxes'][0]['stacked'] = true
+        scales['yAxes'][0]['stacked'] = true
+      end
+
       options['legend'] = {display: false} if style_options['legend'] == 'false'
+      
       options['title'] = {display: true, text: style_options['title']} if style_options['title'] != ''
 
       {plot_data: plot_data, options: options}

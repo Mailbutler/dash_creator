@@ -14,6 +14,7 @@
 //= require dash_creator/libs/jquery-ui
 //= require dash_creator/libs/bootstrap
 //= require dash_creator/libs/moment
+//= require dash_creator/libs/tether
 //= require dash_creator/libs/Chart
 //= require dash_creator/libs/daterangepicker
 //= require dash_creator/libs/jquery.minicolors

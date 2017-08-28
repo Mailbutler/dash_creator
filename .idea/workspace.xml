@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4f60083-18c5-4bdd-8487-2efe2eb938c3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/dash_creator/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/dash_creator/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/dash_creator/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/dash_creator/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/dash_creator/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/dash_creator/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/dash_creator/libs/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/dash_creator/libs/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/dash_creator/layouts/application.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/dash_creator/layouts/menu/_left_menu.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/tether.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dash_creator/user/creator.html.erb" afterPath="$PROJECT_DIR$/app/views/dash_creator/user/creator.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/dash_creator.rb" afterPath="$PROJECT_DIR$/lib/dash_creator.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/generators/dash_creator/install/install_generator.rb" afterPath="$PROJECT_DIR$/lib/generators/dash_creator/install/install_generator.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/generators/dash_creator/install/templates/initializer.rb" afterPath="$PROJECT_DIR$/lib/generators/dash_creator/install/templates/initializer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/dash_creator/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/dash_creator/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/dash_creator/chart_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/dash_creator/chart_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dash_creator/chart/_chart_creator.html.erb" afterPath="$PROJECT_DIR$/app/views/dash_creator/chart/_chart_creator.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -34,12 +23,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1140">
-                <caret line="118" column="59" lean-forward="false" selection-start-line="118" selection-start-column="59" selection-end-line="118" selection-end-column="59" />
+              <first_editor relative-caret-position="355">
+                <caret line="81" column="61" lean-forward="false" selection-start-line="81" selection-start-column="61" selection-end-line="81" selection-end-column="61" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -47,11 +36,93 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/dash_creator/layouts/application.html.erb">
+      <file leaf-file-name="chartCreator.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+            <state relative-caret-position="32">
+              <caret line="137" column="0" lean-forward="true" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+              <folding>
+                <element signature="e#6195#6351#0" expanded="false" />
+                <element signature="e#6394#7806#0" expanded="false" />
+                <element signature="e#11227#11498#0" expanded="false" />
+                <element signature="e#11543#12932#0" expanded="false" />
+                <element signature="e#12979#13224#0" expanded="false" />
+                <element signature="e#13289#14774#0" expanded="false" />
+                <element signature="e#14808#15026#0" expanded="false" />
+                <element signature="e#15063#15704#0" expanded="false" />
+                <element signature="e#15806#16319#0" expanded="false" />
+                <element signature="e#16364#17807#0" expanded="false" />
+                <element signature="e#17852#20848#0" expanded="false" />
+                <element signature="e#20892#22229#0" expanded="false" />
+                <element signature="e#22276#22825#0" expanded="false" />
+                <element signature="e#22871#23776#0" expanded="false" />
+                <element signature="e#23815#24133#0" expanded="false" />
+                <element signature="e#24200#25990#0" expanded="false" />
+                <element signature="e#26038#28766#0" expanded="false" />
+                <element signature="e#28817#29628#0" expanded="false" />
+                <element signature="e#29675#31094#0" expanded="false" />
+                <element signature="e#31142#31964#0" expanded="false" />
+                <element signature="e#32011#32824#0" expanded="false" />
+                <element signature="e#32871#33684#0" expanded="false" />
+                <element signature="e#33736#34053#0" expanded="false" />
+                <element signature="e#34096#36171#0" expanded="false" />
+                <element signature="e#36219#37562#0" expanded="false" />
+                <element signature="e#37611#38078#0" expanded="false" />
+                <element signature="e#38125#39048#0" expanded="false" />
+                <element signature="e#39094#40080#0" expanded="false" />
+                <element signature="e#40124#41048#0" expanded="false" />
+                <element signature="e#41095#44828#0" expanded="false" />
+                <element signature="e#44921#45465#0" expanded="false" />
+                <element signature="e#45510#50769#0" expanded="false" />
+                <element signature="e#50818#52071#0" expanded="false" />
+                <element signature="e#52122#52331#0" expanded="false" />
+                <element signature="e#52447#52672#0" expanded="false" />
+                <element signature="e#52716#53615#0" expanded="false" />
+                <element signature="e#53655#54200#0" expanded="false" />
+                <element signature="e#54255#55327#0" expanded="false" />
+                <element signature="e#55382#55836#0" expanded="false" />
+                <element signature="e#55890#57633#0" expanded="false" />
+                <element signature="e#57687#57917#0" expanded="false" />
+                <element signature="e#57968#58602#0" expanded="false" />
+                <element signature="e#58652#60411#0" expanded="false" />
+                <element signature="e#60461#61013#0" expanded="false" />
+                <element signature="e#61067#62586#0" expanded="false" />
+                <element signature="e#62682#64645#0" expanded="false" />
+                <element signature="e#64707#64992#0" expanded="false" />
+                <element signature="e#65095#66838#0" expanded="false" />
+                <marker date="1503910832799" expanded="true" signature="1679:1764" ph="..." />
+                <marker date="1503910832799" expanded="true" signature="1863:1896" ph="..." />
+                <marker date="1503910832799" expanded="true" signature="1979:2153" ph="..." />
+                <marker date="1503910832799" expanded="true" signature="2622:2638" ph="..." />
+                <marker date="1503910832799" expanded="true" signature="3231:3247" ph="..." />
+                <marker date="1503910832799" expanded="true" signature="3326:3346" ph="..." />
+                <marker date="1503910832799" expanded="true" signature="3709:3729" ph="..." />
+                <marker date="1503910832799" expanded="true" signature="11642:11658" ph="..." />
+                <marker date="1503910832799" expanded="true" signature="38218:38237" ph="..." />
+                <marker date="1503910832799" expanded="true" signature="39187:39206" ph="..." />
+                <marker date="1503910832799" expanded="true" signature="40217:40236" ph="..." />
+                <marker date="1503910832799" expanded="true" signature="65268:65357" ph="..." />
+                <marker date="1503910832799" expanded="true" signature="65435:65441" ph=" " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tether.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/tether.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_chart_creator.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/dash_creator/chart/_chart_creator.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="169" column="29" lean-forward="false" selection-start-line="169" selection-start-column="28" selection-end-line="169" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -67,11 +138,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/application.js">
+      <file leaf-file-name="chart_helper.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/helpers/dash_creator/chart_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="586">
+              <caret line="84" column="6" lean-forward="false" selection-start-line="84" selection-start-column="6" selection-end-line="84" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -100,8 +171,8 @@
       <file leaf-file-name="install_generator.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/generators/dash_creator/install/install_generator.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="52" lean-forward="false" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+            <state relative-caret-position="105">
+              <caret line="7" column="60" lean-forward="true" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -119,11 +190,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>capitali</find>
-      <find>createa</find>
-      <find>Does not haveals</find>
-      <find>capita</find>
-      <find>labels-co</find>
       <find>'integer'</find>
       <find>chart_processed</find>
       <find>this.attr</find>
@@ -149,6 +215,11 @@
       <find>switch</find>
       <find>$re</find>
       <find>url</find>
+      <find>#stac</find>
+      <find>capi</find>
+      <find>stac</find>
+      <find>stacked</find>
+      <find>legend</find>
     </findStrings>
     <replaceStrings>
       <replace>user.dash_creator_filters</replace>
@@ -205,15 +276,11 @@
         <option value="$PROJECT_DIR$/db/migrate/20170822135037_create_dash_creator_dashboards.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20170822135407_create_dash_creator_dashboard_objects.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/stringHelpers.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/application.js" />
-        <option value="$PROJECT_DIR$/app/views/dash_creator/chart/_chart_creator.html.erb" />
         <option value="$PROJECT_DIR$/app/views/dash_creator/filter/_filtering_card.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/filterCreator.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js" />
         <option value="$PROJECT_DIR$/lib/dash_creator/version.rb" />
         <option value="$PROJECT_DIR$/config/initializers/redis.rb" />
         <option value="$PROJECT_DIR$/dash_creator.gemspec" />
-        <option value="$PROJECT_DIR$/app/helpers/dash_creator/chart_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/dash_creator/chart/create_chart.js.erb" />
         <option value="$PROJECT_DIR$/lib/generators/dash_creator/install/install_generator.rb" />
         <option value="$PROJECT_DIR$/app/views/dash_creator/layouts/menu/_left_menu.html.erb" />
@@ -223,6 +290,10 @@
         <option value="$PROJECT_DIR$/lib/generators/dash_creator/install/templates/initializer.rb" />
         <option value="$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/app/views/dash_creator/chart/_chart_creator.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/application.js" />
+        <option value="$PROJECT_DIR$/app/helpers/dash_creator/chart_helper.rb" />
       </list>
     </option>
   </component>
@@ -649,74 +720,6 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dash_creator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dash_creator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dash_creator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dash_creator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dash_creator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dash_creator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dash_creator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fonts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -771,24 +774,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dash_creator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dash_creator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -811,10 +796,10 @@
       <recent name="C:\Users\Elie\RubymineProjects\dash_creator\config\initializers" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Elie\RubymineProjects\dash_creator\app\assets\javascripts\dash_creator\libs" />
       <recent name="C:\Users\Elie\RubymineProjects\dash_creator\app\views\dash_creator\layouts" />
       <recent name="C:\Users\Elie\RubymineProjects\dash_creator\app\assets\stylesheets\dash_creator" />
       <recent name="C:\Users\Elie\RubymineProjects\dash_creator\app\assets\stylesheets\dash_creator\libs" />
-      <recent name="C:\Users\Elie\RubymineProjects\dash_creator\app\assets\javascripts\dash_creator\libs" />
       <recent name="C:\Users\Elie\RubymineProjects\dash_creator\app\views\dash_creator\chart" />
     </key>
   </component>
@@ -1102,12 +1087,12 @@
       <workItem from="1503473370376" duration="26140000" />
       <workItem from="1503559981086" duration="26513000" />
       <workItem from="1503646745822" duration="23011000" />
-      <workItem from="1503907009030" duration="2569000" />
+      <workItem from="1503907009030" duration="4788000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82009000" />
+    <option name="totallyTimeSpent" value="84228000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1176" extended-state="6" />
@@ -1146,13 +1131,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/dash_creator/dashboard_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="68" lean-forward="false" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/dash_creator/dashboard_object_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1164,13 +1142,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/dash_creator/filter_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="108" column="22" lean-forward="false" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1206,14 +1177,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-55">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/chart/_plot_chart.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1348,6 +1311,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1375,84 +1339,6 @@
             <marker date="1503497143183" expanded="true" signature="12392:12406" ph="..." />
             <marker date="1503497143183" expanded="true" signature="12453:12556" ph="..." />
             <marker date="1503497143183" expanded="true" signature="12609:12629" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/chart/_chart_creator.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="53" column="46" lean-forward="true" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="222" column="10" lean-forward="false" selection-start-line="222" selection-start-column="10" selection-end-line="222" selection-end-column="10" />
-          <folding>
-            <element signature="e#6195#6351#0" expanded="false" />
-            <element signature="e#6394#7806#0" expanded="false" />
-            <element signature="e#7851#10176#0" expanded="false" />
-            <element signature="e#10269#10540#0" expanded="false" />
-            <element signature="e#10585#11974#0" expanded="false" />
-            <element signature="e#12021#12266#0" expanded="false" />
-            <element signature="e#12331#13816#0" expanded="false" />
-            <element signature="e#13850#14068#0" expanded="false" />
-            <element signature="e#14105#14604#0" expanded="false" />
-            <element signature="e#14706#15219#0" expanded="false" />
-            <element signature="e#15264#16707#0" expanded="false" />
-            <element signature="e#16752#19748#0" expanded="false" />
-            <element signature="e#19792#21129#0" expanded="false" />
-            <element signature="e#21176#21725#0" expanded="false" />
-            <element signature="e#21771#22676#0" expanded="false" />
-            <element signature="e#22715#23033#0" expanded="false" />
-            <element signature="e#23100#24890#0" expanded="false" />
-            <element signature="e#24938#27666#0" expanded="false" />
-            <element signature="e#27717#28528#0" expanded="false" />
-            <element signature="e#28575#29994#0" expanded="false" />
-            <element signature="e#30042#30864#0" expanded="false" />
-            <element signature="e#30911#31724#0" expanded="false" />
-            <element signature="e#31771#32584#0" expanded="false" />
-            <element signature="e#32636#32953#0" expanded="false" />
-            <element signature="e#32996#35071#0" expanded="false" />
-            <element signature="e#35119#36462#0" expanded="false" />
-            <element signature="e#36511#36978#0" expanded="false" />
-            <element signature="e#37025#37948#0" expanded="false" />
-            <element signature="e#37994#38980#0" expanded="false" />
-            <element signature="e#39024#39948#0" expanded="false" />
-            <element signature="e#39995#43728#0" expanded="false" />
-            <element signature="e#43821#44365#0" expanded="false" />
-            <element signature="e#49718#50589#0" expanded="false" />
-            <element signature="e#50640#50849#0" expanded="false" />
-            <element signature="e#50965#51190#0" expanded="false" />
-            <element signature="e#51234#52133#0" expanded="false" />
-            <element signature="e#52173#52718#0" expanded="false" />
-            <element signature="e#52773#53845#0" expanded="false" />
-            <element signature="e#53900#54354#0" expanded="false" />
-            <element signature="e#54408#56151#0" expanded="false" />
-            <element signature="e#56205#56435#0" expanded="false" />
-            <element signature="e#56486#57120#0" expanded="false" />
-            <element signature="e#57170#58929#0" expanded="false" />
-            <element signature="e#58979#59531#0" expanded="false" />
-            <element signature="e#59585#60728#0" expanded="false" />
-            <element signature="e#60824#62787#0" expanded="false" />
-            <element signature="e#62849#63134#0" expanded="false" />
-            <element signature="e#63237#64980#0" expanded="false" />
-            <marker date="1503664042212" expanded="true" signature="1679:1764" ph="..." />
-            <marker date="1503664042212" expanded="true" signature="1863:1896" ph="..." />
-            <marker date="1503664042212" expanded="true" signature="1979:2153" ph="..." />
-            <marker date="1503664042212" expanded="true" signature="2622:2638" ph="..." />
-            <marker date="1503664042212" expanded="true" signature="3231:3247" ph="..." />
-            <marker date="1503664042212" expanded="true" signature="3326:3346" ph="..." />
-            <marker date="1503664042212" expanded="true" signature="3709:3729" ph="..." />
-            <marker date="1503664042212" expanded="true" signature="10684:10700" ph="..." />
-            <marker date="1503664042212" expanded="true" signature="37118:37137" ph="..." />
-            <marker date="1503664042212" expanded="true" signature="38087:38106" ph="..." />
-            <marker date="1503664042212" expanded="true" signature="39117:39136" ph="..." />
-            <marker date="1503664042212" expanded="true" signature="63410:63499" ph="..." />
-            <marker date="1503664042212" expanded="true" signature="63577:63583" ph=" " />
           </folding>
         </state>
       </provider>
@@ -1505,33 +1391,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/redis.rb" />
-    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/chart/create_chart.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="37" lean-forward="false" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dash_creator.gemspec">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="59" lean-forward="false" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/dash_creator/chart_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10680">
-          <caret line="712" column="0" lean-forward="false" selection-start-line="712" selection-start-column="0" selection-end-line="712" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1568,26 +1431,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/generators/dash_creator/install/templates/initializer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="54" lean-forward="true" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/generators/dash_creator/install/install_generator.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="52" lean-forward="false" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -1597,8 +1444,24 @@
         <state relative-caret-position="15">
           <caret line="1" column="43" lean-forward="false" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
           <folding>
-            <element signature="e#29#64#0#HTML" expanded="true" />
+            <element signature="e#29#64#0#HTML" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/generators/dash_creator/install/templates/initializer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/generators/dash_creator/install/install_generator.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="60" lean-forward="true" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1613,11 +1476,137 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1140">
-            <caret line="118" column="59" lean-forward="false" selection-start-line="118" selection-start-column="59" selection-end-line="118" selection-end-column="59" />
+          <first_editor relative-caret-position="355">
+            <caret line="81" column="61" lean-forward="false" selection-start-line="81" selection-start-column="61" selection-end-line="81" selection-end-column="61" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/chart/create_chart.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="37" lean-forward="false" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/chart/_plot_chart.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/dash_creator/filter_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="142" column="57" lean-forward="false" selection-start-line="142" selection-start-column="57" selection-end-line="142" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/chart/_chart_creator.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="169" column="29" lean-forward="false" selection-start-line="169" selection-start-column="28" selection-end-line="169" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="137" column="0" lean-forward="true" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+          <folding>
+            <element signature="e#6195#6351#0" expanded="false" />
+            <element signature="e#6394#7806#0" expanded="false" />
+            <element signature="e#11227#11498#0" expanded="false" />
+            <element signature="e#11543#12932#0" expanded="false" />
+            <element signature="e#12979#13224#0" expanded="false" />
+            <element signature="e#13289#14774#0" expanded="false" />
+            <element signature="e#14808#15026#0" expanded="false" />
+            <element signature="e#15063#15704#0" expanded="false" />
+            <element signature="e#15806#16319#0" expanded="false" />
+            <element signature="e#16364#17807#0" expanded="false" />
+            <element signature="e#17852#20848#0" expanded="false" />
+            <element signature="e#20892#22229#0" expanded="false" />
+            <element signature="e#22276#22825#0" expanded="false" />
+            <element signature="e#22871#23776#0" expanded="false" />
+            <element signature="e#23815#24133#0" expanded="false" />
+            <element signature="e#24200#25990#0" expanded="false" />
+            <element signature="e#26038#28766#0" expanded="false" />
+            <element signature="e#28817#29628#0" expanded="false" />
+            <element signature="e#29675#31094#0" expanded="false" />
+            <element signature="e#31142#31964#0" expanded="false" />
+            <element signature="e#32011#32824#0" expanded="false" />
+            <element signature="e#32871#33684#0" expanded="false" />
+            <element signature="e#33736#34053#0" expanded="false" />
+            <element signature="e#34096#36171#0" expanded="false" />
+            <element signature="e#36219#37562#0" expanded="false" />
+            <element signature="e#37611#38078#0" expanded="false" />
+            <element signature="e#38125#39048#0" expanded="false" />
+            <element signature="e#39094#40080#0" expanded="false" />
+            <element signature="e#40124#41048#0" expanded="false" />
+            <element signature="e#41095#44828#0" expanded="false" />
+            <element signature="e#44921#45465#0" expanded="false" />
+            <element signature="e#45510#50769#0" expanded="false" />
+            <element signature="e#50818#52071#0" expanded="false" />
+            <element signature="e#52122#52331#0" expanded="false" />
+            <element signature="e#52447#52672#0" expanded="false" />
+            <element signature="e#52716#53615#0" expanded="false" />
+            <element signature="e#53655#54200#0" expanded="false" />
+            <element signature="e#54255#55327#0" expanded="false" />
+            <element signature="e#55382#55836#0" expanded="false" />
+            <element signature="e#55890#57633#0" expanded="false" />
+            <element signature="e#57687#57917#0" expanded="false" />
+            <element signature="e#57968#58602#0" expanded="false" />
+            <element signature="e#58652#60411#0" expanded="false" />
+            <element signature="e#60461#61013#0" expanded="false" />
+            <element signature="e#61067#62586#0" expanded="false" />
+            <element signature="e#62682#64645#0" expanded="false" />
+            <element signature="e#64707#64992#0" expanded="false" />
+            <element signature="e#65095#66838#0" expanded="false" />
+            <marker date="1503910832799" expanded="true" signature="1679:1764" ph="..." />
+            <marker date="1503910832799" expanded="true" signature="1863:1896" ph="..." />
+            <marker date="1503910832799" expanded="true" signature="1979:2153" ph="..." />
+            <marker date="1503910832799" expanded="true" signature="2622:2638" ph="..." />
+            <marker date="1503910832799" expanded="true" signature="3231:3247" ph="..." />
+            <marker date="1503910832799" expanded="true" signature="3326:3346" ph="..." />
+            <marker date="1503910832799" expanded="true" signature="3709:3729" ph="..." />
+            <marker date="1503910832799" expanded="true" signature="11642:11658" ph="..." />
+            <marker date="1503910832799" expanded="true" signature="38218:38237" ph="..." />
+            <marker date="1503910832799" expanded="true" signature="39187:39206" ph="..." />
+            <marker date="1503910832799" expanded="true" signature="40217:40236" ph="..." />
+            <marker date="1503910832799" expanded="true" signature="65268:65357" ph="..." />
+            <marker date="1503910832799" expanded="true" signature="65435:65441" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/tether.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="36" lean-forward="false" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/dash_creator/chart_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="84" column="6" lean-forward="false" selection-start-line="84" selection-start-column="6" selection-end-line="84" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
