@@ -36,7 +36,9 @@ module DashCreator
     def dashboard
       user = user_for_dash_creator
       @dashboard = DashCreator::Dashboard.where(user_id: user.id).find(params[:dashboard_id])
-      @dashboard_objects = DashCreator::DashboardObject.all
+      @dashboards = DashCreator::Dashboard.where(user_id: user.id).all.map { |d| [d.name, d.id] }
+
+      render :dashboard, layout: DashCreator.layout_path
     end
 
 

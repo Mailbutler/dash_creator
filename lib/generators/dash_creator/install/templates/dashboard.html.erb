@@ -2,9 +2,9 @@
   <h1 class="text-center"><%= @dashboard.name %></h1>
   <div class="row" style="margin-top: 20px;">
     <% unless @dashboard.options.empty? || @dashboard.options.nil? %>
-    <% @dashboard.options.each do |index, section| %>
-        <%= render 'section_card', {section: section} %>
-    <% end %>
+        <% @dashboard.options.each do |index, section| %>
+            <%= render 'section_card', {section: section} %>
+        <% end %>
     <% end %>
   </div>
 </div>

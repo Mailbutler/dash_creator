@@ -1,0 +1,17 @@
+<div class="col-md-<%= section['size'] %> offset-md-<%= section['offset'] %>">
+  <div class="card">
+    <div class="card-header">
+      <%= section['name'] %>
+    </div>
+    <div class="card-block">
+      <div class="row">
+        <% unless section['objects'].nil? %>
+        <% section['objects'].each do |index, object| %>
+            <%= render 'dash_creator/dashboard_object/' + object['type'], {"#{object['type']}": object} %>
+        <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <!--/.card-->
+</div>

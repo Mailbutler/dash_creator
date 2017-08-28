@@ -54,6 +54,12 @@ module DashCreator
           "#{match}\n  mount DashCreator::Engine, at: '/dash_creator'\n"
         end
       end
+
+      def add_template_dashboard_views
+        template 'dashboard.html.erb', 'app/views/user/dashboard.html.erb'
+        template '_section_card.html.erb', 'app/views/user/_section_card.html.erb'
+        template '_chart.html.erb', 'app/views/dashboard_object/_chart.html.erb'
+      end
     end
   end
 end

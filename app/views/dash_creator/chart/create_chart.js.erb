@@ -29,7 +29,7 @@ $(chart_script_string).appendTo(chart_wrapper_div);
 
 // Refresh option
 chart_wrapper_div
-    .off('click')                                           // Remove previous binded refresh event
+    .off('click')                                           // Remove previous bound refresh event
     .on('click', '#chart-refresh-btn', refreshChart);       // Bind refresh event
 
 function refreshChart() {

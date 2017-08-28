@@ -142,7 +142,7 @@
 
         var params = {dashboards_ids: dashboards_ids};
 
-        $.post("<%= delete_dashboards_path %>s", params, function() {
+        $.post("<%= delete_dashboards_path %>", params, function() {
             // Remove from dashboards list
             for (var i = 0; i < dashboards.length; i++) {
                 var id = dashboards[i][1];

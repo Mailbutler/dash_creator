@@ -1,0 +1,9 @@
+<div class="col-md-<%= chart['size'] %> offset-md-<%= chart['offset'] %>" style="margin-bottom: 50px;">
+  <div class="chart-wrapper" data-id="<%= chart['id'] %>" style="height: 400px;">
+    <iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: flex; overflow: hidden; border: 0; margin: 0; top: 0; left: 0; bottom: 0; right: 0; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+  </div>
+  <script>
+      var params = {chart_id: '<%= chart['id'] %>'};
+      $.post("<%= get_chart_path %>", params);
+  </script>
+</div>

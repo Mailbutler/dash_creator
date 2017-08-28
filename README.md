@@ -29,6 +29,7 @@ It will add to your project:
   - acts_as_dash_creator to app/models/user.rb if this file is found
   - user_for_dash_creator helper function in app/controllers/application_controller.rb
   - dash_creator.rb initializer in config/initializers
+  - template views to display your dashboards
   
 In the added initializer, by default Redis is used.
 If you don't use Redis, then go in the initializer and change:
@@ -47,7 +48,7 @@ Then you can migrate:
 $ rails db:migrate
 ```
 
-## Usage
+## Initialization
 
 In config/initializers you will find a dash_creator.rb file after having run the generator.
 In this initializer you can define several options used by the gem:
@@ -96,6 +97,46 @@ Don't forget to also include the following lines in the head of your layout for 
 <%= stylesheet_link_tag 'dash_creator/application', media: 'all', 'data-turbolinks-track': 'reload' %>
 <%= javascript_include_tag 'dash_creator/application', 'data-turbolinks-track': 'reload' %>
 ```
+
+## Usage
+
+DashCreator is made of three components:
+- The Filter Creator: create filters based on your database and on the initializer's options
+- The Chart Creator: create charts using your filters' data
+- The Dashboard Creator: create dashboards in which you can display charts and self defined objects (using acts_as_dashboard_object in the wanted models)
+
+In each creator, you can get, save, modify and delete the objects you have created.
+
+The usual flow would be to:
+- First create filters to get the precise records you want from database (if you want all records from a model, just add a filter for this model and leave it empty)
+- Then create charts using your filters and save them
+- Finally create your dashboard using your saved charts
+
+Now that you have built your own dashboards, you can access them in a controller. For example:
+```ruby
+user = current_user
+@dashboards = DashCreator::Dashboard.where(user_id: user.id)
+```
+A default engine route is provided to render your dashboards in a full page, using the engine layout.
+However you may want to customize the display of your dashboard.
+
+If you want to have a full page for each of your dashboards, then you may want to do something like the following.
+In your routes.rb file:
+```ruby
+get '/dashboard/:dashboard_id', to: 'user#dashboard'
+```
+And in your user controller:
+```ruby
+def dashboard
+  user = current_user
+  @dashboard = DashCreator::Dashboard.where(user_id: user.id).find(params[:dashboard_id])
+end
+```
+Running the generator added two files to your app/views/user folder, to help you display your dashboards:
+- dashboard.html.erb: a template view for a dashboard
+- _section_card.html.erb: a template partial for rendering a section of your dashboard
+
+It also added a new dashboard_objects folder to your views, in which you can provide the partials for your self-defined dashboard items, and containing a template partial for rendering charts.
 
 ## Known bugs
 Don't plot charts using filters with a defined number of records.
