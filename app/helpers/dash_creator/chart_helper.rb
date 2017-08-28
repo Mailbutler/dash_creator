@@ -234,8 +234,7 @@ module DashCreator
       ActiveRecord::Base.connection.execute("SET temp_buffers = '8MB';")
       hash = hash.merge({
                             datasets_labels: data['datasets_labels'],
-                            types: data['types'],
-                            style: data['style']
+                            types: data['types']
                         })
       hash
     end
@@ -761,7 +760,7 @@ module DashCreator
         # Add chart data to redis
         DashCreator.redis_store_variable.set(redis_chart_data, processed_data.to_json) unless DashCreator.redis_store_variable.nil?
       end
-      
+
       processed_data['style'] = style
       processed_data['style'] = processed_data['style'].to_unsafe_h unless processed_data['style'].is_a?(Hash)
 
@@ -772,7 +771,6 @@ module DashCreator
       # Prepare data to encode
       encoded_chart_data = chart_data.clone
       encoded_chart_data = encoded_chart_data.to_unsafe_h unless encoded_chart_data.is_a?(Hash)
-      encoded_chart_data.delete('style')
       encoded_chart_data.delete('controller')
       encoded_chart_data.delete('action')
       encoded_chart_data.delete('refresh')

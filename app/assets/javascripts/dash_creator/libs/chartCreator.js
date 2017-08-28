@@ -69,7 +69,7 @@
                 '<hr> ' +
                 '<div class="col-md-12 px-2" id="options-container"> ' +
                 '<div class="row" style="margin-top:60px;"> ' +
-                '<div class="col-sm-6"> ' +
+                '<div class="col-sm-12" style="margin-bottom: 40px;"> ' +
                 '<h3 style="margin-bottom: 20px;">Label Options</h3> ' +
                 '<div class="row"> ' +
                 '<div class="col-sm-10 offset-sm-1"> ' +
@@ -87,6 +87,15 @@
                 '</div> ' +
                 '</div> ' +
                 '</div> ' +
+                '<div class="col-sm-6"> ' +
+                '<h3 style="margin-bottom: 20px;">Color Options</h3> ' +
+                '<div class="row"> ' +
+                '<div class="col-sm-10 offset-sm-1"> ' +
+                '<div class="row" id="color-options"> ' +
+                '</div> ' +
+                '</div> ' +
+                '</div> ' +
+                '</div> ' +
                 '</div> ' +
                 '</div> ' +
                 '</div>';
@@ -99,6 +108,7 @@
         this.xContainer = this.varContainer.find('#x-container');
         this.labelOptionsContainer = this.container.find('#label-options');
         this.styleOptionsContainer = this.container.find('#style-options');
+        this.colorOptionsContainer = this.container.find('#color-options');
         this.addMainVar();
 
         this.varContainer
@@ -133,6 +143,7 @@
         addMainVar: function() {
             this.addMainVarToCreator();
             this.addMainStyleToCreator();
+            this.addMainColorToCreator();
             this.xContainer.find('#x-axis-select-div').hide();
         },
 
@@ -168,7 +179,12 @@
 
         addMainStyleToCreator: function() {
             var main_style_string = '<div class="col-sm-12 var-style-div" data-id="0"> ' +
-                '<div class="row color-div" id="main-color-div"> ' +
+                '<div class="row"> ' +
+                '<div class="col-sm-12" style="margin-bottom: 20px;"> ' +
+                '<div class="row" id="style-general"> ' +
+                '<div class="col-sm-12"> ' +
+                '<strong>General</strong> ' +
+                '</div> ' +
                 '<div class="col-sm-12" id="title-div"> ' +
                 '<div class="form-group"> ' +
                 '<label for="title">Title</label> ' +
@@ -195,6 +211,13 @@
                 '</div> ' +
                 '</div> ' +
                 '</div> ' +
+                '</div> ' +
+                '</div> ' +
+                '</div> ' +
+                '<div class="col-sm-12" style="margin-bottom: 20px;"> ' +
+                '<div class="row" id="style-barline"> ' +
+                '<div class="col-sm-12"> ' +
+                '<strong>Bar/Line chart</strong> ' +
                 '</div> ' +
                 '<div class="col-sm-12" id="grid-div"> ' +
                 '<div class="row"> ' +
@@ -246,6 +269,17 @@
                 '<input type="checkbox" name="stacked" class="form-control"> ' +
                 '</div> ' +
                 '</div> ' +
+                '</div> ' +
+                '</div> ' +
+                '</div> ' +
+                '</div> ';
+
+            $(main_style_string).appendTo(this.styleOptionsContainer);
+        },
+
+        addMainColorToCreator: function() {
+            var main_color_string = '<div class="col-sm-12 color-div" data-id="0" id="main-color" style="margin-bottom: 20px;">' +
+                '<div class="row" id="main-color"> ' +
                 '<div class="col-sm-6"> ' +
                 '<div class="form-group color-group"> ' +
                 '<label for="dataset-color">Main variable color</label>' +
@@ -256,17 +290,16 @@
                 '<div class="form-group transparency-group"> ' +
                 '<label for="transparency">Area transparency</label> ' +
                 '<input type="range" name="transparency" value="0" step="1" class="form-control"> ' +
-                '</div> ' +
-                '</div> ' +
-                '</div> ' +
-                '</div> ';
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
 
-            var main_style_div = $(main_style_string).appendTo(this.styleOptionsContainer);
-
+            var main_color_div = $(main_color_string).appendTo(this.colorOptionsContainer);
             // Set first swatches color
             var default_color = this.minicolors_options.swatches[0];
-            main_style_div.find('[name="dataset-color"]').minicolors(this.minicolors_options).val(default_color).change();
-            main_style_div.find('.minicolors-input-swatch .minicolors-swatch-color').css("background-color", default_color);
+            main_color_div.find('[name="dataset-color"]').minicolors(this.minicolors_options).val(default_color).change();
+            main_color_div.find('.minicolors-input-swatch .minicolors-swatch-color').css("background-color", default_color);
         },
 
 
@@ -313,34 +346,39 @@
             var var_style_div_string = '<div class="col-sm-12 var-style-div" data-id="' + var_id + '"></div>';
             $(var_style_div_string).appendTo(this.styleOptionsContainer);
 
-            this.addColorToStyleDiv(var_id, 0);
+            this.addColorToCreator(var_id, 0);
         },
 
-        addColorToStyleDiv: function(style_div_id, label_num) {
+        addColorToCreator: function(var_id, label_num) {
             var label;
-            if (style_div_id === 0)
+            var is_not_var_color = var_id === 0;
+            if (is_not_var_color)
                 label = 'Label ' + label_num + ' color';
             else
-                label = 'Variable ' + style_div_id + ' color';
+                label = 'Variable ' + var_id + ' color';
 
-            var color_div_string = '<div class="row color-div">'
-                + '<div class="col-sm-6">'
-                + '<div class="form-group color-group">'
-                + '<label>' + label + '</label>'
-                + '<input type="text" name="dataset-color" class="form-control">'
-                + '</div></div>'
-                + '<div class="col-sm-6">'
-                + '<div class="form-group transparency-group">'
-                + '<label>Area transparency</label>'
-                + '<input type="range" name="transparency" step="1" value="0" class="form-control">'
-                + '</div></div></div>';
+            var color_div_string = '<div class="col-sm-12 color-div" data-id="' + var_id + '" style="margin-bottom: 20px;">' +
+                '<div class="row"> ' +
+                '<div class="col-sm-6"> ' +
+                '<div class="form-group color-group"> ' +
+                '<label for="dataset-color">' + label + '</label>' +
+                '<input type="text" name="dataset-color" class="form-control"> ' +
+                '</div> ' +
+                '</div> ' +
+                '<div class="col-sm-6"> ' +
+                '<div class="form-group transparency-group"> ' +
+                '<label for="transparency">Area transparency</label> ' +
+                '<input type="range" name="transparency" value="0" step="1" class="form-control"> ' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
 
-            var style_div = this.styleOptionsContainer.find('.var-style-div[data-id="' + style_div_id + '"]');
-            var color_div = $(color_div_string).appendTo(style_div);
+            var color_div = $(color_div_string).appendTo(this.colorOptionsContainer);
 
             // Set a default color
             var swatches = this.minicolors_options.swatches;
-            var num = label_num === 0 ? style_div_id : label_num;
+            var num = label_num === 0 ? var_id : label_num;
             var default_color = swatches[num % swatches.length];
             color_div.find('[name="dataset-color"]').minicolors(this.minicolors_options).val(default_color).change();
             color_div.find('.minicolors-input-swatch .minicolors-swatch-color').css("background-color", default_color);
@@ -359,17 +397,11 @@
 
             if (main_type === 'bar' || main_type === 'line') {
                 this.yContainer.find('[name="type"]').show();
-                this.styleOptionsContainer.find('#stacked-div').show();
-                this.styleOptionsContainer.find('#labeling-step-div').show();
-                this.styleOptionsContainer.find('#grid-div').show();
-                this.styleOptionsContainer.find('#y-axis-div').show();
+                this.styleOptionsContainer.find('#style-barline').show();
             }
             else {
                 this.yContainer.find('[name="type"]').hide();
-                this.styleOptionsContainer.find('#stacked-div').hide();
-                this.styleOptionsContainer.find('#labeling-step-div').hide();
-                this.styleOptionsContainer.find('#grid-div').hide();
-                this.styleOptionsContainer.find('#y-axis-div').hide();
+                this.styleOptionsContainer.find('#style-barline').hide();
             }
 
             return main_type;
@@ -615,7 +647,6 @@
 
         showDatetimeLabelOptions: function() {
             this.labelOptionsContainer.find('#sub-label-type-radio-div').remove();
-            var parent_div = $('<div class="col-sm-12"><div class="form-group"></div></div>').appendTo(this.labelOptionsContainer);
 
             // Select input for date range
             var date_range_options = [
@@ -639,29 +670,24 @@
             });
             date_range_select_string += '</select>';
 
-            var date_range_select_div_string = '<div class="col-sm-12">'
+            var options_string = '<div class="col-sm-6">'
                 + '<div class="form-group">'
                 + '<label>Date range</label>'
                 + date_range_select_string
                 + '</div></div>';
 
-            $(date_range_select_div_string).appendTo(parent_div);
-
-            // Add daterangepicker
-            daterangeField(parent_div);
-
             // Choose period plot : day, week, month
-            var options_string = '<div class="col-sm-4">'
+            options_string += '<div class="col-sm-2">'
                 + '<div class="form-group">'
                 + '<input type="radio" name="period" value="day" checked="checked" class="form-control">'
                 + '<label>Day</label>'
                 + '</div></div>';
-            options_string += '<div class="col-sm-4">'
+            options_string += '<div class="col-sm-2">'
                 + '<div class="form-group">'
                 + '<input type="radio" name="period" value="week" class="form-control">'
                 + '<label>Week</label>'
                 + '</div></div>';
-            options_string += '<div class="col-sm-4">'
+            options_string += '<div class="col-sm-2">'
                 + '<div class="form-group">'
                 + '<input type="radio" name="period" value="month" class="form-control">'
                 + '<label>Month</label>'
@@ -674,6 +700,12 @@
             //     + '</div></div>';
 
             $(options_string).appendTo(this.labelOptionsContainer);
+
+            var parent_div = $('<div class="col-sm-12"></div>').appendTo(this.labelOptionsContainer);
+            var parent_div = $('<div class="form-group"></div>').appendTo(parent_div);
+
+            // Add daterangepicker
+            daterangeField(parent_div);
         },
 
         showNumericLabelTypes: function(is_sub) {
@@ -1020,6 +1052,7 @@
             // Style Options
             var style_options = chart_data['style'] = {};
             this.getStyleData(style_options);
+            this.getColorData(style_options);
 
             if (this.filter_creator === null)
                 this.addDefaultFilters(chart_data);
@@ -1138,18 +1171,6 @@
         },
 
         getStyleData: function(style_options) {
-            // Colors
-            style_options['colors'] = [];
-            this.styleOptionsContainer.find('[name="dataset-color"]').each(function() {
-                style_options['colors'].push($(this).val());
-            });
-
-            // Area transparency
-            style_options['transparencies'] = [];
-            this.styleOptionsContainer.find('[name="transparency"]').each(function() {
-                style_options['transparencies'].push($(this).val());
-            });
-
             // Title
             style_options['title'] = this.styleOptionsContainer.find('[name="title"]').val();
 
@@ -1176,6 +1197,20 @@
             style_options['stacked'] = this.styleOptionsContainer.find('[name="stacked"]').is(':checked');
         },
 
+        getColorData: function(style_options) {
+            // Colors
+            style_options['colors'] = [];
+            this.colorOptionsContainer.find('[name="dataset-color"]').each(function() {
+                style_options['colors'].push($(this).val());
+            });
+
+            // Area transparency
+            style_options['transparencies'] = [];
+            this.colorOptionsContainer.find('[name="transparency"]').each(function() {
+                style_options['transparencies'].push($(this).val());
+            });
+        },
+
         addDefaultFilters: function(chart_data) {
             var filters_data = chart_data['filters'] = {};
             $.each(chart_data['y_data'], function(index, model) {
@@ -1190,6 +1225,7 @@
             this.buildXAxis(chart_data['x_data']);
             this.buildLabelOptions(chart_data['x_data'], false);
             this.buildStyleOptions(chart_data['style']);
+            this.buildColorOptions(chart_data['style']);
         },
 
         buildYAxes: function(chart_data) {
@@ -1379,20 +1415,6 @@
         },
 
         buildStyleOptions: function(style_options) {
-            // Colors
-            var colors = style_options['colors'], i = 0;
-            this.styleOptionsContainer.find('[name="dataset-color"]').each(function() {
-                $(this).val(colors[i]);
-                $(this).parent().find('.minicolors-input-swatch .minicolors-swatch-color').css("background-color", colors[i++]);
-            });
-
-            // Transparencies
-            var transparencies = style_options['transparencies'];
-            i = 0;
-            this.styleOptionsContainer.find('[name="transparency"]').each(function() {
-                $(this).val(transparencies[i++]);
-            });
-
             // Title
             var title = style_options['title'];
             this.styleOptionsContainer.find('[name="title"]').val(title);
@@ -1421,23 +1443,39 @@
             this.styleOptionsContainer.find('[name="stacked"]').prop('checked', stacked);
         },
 
+        buildColorOptions: function(style_options) {
+            // Colors
+            var colors = style_options['colors'], i = 0;
+            this.colorOptionsContainer.find('[name="dataset-color"]').each(function() {
+                $(this).val(colors[i]);
+                $(this).parent().find('.minicolors-input-swatch .minicolors-swatch-color').css("background-color", colors[i++]);
+            });
+
+            // Transparencies
+            var transparencies = style_options['transparencies'];
+            i = 0;
+            this.colorOptionsContainer.find('[name="transparency"]').each(function() {
+                $(this).val(transparencies[i++]);
+            });
+        },
+
 
         // --------------- Color callback ---------------
         colorCallback: function() {
             var labels_num_input = this.labelOptionsContainer.find('[name="labels-num"]'),
-                main_style_color_divs = this.styleOptionsContainer.find('.var-style-div[data-id="0"]').find('.color-div'),
+                main_var_color_divs = this.colorOptionsContainer.find('.color-div[data-id="0"]'),
                 x_is_boolean = this.labelOptionsContainer.find('[name="boolean-true"]').length !== 0;
 
             var main_type = this.yContainer.find('[name="main-type"]').val();
 
             // No colors if no labels_num (in no boolean case) or if type 1 chart
             if ((labels_num_input.length === 0 && !x_is_boolean) || main_type === 'bar' || main_type === 'line') {
-                main_style_color_divs.not('#main-color-div').remove();
+                main_var_color_divs.not('#main-color').remove();
             }
             // Right number of colors for type 2 chart
             else {
                 var color_number = x_is_boolean ? 2 : parseInt(labels_num_input.val()),         // 2 colors if x is boolean
-                    previous_color_number = parseInt(main_style_color_divs.length);
+                    previous_color_number = parseInt(main_var_color_divs.length);
                 var adapt_to_label_type = 0;
                 if ((this.labelOptionsContainer.find('[name="labels-type"][value="number"]').is(':checked')
                     || this.labelOptionsContainer.find('[name="sub-labels-type"][value="number"]').is(':checked'))
@@ -1447,12 +1485,12 @@
 
                 if (color_number >= previous_color_number) {
                     for (var i = previous_color_number; i < color_number + adapt_to_label_type; i++) {
-                        this.addColorToStyleDiv(0, i + 1);
+                        this.addColorToCreator(0, i + 1);
                     }
                 }
                 else {
                     for (var i = previous_color_number - adapt_to_label_type; i > color_number; i--) {
-                        this.styleOptionsContainer.find('.var-style-div[data-id="0"] .color-div:last').remove();
+                        this.colorOptionsContainer.find('.color-div[data-id="0"]:last').remove();
                     }
                 }
             }
