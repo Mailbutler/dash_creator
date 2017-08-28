@@ -182,6 +182,22 @@
                 '<input type="checkbox" name="legend" class="form-control" checked="checked"> ' +
                 '</div> ' +
                 '</div> ' +
+                '<div class="col-sm-12" id="grid-div"> ' +
+                '<div class="row"> ' +
+                '<div class="col-sm-6"> ' +
+                '<div class="form-group"> ' +
+                '<label for="x-grid-lines">Vertical grid lines</label> ' +
+                '<input type="checkbox" name="x-grid-lines" class="form-control" checked="checked"> ' +
+                '</div> ' +
+                '</div> ' +
+                '<div class="col-sm-6"> ' +
+                '<div class="form-group"> ' +
+                '<label for="y-grid-lines">Horizontal</label> ' +
+                '<input type="checkbox" name="y-grid-lines" class="form-control" checked="checked"> ' +
+                '</div> ' +
+                '</div> ' +
+                '</div> ' +
+                '</div> ' +
                 '<div class="col-sm-12" id="y-axis-div"> ' +
                 '<div class="row"> ' +
                 '<div class="col-sm-4"> ' +
@@ -325,11 +341,13 @@
             if (main_type === 'bar' || main_type === 'line') {
                 this.yContainer.find('[name="type"]').show();
                 this.styleOptionsContainer.find('#stacked-div').show();
+                this.styleOptionsContainer.find('#grid-div').show();
                 this.styleOptionsContainer.find('#y-axis-div').show();
             }
             else {
                 this.yContainer.find('[name="type"]').hide();
                 this.styleOptionsContainer.find('#stacked-div').hide();
+                this.styleOptionsContainer.find('#grid-div').hide();
                 this.styleOptionsContainer.find('#y-axis-div').hide();
             }
 
@@ -1117,6 +1135,11 @@
             // Legend
             style_options['legend'] = this.styleOptionsContainer.find('[name="legend"]').is(':checked');
 
+            // Grid
+            var grid_options = style_options['grid'] = {};
+            grid_options['x'] = this.styleOptionsContainer.find('[name="x-grid-lines"]').is(':checked');
+            grid_options['y'] = this.styleOptionsContainer.find('[name="y-grid-lines"]').is(':checked');
+
             // Y Axis
             var y_axis_options = style_options['y-axis'] = {};
             y_axis_options['min'] = this.styleOptionsContainer.find('[name="y-axis-min"]').val();
@@ -1351,6 +1374,11 @@
             // Legend checkbox
             var legend = style_options['legend'] === 'true';
             this.styleOptionsContainer.find('[name="legend"]').prop('checked', legend);
+
+            // Grid checkboxes
+            var grid_options = style_options['grid'];
+            this.styleOptionsContainer.find('[name="x-grid-lines"]').prop('checked', grid_options['x'] === 'true');
+            this.styleOptionsContainer.find('[name="y-grid-lines"]').prop('checked', grid_options['y'] === 'true');
 
             // Y Axis options
             var y_axis_options = style_options['y-axis'];

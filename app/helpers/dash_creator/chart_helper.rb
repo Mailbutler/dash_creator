@@ -69,7 +69,13 @@ module DashCreator
       scales = options['scales'] = {}
       scales['xAxes'] = [{}]
       scales['yAxes'] = [{}]
+      scales['xAxes'][0]['gridLines'] = {}
+      scales['yAxes'][0]['gridLines'] = {}
       scales['yAxes'][0]['ticks'] = {}
+
+      grid_options = style_options['grid']
+      scales['xAxes'][0]['gridLines']['display'] = false if grid_options['x'] == 'false'
+      scales['yAxes'][0]['gridLines']['display'] = false if grid_options['y'] == 'false'
 
       y_axis_options = style_options['y-axis']
       scales['yAxes'][0]['ticks']['min'] = y_axis_options['min'].to_i if y_axis_options['min'] != ''
@@ -82,7 +88,7 @@ module DashCreator
       end
 
       options['legend'] = {display: false} if style_options['legend'] == 'false'
-      
+
       options['title'] = {display: true, text: style_options['title']} if style_options['title'] != ''
 
       {plot_data: plot_data, options: options}

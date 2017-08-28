@@ -97,16 +97,14 @@ It would be good to find an alternative to redis to store chart_data
 Add a share chart function (send chart id with a temporary hash stored in redis), export chart as image
 
 Customize everything on your chart:
-- y-axis origin (min, max & step)
 - grid
-- ticks
 - filter labels (ex: 1 out of 2 label dates is hidden in datetime chart)
 - legend
 - points style & size
 - tooltips (particularly add info)
 - data labelling on chart
-- bar (horizontal, stacked groups, several colors for non date)
-- line (style, stepped, stacked??)
+- bar (horizontal, several colors for non date)
+- line (style, stepped)
 
 Probably some stuff to do with acts_as_dashboard_object: self defined partials.
 Explain the DashboardObject usage, what about customized partials ? Change chart's one ?
