@@ -152,7 +152,6 @@
                 '</div> ' +
                 '<div class="form-group col-sm-3 offset-sm-1"> ' +
                 '<select name="main-type" class="type-select form-control">' +
-                '<option value="">Choose main type</option>' +
                 '<option value="line">Line</option>' +
                 '<option value="bar">Bar</option>' +
                 '<option value="pie">Pie</option>' +
@@ -220,6 +219,12 @@
                 '</div> ' +
                 '</div> ' +
                 '</div> ' +
+                '<div class="col-sm-12" id="labeling-step-div"> ' +
+                '<div class="form-group"> ' +
+                '<label for="labeling-step">Labeling step</label> ' +
+                '<input type="number" name="labeling-step" class="form-control" min="1" value="1"> ' +
+                '</div> ' +
+                '</div> ' +
                 '<div class="col-sm-12" id="stacked-div"> ' +
                 '<div class="form-group"> ' +
                 '<label for="stacked">Stacked</label> ' +
@@ -281,7 +286,6 @@
                 + '</div>'
                 + '<div class="form-group col-sm-3 offset-sm-1">' +
                 '<select name="type" class="type-select form-control">' +
-                '<option value="">Choose type</option>' +
                 '<option value="line">Line</option>' +
                 '<option value="bar">Bar</option>' +
                 '</select>'
@@ -341,12 +345,14 @@
             if (main_type === 'bar' || main_type === 'line') {
                 this.yContainer.find('[name="type"]').show();
                 this.styleOptionsContainer.find('#stacked-div').show();
+                this.styleOptionsContainer.find('#labeling-step-div').show();
                 this.styleOptionsContainer.find('#grid-div').show();
                 this.styleOptionsContainer.find('#y-axis-div').show();
             }
             else {
                 this.yContainer.find('[name="type"]').hide();
                 this.styleOptionsContainer.find('#stacked-div').hide();
+                this.styleOptionsContainer.find('#labeling-step-div').hide();
                 this.styleOptionsContainer.find('#grid-div').hide();
                 this.styleOptionsContainer.find('#y-axis-div').hide();
             }
@@ -1146,6 +1152,9 @@
             y_axis_options['max'] = this.styleOptionsContainer.find('[name="y-axis-max"]').val();
             y_axis_options['step'] = this.styleOptionsContainer.find('[name="y-axis-step"]').val();
 
+            // Labeling step
+            style_options['labeling-step'] = this.styleOptionsContainer.find('[name="labeling-step"]').val();
+
             // Stacked
             style_options['stacked'] = this.styleOptionsContainer.find('[name="stacked"]').is(':checked');
         },
@@ -1385,6 +1394,9 @@
             this.styleOptionsContainer.find('[name="y-axis-min"]').val(y_axis_options['min']);
             this.styleOptionsContainer.find('[name="y-axis-max"]').val(y_axis_options['max']);
             this.styleOptionsContainer.find('[name="y-axis-step"]').val(y_axis_options['step']);
+
+            // Labeling step number
+            this.styleOptionsContainer.find('[name="labeling-step"]').val(style_options['labeling-step']);
 
             // Stacked checkbox
             var stacked = style_options['stacked'] === 'true';

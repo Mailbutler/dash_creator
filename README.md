@@ -97,8 +97,6 @@ It would be good to find an alternative to redis to store chart_data
 Add a share chart function (send chart id with a temporary hash stored in redis), export chart as image
 
 Customize everything on your chart:
-- grid
-- filter labels (ex: 1 out of 2 label dates is hidden in datetime chart)
 - legend
 - points style & size
 - tooltips (particularly add info)

@@ -65,30 +65,40 @@ module DashCreator
         set[:borderColor] = style_options['colors'][i] unless style_options['colors'].nil? || style_options['colors'][i].nil?
       end
 
+      # Initialize options
       options = {}
       scales = options['scales'] = {}
       scales['xAxes'] = [{}]
       scales['yAxes'] = [{}]
       scales['xAxes'][0]['gridLines'] = {}
+      scales['xAxes'][0]['ticks'] = {}
       scales['yAxes'][0]['gridLines'] = {}
       scales['yAxes'][0]['ticks'] = {}
 
+      # Grid options
       grid_options = style_options['grid']
       scales['xAxes'][0]['gridLines']['display'] = false if grid_options['x'] == 'false'
       scales['yAxes'][0]['gridLines']['display'] = false if grid_options['y'] == 'false'
 
+      # Y Axis options
       y_axis_options = style_options['y-axis']
       scales['yAxes'][0]['ticks']['min'] = y_axis_options['min'].to_i if y_axis_options['min'] != ''
       scales['yAxes'][0]['ticks']['max'] = y_axis_options['max'].to_i if y_axis_options['max'] != ''
       scales['yAxes'][0]['ticks']['stepSize'] = y_axis_options['step'].to_i if y_axis_options['step'] != ''
 
+      # Stacked
       if style_options['stacked'] == 'true'
         scales['xAxes'][0]['stacked'] = true
         scales['yAxes'][0]['stacked'] = true
       end
 
+      # Labeling step
+      scales['xAxes'][0]['ticks']['callback'] = style_options['labeling-step'] if style_options['labeling-step'] != ''
+
+      # Legend
       options['legend'] = {display: false} if style_options['legend'] == 'false'
 
+      # Title
       options['title'] = {display: true, text: style_options['title']} if style_options['title'] != ''
 
       {plot_data: plot_data, options: options}

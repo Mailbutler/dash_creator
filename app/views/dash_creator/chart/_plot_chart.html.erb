@@ -3,12 +3,20 @@
 <canvas id="chart-<%= id %>" style="display: block; align-items: stretch;"></canvas>
 
 <script>
+    var options = <%= raw options.to_json %>;
+    var labeling_step = options.scales.xAxes[0].ticks["callback"];
+    if (typeof labeling_step === "undefined")
+        labeling_step = 1;
+    options.scales.xAxes[0].ticks["callback"] = function(dataLabel, index) {
+        return index % labeling_step === 0 ? dataLabel : null;
+    };
+
     var canvas = document.getElementById("chart-<%= id %>");
     canvas.width = "80%"; canvas.height = "80%";
     var ctx = canvas.getContext("2d");
     chart_<%= id.to_s.underscore %> = new Chart(ctx, {
         type: "<%= type == 'mixed' ? 'bar' : type %>",
         data: <%= raw data.to_json %>,
-        options: <%= raw options.to_json %>
+        options: options
     });
 </script>
