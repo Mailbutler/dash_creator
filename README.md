@@ -29,6 +29,13 @@ It will add to your project:
   - acts_as_dash_creator to app/models/user.rb if this file is found
   - user_for_dash_creator helper function in app/controllers/application_controller.rb
   - dash_creator.rb initializer in config/initializers
+  
+Add a word on redis (delete otherwise won't migrate if you do not use redis)
+
+Then migrate:
+```bash
+$ rails db:migrate
+```
 
 ## Usage
 
@@ -64,8 +71,7 @@ One must also add the following functions:
   - In user model, acts_as_dash_creator: add ownership of filters, charts and dashboards to the right model (default: user.rb)
   - In model, acts_as_dashboard_object: add object to list of dashboard_objects that can be displayed in a dashboard
 
-This gem is made to work with PostgreSQL, but should work with any database.
-If you use pgcrypto extension in your DB to encrypt the ids, it will be used by default for DashCreator tables, except if you set it to false in initializer.
+If you use pgcrypto extension (PostgreSQL) in your DB to encrypt the ids, it will be used by default for DashCreator tables, except if you set it to false in initializer.
 
 For the moment the following types are handled:
 - numeric: integer, float, decimal
@@ -73,14 +79,20 @@ For the moment the following types are handled:
 - boolean
 - datetime, date
 
+You can define your own layout for DashCreator in initializer.
+If your layout includes links, you may have to change them from 'blabla_path' to 'main_app.blabla_path'.
+Don't forget to also include the following lines in the head of your layout for DashCreator to work properly:
+```html
+<%= stylesheet_link_tag 'dash_creator/application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'dash_creator/application', 'data-turbolinks-track': 'reload' %>
+```
+
 ## Known bugs
 Don't plot charts using filters with a defined number of records.
 Result will be wrong and not limited to the wanted number.
 
 ## TODO List
 It would be good to find an alternative to redis to store chart_data
-
-Not possible to use without redis for the moment because of redis initializer
 
 Add a share chart function (send chart id with a temporary hash stored in redis), export chart as image
 
@@ -96,16 +108,12 @@ Customize everything on your chart:
 - bar (horizontal, stacked groups, several colors for non date)
 - line (style, stepped, stacked??)
 
-Probably some stuff to do with acts_as_dashboard_object: self defined partials
+Probably some stuff to do with acts_as_dashboard_object: self defined partials.
+Explain the DashboardObject usage, what about customized partials ? Change chart's one ?
 
 different filters for same model at once
 
 Time type ? To link with numeric maybe ?
-
-Explain the DashboardObject usage, what about customized partials ? Change chart's one ?
-
-## Contributing
-Contribution directions go here.
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).

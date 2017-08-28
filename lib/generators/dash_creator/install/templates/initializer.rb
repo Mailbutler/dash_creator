@@ -42,4 +42,7 @@ DashCreator.configure do |config|
   config.displayed_attribute_names = {
 
   }
+
+  # Define creator page layout giving its path
+  config.layout_path = 'dash_creator/layouts/application'
 end

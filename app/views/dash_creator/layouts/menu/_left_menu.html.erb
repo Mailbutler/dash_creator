@@ -1,0 +1,12 @@
+<div class="sidebar">
+  <nav class="sidebar-nav">
+    <ul class="nav">
+      <li class="nav-title">Dashboards</li>
+      <% @dashboards.each do |d| %>
+          <li class="nav-item">
+            <%= link_to d[0], dashboard_path(d[1]), class: 'nav-link' %>
+          </li>
+      <% end %>
+    </ul>
+  </nav>
+</div>

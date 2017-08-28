@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="DashCreator">
+  <meta name="author" content="Elie Oriol">
+  <meta name="keyword" content="DashCreator">
+
+
+  <title>DashCreator</title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag 'dash_creator/application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'dash_creator/application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body class="app header-fixed">
+<header class="app-header navbar">
+  <ul class="nav navbar-nav ml-auto">
+    <li class="nav-item">
+      <%= link_to (t :home), main_app.root_path, class: 'nav-link' %>
+    </li>
+    <li style='width:50px;'></li>
+  </ul>
+</header>
+
+<div class="app-body">
+  <%= render 'dash_creator/layouts/menu/left_menu' %>
+  <!-- Main content -->
+  <main class="main">
+    <div class="container-fluid">
+      <% flash.each do |name, msg| %>
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="card card-inverse card-<%= name %> text-center">
+                <div class="card-block">
+                  <blockquote class="card-blockquote">
+                    <p><%= msg %></p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+      <% end %>
+      <%= yield %>
+    </div>
+  </main>
+
+</div>
+</div>
+<footer class="app-footer">
+  <span class="float-right">
+        DashCreator
+    </span>
+</footer>
+
+
+</body>
+</html>

@@ -26,6 +26,8 @@ module DashCreator
           @model_objects[o.code] = model_objects.map{ |mo| {id: mo.id, name: mo.name} }
         end
       end
+
+      render :creator, layout: DashCreator.layout_path
     end
 
 

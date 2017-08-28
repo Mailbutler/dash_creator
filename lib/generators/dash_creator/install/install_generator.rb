@@ -39,12 +39,12 @@ module DashCreator
       def add_default_acts_as_dash_creator
         line = 'class User < ApplicationRecord'
         gsub_file 'app/models/user.rb', /(#{Regexp.escape(line)})/mi do |match|
-          "#{match}\n  acts_as_dash_creator\n"
+          "include DashCreator::ActsAsDashCreator\n\n #{match}\n  acts_as_dash_creator\n"
         end
 
         line = 'class User < ActiveRecord::Base'
         gsub_file 'app/models/user.rb', /(#{Regexp.escape(line)})/mi do |match|
-          "#{match}\n  acts_as_dash_creator\n"
+          "include DashCreator::ActsAsDashCreator\n\n #{match}\n  acts_as_dash_creator\n"
         end
       end
 
