@@ -181,7 +181,7 @@ module DashCreator
       refresh = data.delete('refresh')
       redis_filter_data = encode_filter_data(data)
 
-      unless refresh == 'true' || DashCreator.redis_store_variable.nil?
+      unless refresh == true || DashCreator.redis_store_variable.nil?
         redis_data = DashCreator.redis_store_variable.get(redis_filter_data)
       end
 
@@ -191,6 +191,8 @@ module DashCreator
         processed_data = filter_data(data).deep_stringify_keys
         processed_data.keys.each { |k| processed_data[k] = processed_data[k].count }
         processed_data['last_updated'] = DateTime.now.strftime('%d/%m/%Y - %T')
+
+        pp processed_data
 
         # Add chart data to redis
         DashCreator.redis_store_variable.set(redis_filter_data, processed_data.to_json) unless DashCreator.redis_store_variable.nil?

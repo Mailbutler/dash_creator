@@ -18,4 +18,4 @@ stat_wrapper.off("click").on("click", "#stat-refresh-btn", function() {
     $.post("<%= create_stat_path %>", params);
 });
 
-<% DashCreator.redis_store_variable.keys.each {|k| $redis.del(k)}   # To delete what is stored in redis %>
+<% # DashCreator.redis_store_variable.keys.each {|k| $redis.del(k)}   # To delete what is stored in redis %>

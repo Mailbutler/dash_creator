@@ -49,6 +49,7 @@ module DashCreator
     def create_stat
       id = params[:filter_id]
       filters_data = DashCreator::Filter.find(id).options
+      filters_data['refresh'] = true unless params[:refresh].nil?
 
       render 'dash_creator/filter/create_stat', locals: {filters_data: filters_data, id: id}
     end
