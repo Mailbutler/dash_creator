@@ -27,7 +27,7 @@ module DashCreator
 
       # Create chart from data
       user = user_for_dash_creator
-      chart = DashCreator::Chart.where(user_id: user.id).create(name: params[:chart_name], data: chart_data)
+      chart = DashCreator::Chart.all.where(user_id: user.id).create(name: params[:chart_name], data: chart_data)
 
       render js: 'chart_id = ' + "'#{chart.id}'" + '; charts.push([' + "'#{params['chart_name']}'" + ', chart_id]);'
     end
@@ -43,7 +43,7 @@ module DashCreator
 
       # Edit chart from data
       user = user_for_dash_creator
-      chart = DashCreator::Chart.where(user_id: user.id).find(params[:chart_id])
+      chart = DashCreator::Chart.all.where(user_id: user.id).find(params[:chart_id])
       chart.update_attribute(:data, chart_data)
 
       render json: {chart_id: chart.id}
@@ -52,7 +52,7 @@ module DashCreator
     def get_chart
       user = user_for_dash_creator
       id = params[:chart_id]
-      chart = DashCreator::Chart.where(user_id: user.id).find(id)
+      chart = DashCreator::Chart.all.where(user_id: user.id).find(id)
       refresh = params.key?('refresh') ? params['refresh'] : 'false'
 
       filters_data = chart.data['filters']
@@ -67,7 +67,7 @@ module DashCreator
 
     def delete_charts
       user = user_for_dash_creator
-      DashCreator::Chart.where(user_id: user.id).where(id: params[:charts_ids]).destroy_all
+      DashCreator::Chart.all.where(user_id: user.id, id: params[:charts_ids]).destroy_all
     end
 
     def pluck_labels

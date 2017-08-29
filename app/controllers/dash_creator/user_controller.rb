@@ -12,10 +12,10 @@ module DashCreator
 
       @models = models.map{ |m| [m.name, m.name] }
 
-      @filters = DashCreator::Filter.where(user_id: user.id).all.map { |f| [f.name, f.id] }
+      @filters = DashCreator::Filter.all.where(user_id: user.id).all.map { |f| [f.name, f.id] }
       @models_data = models_data
-      @charts = DashCreator::Chart.where(user_id: user.id).all.map { |c| [c.name, c.id] }
-      @dashboards = DashCreator::Dashboard.where(user_id: user.id).all.map { |d| [d.name, d.id] }
+      @charts = DashCreator::Chart.all.where(user_id: user.id).all.map { |c| [c.name, c.id] }
+      @dashboards = DashCreator::Dashboard.all.where(user_id: user.id).all.map { |d| [d.name, d.id] }
 
       @dashboard_objects = DashboardObject.all
       @model_objects = {}
@@ -35,8 +35,8 @@ module DashCreator
 
     def dashboard
       user = user_for_dash_creator
-      @dashboard = DashCreator::Dashboard.where(user_id: user.id).find(params[:dashboard_id])
-      @dashboards = DashCreator::Dashboard.where(user_id: user.id).all.map { |d| [d.name, d.id] }
+      @dashboard = DashCreator::Dashboard.all.where(user_id: user.id).find(params[:dashboard_id])
+      @dashboards = DashCreator::Dashboard.all.where(user_id: user.id).all.map { |d| [d.name, d.id] }
 
       render :dashboard, layout: DashCreator.layout_path
     end

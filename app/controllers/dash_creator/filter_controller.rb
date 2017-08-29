@@ -6,21 +6,21 @@ module DashCreator
 
     def get_filter
       user = user_for_dash_creator
-      filter = DashCreator::Filter.where(user_id: user.id).find(params[:filter_id])
+      filter = DashCreator::Filter.all.where(user_id: user.id).find(params[:filter_id])
 
       render json: filter.options
     end
 
     def save_filter
       user = user_for_dash_creator
-      filter = DashCreator::Filter.where(user_id: user.id).create(name: params[:filter_name], options: params[:filters])
+      filter = DashCreator::Filter.all.where(user_id: user.id).create(name: params[:filter_name], options: params[:filters])
 
       render json: {filter_id: filter.id}
     end
 
     def delete_filters
       user = user_for_dash_creator
-      DashCreator::Filter.where(user_id: user.id).where(id: params[:filters_ids]).destroy_all
+      DashCreator::Filter.all.where(user_id: user.id, id: params[:filters_ids]).destroy_all
     end
 
     def filtering_result

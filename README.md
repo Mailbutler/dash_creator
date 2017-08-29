@@ -154,8 +154,8 @@ Customize everything on your chart:
 - data labeling on chart (values next to points)
 - bar (horizontal, several colors for non date)
 
-Probably some stuff to do with acts_as_dashboard_object: self defined partials.
-Explain the DashboardObject usage, what about customized partials ? Change chart's one ?
+
+Explain the DashboardObject usage
 
 different filters for same model at once
 
