@@ -1,15 +1,11 @@
 module DashCreator
   module FilterHelper
     def filter_data(data)
-      Rails.application.eager_load!
-      models = ApplicationRecord.descendants
-
       mods = {}
       data.keys.each do |k|
-        model = models.select { |m| m.name == k }[0]
         filter_hash = data[k]
 
-        mods[k] = filter_model(model, filter_hash)
+        mods[k] = filter_model(k.safe_constantize, filter_hash)
       end
 
       mods
@@ -178,6 +174,49 @@ module DashCreator
         mods = mods.where("#{attribute}": nil)
       end
       mods
+    end
+
+    def filter_data_count_from_redis(data)
+      redis_data = nil
+      refresh = data.delete('refresh')
+      redis_filter_data = encode_filter_data(data)
+
+      unless refresh == 'true' || DashCreator.redis_store_variable.nil?
+        redis_data = DashCreator.redis_store_variable.get(redis_filter_data)
+      end
+
+      unless redis_data.nil?
+        processed_data = JSON.parse(redis_data)
+      else
+        processed_data = filter_data(data).deep_stringify_keys
+        processed_data.keys.each { |k| processed_data[k] = processed_data[k].count }
+        processed_data['last_updated'] = DateTime.now.strftime('%d/%m/%Y - %T')
+
+        # Add chart data to redis
+        DashCreator.redis_store_variable.set(redis_filter_data, processed_data.to_json) unless DashCreator.redis_store_variable.nil?
+      end
+
+      processed_data
+    end
+
+    def encode_filter_data(data)
+      # Prepare data to encode
+      encoded_data = data.clone
+      encoded_data = encoded_data.to_unsafe_h unless encoded_data.is_a?(Hash)
+
+      # Encode
+      hash_hash(encoded_data)
+    end
+
+    # This helper function is used in create_chart.js.erb to hash param hash to store it in Redis
+    def hash_hash(h)
+      require 'digest/sha1'
+      str = recursive_flatten(h).sort.join
+      Digest::SHA1.hexdigest(str)
+    end
+
+    def recursive_flatten(h)
+      h.flatten(-1).map{|el| el.is_a?(Hash) ? recursive_flatten(el) : el}.flatten
     end
 
     # Check if string is 'true'

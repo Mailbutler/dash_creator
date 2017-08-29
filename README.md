@@ -136,7 +136,7 @@ Running the generator added two files to your app/views/user folder, to help you
 - dashboard.html.erb: a template view for a dashboard
 - _section_card.html.erb: a template partial for rendering a section of your dashboard
 
-It also added a new dashboard_objects folder to your views, in which you can provide the partials for your self-defined dashboard items, and containing a template partial for rendering charts.
+It also added a new dash_creator/dashboard_object folder to your views, in which you can provide the partials for your self-defined dashboard items, and containing a template partial for rendering charts.
 
 DashCreator natively only includes charts as dashboard objects.
 If you want to add more widgets to your dashboards, you can create your own, either by:
@@ -146,7 +146,7 @@ If you want to add more widgets to your dashboards, you can create your own, eit
 The DashCreator::DashboardObject model attributes are:
 - name: the one displayed on the dashboard creator interface
 - code: used in the background
-- model_name: the related model if there is one, otherwise leave it nil
+- related_model: the related model if there is one, otherwise leave it nil
 - options: a jsonb object containing whatever additional info to use in your templates
 
 ## Known bugs

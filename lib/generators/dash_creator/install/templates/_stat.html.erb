@@ -1,0 +1,8 @@
+<div class="col-md-<%= stat['size'] %> offset-md-<%= stat['offset'] %>" style="margin-bottom: 50px;">
+  <div class="stat-wrapper text-center" style="padding: 20px; background-color: #a6d5ec; border-radius: 5px;">
+    <h3><%= DashCreator::Filter.find(stat['id']).name %></h3><br>
+    <% filter_data_from_id(stat['id']).each do |filtered_model, objects| %>
+        <span><%= objects.count %></span><br>
+    <% end %>
+  </div>
+</div>

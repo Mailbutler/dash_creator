@@ -45,5 +45,12 @@ module DashCreator
                 type: 'text/csv; charset=utf-8; header=present',
                 disposition: "attachment; filename=#{model}.csv"
     end
+
+    def create_stat
+      id = params[:filter_id]
+      filters_data = DashCreator::Filter.find(id).options
+
+      render 'dash_creator/filter/create_stat', locals: {filters_data: filters_data, id: id}
+    end
   end
 end

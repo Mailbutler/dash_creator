@@ -29,7 +29,7 @@ module DashCreator
       user = user_for_dash_creator
       chart = DashCreator::Chart.all.where(user_id: user.id).create(name: params[:chart_name], data: chart_data)
 
-      render js: 'chart_id = ' + "'#{chart.id}'" + '; charts.push([' + "'#{params['chart_name']}'" + ', chart_id]);'
+      render json: {chart_id: chart.id}
     end
 
     def edit_chart

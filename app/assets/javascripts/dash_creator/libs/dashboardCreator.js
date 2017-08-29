@@ -19,7 +19,7 @@
 
         // Objects data format:
         // 'object.code': {
-        //      'info': object.info,
+        //      'related_model': object.related_model,
         //      'name': object.name,
         //      'objects': [model_objects]
         // }
@@ -226,7 +226,7 @@
             if (object_type === '') return;
 
             // Retrieve object type info
-            var object_model_name = this.objects_data[object_type]['model_name'];
+            var object_model_name = this.objects_data[object_type]['related_model'];
 
             // Add select if associated to model
             if (object_model_name !== '') {

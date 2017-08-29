@@ -1,6 +1,6 @@
 class CreateDashCreatorCharts < ActiveRecord::Migration[5.1]
-  def self.up
-    if extension_enabled?('pgcrypto')
+  def change
+    if extension_enabled?('pgcrypto') && DashCreator.use_pgcrypto
       create_table :dash_creator_charts, id: :uuid, default: 'gen_random_uuid()' do |t|
         t.string :name
         t.jsonb :data

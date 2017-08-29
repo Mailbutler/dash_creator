@@ -1,6 +1,6 @@
 class CreateDashCreatorFilters < ActiveRecord::Migration[5.1]
-  def self.up
-    if extension_enabled?('pgcrypto')
+  def change
+    if extension_enabled?('pgcrypto') && DashCreator.use_pgcrypto
       create_table :dash_creator_filters, id: :uuid, default: 'gen_random_uuid()' do |t|
         t.string :name
         t.jsonb :options, default: {}
@@ -18,9 +18,5 @@ class CreateDashCreatorFilters < ActiveRecord::Migration[5.1]
         t.timestamps
       end
     end
-  end
-
-  def self.down
-    drop_table :dash_creator_filters
   end
 end

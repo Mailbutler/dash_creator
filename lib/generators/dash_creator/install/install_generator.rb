@@ -58,7 +58,8 @@ module DashCreator
       def add_template_dashboard_views
         template 'dashboard.html.erb', 'app/views/user/dashboard.html.erb'
         template '_section_card.html.erb', 'app/views/user/_section_card.html.erb'
-        template '_chart.html.erb', 'app/views/dashboard_object/_chart.html.erb'
+        template '_chart.html.erb', 'app/views/dash_creator/dashboard_object/_chart.html.erb'
+        template '_stat.html.erb', 'app/views/dash_creator/dashboard_object/_stat.html.erb'
       end
     end
   end

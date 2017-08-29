@@ -1,0 +1,24 @@
+<% filter = DashCreator::Filter.find(stat['id']) %>
+
+<div class="col-md-<%= stat['size'] %> offset-md-<%= stat['offset'] %>" style="margin-bottom: 50px;">
+  <div class="stat-wrapper text-center" data-id="<%= stat['id'] %>" style="padding: 20px; background-color: #a6d5ec; border-radius: 5px;">
+
+    <h3><%= filter.name %></h3><br>
+
+    <div class="pull-right">
+      <span id="last-updated"></span>
+      <button id="stat-refresh-btn">Refresh</button>
+    </div>
+
+    <% filter.options.keys.each do %>
+        <span class="filter-count"></span><br>
+    <% end %>
+
+    <script>
+      var params = {
+          filter_id: '<%= stat['id'] %>'
+      };
+      $.post('<%= create_stat_path %>', params);
+    </script>
+  </div>
+</div>

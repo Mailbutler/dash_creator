@@ -11,6 +11,8 @@ DashCreator::Engine.routes.draw do
   post '/filtering_result', to: 'filter#filtering_result', as: :filtering_result
   get '/download_csv', to: 'filter#download_csv', as: :download_csv
 
+  post '/create_stat', to: 'filter#create_stat', as: :create_stat
+
   post '/create_chart', to: 'chart#create_chart', as: :create_chart
   post '/save_chart', to: 'chart#save_chart', as: :save_chart
   post '/edit_chart', to: 'chart#edit_chart', as: :edit_chart

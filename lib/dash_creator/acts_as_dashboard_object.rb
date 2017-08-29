@@ -5,15 +5,14 @@ module DashCreator
       base.extend ClassMethods
     end
 
-    def ClassMethods
+    module ClassMethods
       def acts_as_dashboard_object(name, options = {})
-        DashCreator::DashboardObject
-            .find_or_create_by(
-                name: name,
-                code: name.underscore,
-                info: {model_name: self.class.name},
-                options: options
-            )
+        DashCreator::DashboardObject.find_or_create_by(
+            name: name,
+            code: name.underscore,
+            related_model: self.class.name,
+            options: options
+        )
       end
     end
   end

@@ -20,8 +20,8 @@ module DashCreator
       @dashboard_objects = DashboardObject.all
       @model_objects = {}
       @dashboard_objects.each do |o|
-        if o.model_name != ''
-          model = o.model_name.safe_constantize
+        if o.related_model != ''
+          model = o.related_model.safe_constantize
           model_objects = (model.column_names.include? 'user_id') ? model.where(user: user) : model.all
           @model_objects[o.code] = model_objects.map{ |mo| {id: mo.id, name: mo.name} }
         end

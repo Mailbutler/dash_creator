@@ -96,7 +96,13 @@
     }
 
     function sendChartDataSave(chart_data) {
-        $.post("<%= save_chart_path %>", chart_data);
+        $.post("<%= save_chart_path %>", chart_data, function(data) {
+            var chart_id = data['chart_id'], chart_name = chart_data['chart_name'];
+            charts.push([chart_name, chart_id]);
+
+            var dashboard_creator_objects_data = $('#dashboard-creator').data('dashboardCreator').objects_data;
+            dashboard_creator_objects_data['chart']['objects'].push({id: chart_id, name: chart_name});
+        });
     }
 
     function sendChartDataEdit(chart_data) {

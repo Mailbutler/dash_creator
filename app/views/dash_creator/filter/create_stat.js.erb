@@ -1,0 +1,21 @@
+var stat_wrapper = $('.stat-wrapper[data-id="<%= id %>"]');
+
+<% data = filter_data_count_from_redis(filters_data.deep_stringify_keys) %>
+<% last_updated = data.delete('last_updated') %>
+
+stat_wrapper.find('#last-updated').text('<%= last_updated %>');
+stat_wrapper.find('.filter-count').each(function() {
+    <% count = data[data.keys.first] %>
+    <% data.delete(data.keys.first) %>
+    $(this).text('<%= count %>');
+});
+
+stat_wrapper.off("click").on("click", "#stat-refresh-btn", function() {
+    var params = {
+        filter_id: '<%= id %>',
+        refresh: true
+    };
+    $.post("<%= create_stat_path %>", params);
+});
+
+<% DashCreator.redis_store_variable.keys.each {|k| $redis.del(k)}   # To delete what is stored in redis %>
