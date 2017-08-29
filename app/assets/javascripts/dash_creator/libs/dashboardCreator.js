@@ -226,10 +226,10 @@
             if (object_type === '') return;
 
             // Retrieve object type info
-            var object_info = this.objects_data[object_type]['info'];
+            var object_model_name = this.objects_data[object_type]['model_name'];
 
             // Add select if associated to model
-            if (object_info['model_name'] !== '') {
+            if (object_model_name !== '') {
                 var select_string = '<select name="object_select" class="form-control">'
                     + '<option value="">Choose a ' + object_type + '</option>'
                     + '</select>';

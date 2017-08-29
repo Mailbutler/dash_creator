@@ -53,7 +53,7 @@
 
     <% objects_data = {} %>
     <% @dashboard_objects.each do |o| %>
-        <% objects_data[o.code] = {name: o.name, info: o.info, objects: @model_objects[o.code] } %>
+        <% objects_data[o.code] = {name: o.name, model_name: o.model_name, objects: @model_objects[o.code] } %>
     <% end %>
 
     $('#dashboard-creator').dashboardCreator({

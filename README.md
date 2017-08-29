@@ -138,28 +138,31 @@ Running the generator added two files to your app/views/user folder, to help you
 
 It also added a new dashboard_objects folder to your views, in which you can provide the partials for your self-defined dashboard items, and containing a template partial for rendering charts.
 
+DashCreator natively only includes charts as dashboard objects.
+If you want to add more widgets to your dashboards, you can create your own, either by:
+- Adding acts_as_dashboard_object to a model
+- Directly creating the DashCreator::DashboardObject record in your database
+
+The DashCreator::DashboardObject model attributes are:
+- name: the one displayed on the dashboard creator interface
+- code: used in the background
+- model_name: the related model if there is one, otherwise leave it nil
+- options: a jsonb object containing whatever additional info to use in your templates
+
 ## Known bugs
 Don't plot charts using filters with a defined number of records.
 Result will be wrong and not limited to the wanted number.
 
 ## TODO List
-It would be good to find an alternative to redis to store chart_data
-
-Add a share chart function (send chart id with a temporary hash stored in redis), export chart as image
+- It would be good to find an alternative to redis to store chart_data
+- Add a share chart function (send chart id with a temporary hash stored in redis), export chart as image
+- Allow different filters using same model at once
+- Handle time type
 
 Customize everything on your chart:
-- points style & size for each dataset
-- line (style, stepped) for each dataset
-- tooltips (particularly add info)
-- data labeling on chart (values next to points)
+- points style and size, line style for each dataset
+- tooltips (add info)
 - bar (horizontal, several colors for non date)
-
-
-Explain the DashboardObject usage
-
-different filters for same model at once
-
-Time type ? To link with numeric maybe ?
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).

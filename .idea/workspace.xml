@@ -4,10 +4,12 @@
     <list default="true" id="d4f60083-18c5-4bdd-8487-2efe2eb938c3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dash_creator/chart_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dash_creator/chart_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dash_creator/dashboard_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dash_creator/dashboard_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dash_creator/filter_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dash_creator/filter_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/dashboardCreator.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/dashboardCreator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dash_creator/dashboard_object_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dash_creator/dashboard_object_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dash_creator/dashboard/_dashboard_creator.html.erb" afterPath="$PROJECT_DIR$/app/views/dash_creator/dashboard/_dashboard_creator.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170822135407_create_dash_creator_dashboard_objects.rb" afterPath="$PROJECT_DIR$/db/migrate/20170822135407_create_dash_creator_dashboard_objects.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -24,48 +26,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="775">
-                <caret line="152" column="34" lean-forward="true" selection-start-line="152" selection-start-column="34" selection-end-line="152" selection-end-column="34" />
-                <folding>
-                  <marker date="1503932636645" expanded="true" signature="5066:5178" ph=" ... end" />
-                  <marker date="1503932636645" expanded="true" signature="5066:5182" ph=" ... end" />
-                </folding>
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_chart.js.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/dash_creator/chart/create_chart.js.erb">
+      <file leaf-file-name="dashboardCreator.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/dashboardCreator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="52" column="5" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="initializer.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/generators/dash_creator/install/templates/initializer.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_controller.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="61" column="48" lean-forward="true" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
-              <folding />
+            <state relative-caret-position="346">
+              <caret line="35" column="25" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="25" />
+              <folding>
+                <marker date="1503999797150" expanded="true" signature="1242:1306" ph="..." />
+                <marker date="1503999797150" expanded="true" signature="1423:1498" ph="..." />
+                <marker date="1503999797150" expanded="true" signature="1716:1732" ph="..." />
+                <marker date="1503999797150" expanded="true" signature="4494:4511" ph="..." />
+                <marker date="1503999797150" expanded="true" signature="5669:5699" ph="..." />
+                <marker date="1503999797150" expanded="true" signature="5734:5827" ph="..." />
+                <marker date="1503999797150" expanded="true" signature="5874:5894" ph="..." />
+                <marker date="1503999797150" expanded="true" signature="12396:12410" ph="..." />
+                <marker date="1503999797150" expanded="true" signature="12457:12560" ph="..." />
+                <marker date="1503999797150" expanded="true" signature="12613:12633" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,12 +59,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>classify</find>
-      <find>underscore</find>
-      <find>classi</find>
-      <find>unders</find>
-      <find>filter_cre</find>
-      <find>inArr</find>
       <find>humani</find>
       <find>humanize</find>
       <find>displayed_attrib</find>
@@ -112,6 +83,12 @@
       <find>dateran</find>
       <find>chart_pro</find>
       <find>last_updated</find>
+      <find>barlin</find>
+      <find>model_name</find>
+      <find>dashboard_ob</find>
+      <find>dashboard_object</find>
+      <find>objects_</find>
+      <find>objects_data</find>
     </findStrings>
     <replaceStrings>
       <replace>user.dash_creator_filters</replace>
@@ -135,10 +112,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/models/dash_creator/chart.rb" />
         <option value="$PROJECT_DIR$/lib/dash_creator/acts_as_dashboard_object.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/dashboardCreator.js" />
         <option value="$PROJECT_DIR$/lib/dash_creator/acts_as_dash_creator.rb" />
         <option value="$PROJECT_DIR$/app/views/dash_creator/filter/apply_filtering.js.erb" />
         <option value="$PROJECT_DIR$/lib/generators/initializer_generator.rb" />
@@ -158,7 +133,6 @@
         <option value="$PROJECT_DIR$/db/migrate/20170822135017_create_dash_creator_filters.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20170822135026_create_dash_creator_charts.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20170822135037_create_dash_creator_dashboards.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20170822135407_create_dash_creator_dashboard_objects.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/stringHelpers.js" />
         <option value="$PROJECT_DIR$/app/views/dash_creator/filter/_filtering_card.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/filterCreator.js" />
@@ -174,18 +148,21 @@
         <option value="$PROJECT_DIR$/lib/generators/dash_creator/install/templates/initializer.rb" />
         <option value="$PROJECT_DIR$/app/views/dash_creator/user/_section_card.html.erb" />
         <option value="$PROJECT_DIR$/lib/generators/dash_creator/install/install_generator.rb" />
-        <option value="$PROJECT_DIR$/app/views/dash_creator/dashboard/_dashboard_creator.html.erb" />
         <option value="$PROJECT_DIR$/app/views/dash_creator/user/dashboard.html.erb" />
         <option value="$PROJECT_DIR$/lib/generators/dash_creator/install/templates/dashboard.html.erb" />
         <option value="$PROJECT_DIR$/app/views/dash_creator/chart/create_chart.js.erb" />
         <option value="$PROJECT_DIR$/app/helpers/dash_creator/chart_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/dash_creator/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/dash_creator/dashboard_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/dash_creator/chart_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/dash_creator/filter_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js" />
+        <option value="$PROJECT_DIR$/db/migrate/20170822135407_create_dash_creator_dashboard_objects.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/dash_creator/dashboard_object_controller.rb" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/app/views/dash_creator/dashboard/_dashboard_creator.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/dashboardCreator.js" />
       </list>
     </option>
   </component>
@@ -333,6 +310,10 @@
               <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -429,36 +410,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dash_creator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dash_creator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dash_creator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="menu" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1007,12 +958,12 @@
       <workItem from="1503559981086" duration="26513000" />
       <workItem from="1503646745822" duration="23011000" />
       <workItem from="1503907009030" duration="22894000" />
-      <workItem from="1503992515072" duration="2368000" />
+      <workItem from="1503992515072" duration="5745000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104702000" />
+    <option name="totallyTimeSpent" value="108079000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1176" extended-state="6" />
@@ -1051,41 +1002,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/filter/_result_tables.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/filter/apply_filtering.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="4" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/dash_creator.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/dash_creator/acts_as_dashboard_object.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/dash_creator/acts_as_dash_creator.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/dash_creator/engine.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1101,21 +1017,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20170822135037_create_dash_creator_dashboards.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="65" lean-forward="false" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20170822135026_create_dash_creator_charts.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="65" lean-forward="false" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20170822135407_create_dash_creator_dashboard_objects.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="65" lean-forward="false" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
@@ -1144,27 +1046,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/stringHelpers.js" />
-    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/filter/_filtering_card.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/dashboardCreator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7620">
-          <caret line="511" column="40" lean-forward="true" selection-start-line="511" selection-start-column="40" selection-end-line="511" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/filterCreator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="387" column="18" lean-forward="false" selection-start-line="387" selection-start-column="12" selection-end-line="387" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/dash_creator/version.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1184,6 +1065,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1215,28 +1097,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/chart/_chart_creator.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="169" column="29" lean-forward="false" selection-start-line="169" selection-start-column="28" selection-end-line="169" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/user/creator.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="43" lean-forward="false" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/user/_section_card.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/dash_creator.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -1259,13 +1119,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/dashboard/_modals.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="872">
-          <caret line="66" column="115" lean-forward="false" selection-start-line="66" selection-start-column="115" selection-end-line="66" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/dash_creator/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1280,20 +1133,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/user/dashboard.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/chart/_plot_chart.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="61" lean-forward="false" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/generators/dash_creator/install/templates/_chart.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1305,20 +1144,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
           <caret line="142" column="80" lean-forward="false" selection-start-line="142" selection-start-column="80" selection-end-line="142" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5416">
-          <caret line="685" column="44" lean-forward="true" selection-start-line="685" selection-start-column="44" selection-end-line="685" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1337,17 +1162,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/generators/dash_creator/install/templates/initializer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dash_creator/filter_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="78" lean-forward="false" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dash_creator/chart_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="69" column="76" lean-forward="false" selection-start-line="69" selection-start-column="76" selection-end-line="69" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20170822135407_create_dash_creator_dashboard_objects.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20170822135037_create_dash_creator_dashboards.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="65" lean-forward="false" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="775">
-            <caret line="152" column="34" lean-forward="true" selection-start-line="152" selection-start-column="34" selection-end-line="152" selection-end-column="34" />
+          <first_editor relative-caret-position="850">
+            <caret line="149" column="86" lean-forward="false" selection-start-line="149" selection-start-column="86" selection-end-line="149" selection-end-column="86" />
             <folding>
-              <marker date="1503932636645" expanded="true" signature="5066:5178" ph=" ... end" />
-              <marker date="1503932636645" expanded="true" signature="5066:5182" ph=" ... end" />
+              <marker date="1503999558523" expanded="true" signature="5066:5178" ph=" ... end" />
+              <marker date="1503999558523" expanded="true" signature="5066:5182" ph=" ... end" />
             </folding>
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/chart/_modals.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/chart/_plot_chart.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="61" lean-forward="false" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1361,21 +1250,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/dash_creator/dashboard/_dashboard_creator.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="144" column="45" lean-forward="false" selection-start-line="144" selection-start-column="45" selection-end-line="144" selection-end-column="45" />
+        <state relative-caret-position="310">
+          <caret line="54" column="20" lean-forward="false" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/generators/dash_creator/install/templates/initializer.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/dashboard/_modals.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+        <state relative-caret-position="848">
+          <caret line="66" column="115" lean-forward="false" selection-start-line="66" selection-start-column="115" selection-end-line="66" selection-end-column="115" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dash_creator/dashboard_object_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/dashboard_object/_chart.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1383,35 +1272,220 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dash_creator/chart_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/filter/_filtering_card.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="69" column="76" lean-forward="false" selection-start-line="69" selection-start-column="76" selection-end-line="69" selection-end-column="76" />
+        <state relative-caret-position="338">
+          <caret line="43" column="64" lean-forward="false" selection-start-line="43" selection-start-column="63" selection-end-line="43" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/filter/_modals.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/filter/_result_tables.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/filter/apply_filtering.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/user/_section_card.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/user/creator.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="43" lean-forward="false" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/user/dashboard.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/dash_creator/dashboard_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="85" lean-forward="false" selection-start-line="30" selection-start-column="85" selection-end-line="30" selection-end-column="85" />
+        <state relative-caret-position="510">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dash_creator/filter_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/dash_creator/dashboard_object_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="78" lean-forward="false" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="78" />
+        <state relative-caret-position="135">
+          <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dash_creator/user_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/filterCreator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="61" column="48" lean-forward="true" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
+        <state relative-caret-position="3105">
+          <caret line="366" column="36" lean-forward="false" selection-start-line="366" selection-start-column="29" selection-end-line="366" selection-end-column="36" />
+          <folding>
+            <element signature="e#2187#2244#0" expanded="false" />
+            <element signature="e#2297#4297#0" expanded="false" />
+            <element signature="e#4359#4625#0" expanded="false" />
+            <element signature="e#4794#5377#0" expanded="false" />
+            <element signature="e#5463#6130#0" expanded="false" />
+            <element signature="e#11852#14216#0" expanded="false" />
+            <element signature="e#14289#15153#0" expanded="false" />
+            <element signature="e#15225#16188#0" expanded="false" />
+            <element signature="e#19484#20152#0" expanded="false" />
+            <element signature="e#20628#20975#0" expanded="false" />
+            <element signature="e#21070#22121#0" expanded="false" />
+            <element signature="e#22183#24508#0" expanded="false" />
+            <element signature="e#24616#24888#0" expanded="false" />
+            <element signature="e#24955#25689#0" expanded="false" />
+            <element signature="e#25763#26272#0" expanded="false" />
+            <element signature="e#26332#27226#0" expanded="false" />
+            <element signature="e#27294#27532#0" expanded="false" />
+            <element signature="e#27599#28124#0" expanded="false" />
+            <element signature="e#28191#28384#0" expanded="false" />
+            <element signature="e#28448#28879#0" expanded="false" />
+            <element signature="e#28942#30129#0" expanded="false" />
+            <element signature="e#30192#30938#0" expanded="false" />
+            <element signature="e#31000#31289#0" expanded="false" />
+            <element signature="e#31374#31630#0" expanded="false" />
+            <element signature="e#31677#31787#0" expanded="false" />
+            <element signature="e#31947#32003#0" expanded="false" />
+            <marker date="1503663859115" expanded="true" signature="2602:2633" ph="..." />
+            <marker date="1503663859115" expanded="true" signature="9266:9277" ph="..." />
+            <marker date="1503663859115" expanded="true" signature="12390:12479" ph="..." />
+            <marker date="1503663859115" expanded="true" signature="12561:12567" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dash_creator/chart/_chart_creator.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="50" column="43" lean-forward="false" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/chartCreator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <folding>
+            <element signature="e#15902#16173#0" expanded="false" />
+            <element signature="e#16218#17549#0" expanded="false" />
+            <element signature="e#17596#17840#0" expanded="false" />
+            <element signature="e#17898#19561#0" expanded="false" />
+            <element signature="e#19595#19813#0" expanded="false" />
+            <element signature="e#20526#21039#0" expanded="false" />
+            <element signature="e#21084#22527#0" expanded="false" />
+            <element signature="e#22572#25568#0" expanded="false" />
+            <element signature="e#25612#26949#0" expanded="false" />
+            <element signature="e#26996#27545#0" expanded="false" />
+            <element signature="e#27591#28496#0" expanded="false" />
+            <element signature="e#28535#28853#0" expanded="false" />
+            <element signature="e#28920#30710#0" expanded="false" />
+            <element signature="e#33510#34321#0" expanded="false" />
+            <element signature="e#34368#35787#0" expanded="false" />
+            <element signature="e#35835#36657#0" expanded="false" />
+            <element signature="e#36704#37517#0" expanded="false" />
+            <element signature="e#37564#38377#0" expanded="false" />
+            <element signature="e#38429#38746#0" expanded="false" />
+            <element signature="e#38789#40864#0" expanded="false" />
+            <element signature="e#40912#42255#0" expanded="false" />
+            <element signature="e#42304#42771#0" expanded="false" />
+            <element signature="e#42818#43741#0" expanded="false" />
+            <element signature="e#43787#44773#0" expanded="false" />
+            <element signature="e#44817#45741#0" expanded="false" />
+            <element signature="e#45788#49521#0" expanded="false" />
+            <element signature="e#49614#50204#0" expanded="false" />
+            <element signature="e#50249#55508#0" expanded="false" />
+            <element signature="e#55557#56922#0" expanded="false" />
+            <element signature="e#56971#57467#0" expanded="false" />
+            <element signature="e#57518#57727#0" expanded="false" />
+            <element signature="e#57843#58125#0" expanded="false" />
+            <element signature="e#58169#59068#0" expanded="false" />
+            <element signature="e#59108#59653#0" expanded="false" />
+            <element signature="e#59708#60780#0" expanded="false" />
+            <element signature="e#60835#61289#0" expanded="false" />
+            <element signature="e#61343#63086#0" expanded="false" />
+            <element signature="e#63140#63370#0" expanded="false" />
+            <element signature="e#63421#64055#0" expanded="false" />
+            <element signature="e#64105#65864#0" expanded="false" />
+            <element signature="e#65914#66466#0" expanded="false" />
+            <element signature="e#66520#68005#0" expanded="false" />
+            <element signature="e#68059#68691#0" expanded="false" />
+            <element signature="e#70763#71048#0" expanded="false" />
+            <element signature="e#71151#72894#0" expanded="false" />
+            <marker date="1503998703611" expanded="true" signature="1679:1764" ph="..." />
+            <marker date="1503998703611" expanded="true" signature="1863:1896" ph="..." />
+            <marker date="1503998703611" expanded="true" signature="1979:2153" ph="..." />
+            <marker date="1503998703611" expanded="true" signature="2622:2638" ph="..." />
+            <marker date="1503998703611" expanded="true" signature="3231:3247" ph="..." />
+            <marker date="1503998703611" expanded="true" signature="3301:3321" ph="..." />
+            <marker date="1503998703611" expanded="true" signature="3356:3376" ph="..." />
+            <marker date="1503998703611" expanded="true" signature="3739:3759" ph="..." />
+            <marker date="1503998703611" expanded="true" signature="4122:4142" ph="..." />
+            <marker date="1503998703611" expanded="true" signature="14562:14582" ph="..." />
+            <marker date="1503998703611" expanded="true" signature="16317:16333" ph="..." />
+            <marker date="1503998703611" expanded="true" signature="18239:18259" ph="..." />
+            <marker date="1503998703611" expanded="true" signature="42911:42930" ph="..." />
+            <marker date="1503998703611" expanded="true" signature="43880:43899" ph="..." />
+            <marker date="1503998703611" expanded="true" signature="44910:44929" ph="..." />
+            <marker date="1503998703611" expanded="true" signature="71324:71413" ph="..." />
+            <marker date="1503998703611" expanded="true" signature="71491:71497" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dash_creator/libs/dashboardCreator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="35" column="25" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="25" />
+          <folding>
+            <marker date="1503999797150" expanded="true" signature="1242:1306" ph="..." />
+            <marker date="1503999797150" expanded="true" signature="1423:1498" ph="..." />
+            <marker date="1503999797150" expanded="true" signature="1716:1732" ph="..." />
+            <marker date="1503999797150" expanded="true" signature="4494:4511" ph="..." />
+            <marker date="1503999797150" expanded="true" signature="5669:5699" ph="..." />
+            <marker date="1503999797150" expanded="true" signature="5734:5827" ph="..." />
+            <marker date="1503999797150" expanded="true" signature="5874:5894" ph="..." />
+            <marker date="1503999797150" expanded="true" signature="12396:12410" ph="..." />
+            <marker date="1503999797150" expanded="true" signature="12457:12560" ph="..." />
+            <marker date="1503999797150" expanded="true" signature="12613:12633" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

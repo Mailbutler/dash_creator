@@ -217,7 +217,7 @@
                 '<div class="col-sm-12" style="margin-bottom: 20px;"> ' +
                 '<div class="row" id="style-barline"> ' +
                 '<div class="col-sm-12"> ' +
-                '<strong>Bar/Line chart</strong> ' +
+                '<strong>Bar/Line</strong> ' +
                 '</div> ' +
                 '<div class="col-sm-12" id="grid-div"> ' +
                 '<div class="row"> ' +
@@ -271,6 +271,35 @@
                 '</div> ' +
                 '</div> ' +
                 '</div> ' +
+                // '<div class="col-sm-12" style="margin-bottom: 20px;"> ' +
+                // '<div class="row" id="style-line"> ' +
+                // '<div class="col-sm-12"> ' +
+                // '<strong>Line</strong> ' +
+                // '</div> ' +
+                // '<div class="col-sm-12" id="point-div"> ' +
+                // '<div class="row"> ' +
+                // '<div class="col-sm-6"> ' +
+                // '<div class="form-group"> ' +
+                // '<label for="y-axis-min">Point Style</label> ' +
+                // '<input type="number" name="point-style" class="form-control"> ' +
+                // '</div> ' +
+                // '</div> ' +
+                // '<div class="col-sm-6"> ' +
+                // '<div class="form-group"> ' +
+                // '<label for="y-axis-min">Size</label> ' +
+                // '<input type="number" name="point-size" class="form-control" min="1"> ' +
+                // '</div> ' +
+                // '</div> ' +
+                // '</div> ' +
+                // '</div> ' +
+                // '<div class="col-sm-12" id="line-div"> ' +
+                // '<div class="form-group"> ' +
+                // '<label for="stacked">Stacked</label> ' +
+                // '<input type="checkbox" name="stacked" class="form-control"> ' +
+                // '</div> ' +
+                // '</div> ' +
+                // '</div> ' +
+                // '</div> ' +
                 '</div> ' +
                 '</div> ';
 
@@ -402,6 +431,7 @@
             else {
                 this.yContainer.find('[name="type"]').hide();
                 this.styleOptionsContainer.find('#style-barline').hide();
+                this.styleOptionsContainer.find('#style-line').hide();
             }
 
             return main_type;

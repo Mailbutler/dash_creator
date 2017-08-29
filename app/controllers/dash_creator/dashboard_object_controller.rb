@@ -7,7 +7,7 @@ module DashCreator
     def get_model_objects
       object = DashboardObject.find_by_code(params['object_code'])
 
-      model_objects = object.info['model_name'].classify.safe_constantize.all
+      model_objects = object.model_name.classify.safe_constantize.all
 
       model_objects_json = model_objects.map{ |o| {id: o.id, name: o.name} }
 

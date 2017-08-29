@@ -4,8 +4,8 @@ class CreateDashCreatorDashboardObjects < ActiveRecord::Migration[5.1]
       create_table :dash_creator_dashboard_objects, id: :uuid, default: 'gen_random_uuid()' do |t|
         t.string :name
         t.string :code
+        t.string :model_name
 
-        t.jsonb :info, default: {model_name: ''}
         t.jsonb :options, default: {}
 
         t.timestamps
@@ -15,8 +15,8 @@ class CreateDashCreatorDashboardObjects < ActiveRecord::Migration[5.1]
       create_table :dash_creator_dashboard_objects do |t|
         t.string :name
         t.string :code
+        t.string :model_name
 
-        t.jsonb :info, default: {model_name: ''}
         t.jsonb :options, default: {}
 
         t.timestamps

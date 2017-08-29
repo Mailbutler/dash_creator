@@ -20,8 +20,8 @@ module DashCreator
       @dashboard_objects = DashboardObject.all
       @model_objects = {}
       @dashboard_objects.each do |o|
-        if o.info['model_name'] != ''
-          model = o.info['model_name'].safe_constantize
+        if o.model_name != ''
+          model = o.model_name.safe_constantize
           model_objects = (model.column_names.include? 'user_id') ? model.where(user: user) : model.all
           @model_objects[o.code] = model_objects.map{ |mo| {id: mo.id, name: mo.name} }
         end
@@ -36,7 +36,7 @@ module DashCreator
     def dashboard
       user = user_for_dash_creator
       @dashboard = DashCreator::Dashboard.all.where(user_id: user.id).find(params[:dashboard_id])
-      @dashboards = DashCreator::Dashboard.all.where(user_id: user.id).all.map { |d| [d.name, d.id] }
+      @dashboards = DashCreator::Dashboard.all.where(user_id: user.id).map { |d| [d.name, d.id] }
 
       render :dashboard, layout: DashCreator.layout_path
     end
