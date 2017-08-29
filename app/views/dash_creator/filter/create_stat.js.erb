@@ -4,11 +4,10 @@ var stat_wrapper = $('.stat-wrapper[data-id="<%= id %>"]');
 <% last_updated = data.delete('last_updated') %>
 
 stat_wrapper.find('#last-updated').text('<%= last_updated %>');
-stat_wrapper.find('.filter-count').each(function() {
-    <% count = data[data.keys.first] %>
-    <% data.delete(data.keys.first) %>
-    $(this).text('<%= count %>');
-});
+
+<% data.keys.each do |k| %>
+  stat_wrapper.find('.filter-count[data-key="<%= k %>"]').text('<%= data[k] %>');
+<% end %>
 
 stat_wrapper.off("click").on("click", "#stat-refresh-btn", function() {
     var params = {

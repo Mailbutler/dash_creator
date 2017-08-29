@@ -192,8 +192,6 @@ module DashCreator
         processed_data.keys.each { |k| processed_data[k] = processed_data[k].count }
         processed_data['last_updated'] = DateTime.now.strftime('%d/%m/%Y - %T')
 
-        pp processed_data
-
         # Add chart data to redis
         DashCreator.redis_store_variable.set(redis_filter_data, processed_data.to_json) unless DashCreator.redis_store_variable.nil?
       end

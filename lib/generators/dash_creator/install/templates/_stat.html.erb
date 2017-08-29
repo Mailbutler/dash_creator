@@ -10,8 +10,8 @@
       <button id="stat-refresh-btn">Refresh</button>
     </div>
 
-    <% filter.options.keys.each do %>
-        <span class="filter-count"></span><br>
+    <% filter.options.keys.each do |k| %>
+        <span class="filter-count" data-key="<%= k %>"></span><br>
     <% end %>
 
     <script>
