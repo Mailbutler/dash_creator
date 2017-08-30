@@ -10,7 +10,7 @@
         <button type="submit" class="pull-left btn btn-success" id="apply-btn">Apply filtering</button>
         <a href="#" data-toggle="modal" data-target="#delete_filters_modal" class="pull-right btn btn-sm btn-danger" id="unsave-btn"><%=t :delete_filters%></a>
         <a href="#" data-toggle="modal" data-target="#save_filter_modal" class="pull-right btn btn-sm btn-success"><%=t :save_filter%></a>
-        <select name="filters" id="filter-select" class="form-control pull-right" style="width: 20%; margin-right: 10%;">
+        <select name="filter-select" class="form-control pull-right" style="width: 20%; margin-right: 10%;">
           <option value="">Choose a filter</option>
         </select>
       </div>
@@ -112,7 +112,7 @@
 
 
     // --------------- Display save filter ---------------
-    $('select#filter-select')
+    $('[name="filter-select"]')
         .focusin(displaySavedFilters)
         .change(displayFilter);
 
@@ -121,7 +121,7 @@
         $(this).children().not('[value=""]').remove();
         for (var i = 0; i < filters.length; i++) {
             var filter_name = filters[i][0], filter_id = filters[i][1];
-            $('<option value="' + filter_id + '">' + filter_name + '</option>').appendTo($('#filter-select'));
+            $('<option value="' + filter_id + '">' + filter_name + '</option>').appendTo($('[name="filter-select"]'));
         }
     }
 

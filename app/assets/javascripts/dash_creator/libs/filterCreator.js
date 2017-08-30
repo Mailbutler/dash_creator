@@ -36,7 +36,9 @@
 
         if (typeof options.template !== 'string' && !(options.template instanceof $)) {
             options.template = '<ul class="row" id="filters">' +
+                '<div id="add-btn-container" style="margin-bottom: 30px;">' +
                 '<button id="add-filter-btn" class="btn btn-primary pull-right">+</button>' +
+                '</div>' +
                 '</ul>';
         }
 

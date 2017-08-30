@@ -4,12 +4,14 @@
 
 <script>
     var options = <%= raw options.to_json %>;
+    <% if type == 'mixed' %>
     var labeling_step = options.scales.xAxes[0].ticks["callback"];
     if (typeof labeling_step === "undefined")
         labeling_step = 1;
     options.scales.xAxes[0].ticks["callback"] = function(dataLabel, index) {
         return index % labeling_step === 0 ? dataLabel : null;
     };
+    <% end %>
 
     var canvas = document.getElementById("chart-<%= id %>");
     canvas.width = "80%"; canvas.height = "80%";

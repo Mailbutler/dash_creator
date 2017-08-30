@@ -24,12 +24,12 @@ class CreateDashCreatorDashboardObjects < ActiveRecord::Migration[5.1]
     end
 
     add_index :dash_creator_dashboard_objects, :code, unique: true
+
+    DashCreator::DashboardObject.create(name: 'Chart', code: 'chart', related_model: 'DashCreator::Chart', options: {})
+    DashCreator::DashboardObject.create(name: 'Stat', code: 'stat', related_model: 'DashCreator::Filter', options: {})
   end
 
   def self.down
     drop_table :dash_creator_dashboard_objects
   end
 end
-
-DashCreator::DashboardObject.create(name: 'Chart', code: 'chart', model_name: 'DashCreator::Chart', options: {})
-DashCreator::DashboardObject.create(name: 'Stat', code: 'stat', model_name: 'DashCreator::Filter', options: {})

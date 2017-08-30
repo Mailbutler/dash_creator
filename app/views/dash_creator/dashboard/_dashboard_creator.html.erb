@@ -11,7 +11,7 @@
         <a href="#" data-toggle="modal" data-target="#delete_dashboards_modal" class="pull-right btn btn-sm btn-danger" id="dashboard-unsave-btn"><%=t :delete_dashboards%></a>
         <a href="#" data-toggle="modal" data-target="#edit_dashboard_modal" class="pull-right btn btn-sm btn-primary" id="dashboard-edit-btn"><%=t :modify_dashboard%></a>
         <a href="#" data-toggle="modal" data-target="#save_dashboard_modal" class="pull-right btn btn-sm btn-success"><%=t :save_new_dashboard%></a>
-        <%= select_tag 'dashboards', options_for_select([]), prompt: 'Choose a dashboard', id: 'dashboard-select', class: 'form-control pull-right', style: 'width: 20%; margin-right: 10%;' %>
+        <%= select_tag 'dashboard-select', options_for_select([]), prompt: 'Choose a dashboard', id: '', class: 'form-control pull-right', style: 'width: 20%; margin-right: 10%;' %>
       </div>
     </div>
     <!--/.card-->
@@ -155,7 +155,7 @@
     });
 
 
-    $('#dashboard-select')
+    $('[name="dashboard-select"]')
         .focusin(displaySavedDashboards)
         .change(displayDashboard);
 
@@ -164,7 +164,7 @@
         $(this).children('option').not('[value=""]').remove();
         for (var i = 0; i < dashboards.length; i++) {
             var dashboard_name = dashboards[i][0], id = dashboards[i][1];
-            $('<option value="' + id + '">' + dashboard_name + '</option>').appendTo($('#dashboard-select'));
+            $('<option value="' + id + '">' + dashboard_name + '</option>').appendTo($('[name="dashboard-select"]'));
         }
     }
 

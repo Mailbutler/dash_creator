@@ -1,8 +1,8 @@
-<div class="animated fadeIn" style="margin: 50px 20px 0px 20px;">
-  <h1 class="text-center"><%= dashboard.name %></h1>
+s<div class="animated fadeIn" style="margin: 50px 20px 0px 20px;">
+  <h1 class="text-center"><%= @dashboard.name %></h1>
   <div class="row" style="margin-top: 20px;">
-    <% unless dashboard.options.empty? || dashboard.options.nil? %>
-        <% dashboard.options.each do |index, section| %>
+    <% unless @dashboard.options.empty? || @dashboard.options.nil? %>
+        <% @dashboard.options.each do |index, section| %>
             <%= render 'section_card', {section: section} %>
         <% end %>
     <% end %>

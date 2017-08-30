@@ -333,8 +333,9 @@ module DashCreator
       y_data = data['y_data']
 
       # Gather all info
-      has_models = date_info['attribute'].pluralize
+      # has_models = date_info['attribute'].pluralize
       model_string = y_data.first.first.class.name.underscore
+      attribute_model = date_info['attribute'].classify.safe_constantize
       sub_attribute = date_info['sub_attribute']
 
       format = date_info.key?('format') ? date_info['format'] : '%d.%m.%Y'
@@ -342,18 +343,27 @@ module DashCreator
       labels = get_date_labels(date_info)
 
       datasets = []
-      0.upto(y_data.length-1).each {datasets.push([])}
+      model_ids = []
+      0.upto(y_data.length-1).each do |i|
+        datasets.push([])
+        model_ids.push(y_data[i].pluck(:id).uniq)
+      end
+
       0.upto(labels.length-1).each do |i|
         date = labels[i]
         next_date = i == (labels.length - 1) ? end_date : labels[i+1]
         0.upto(y_data.length-1).each do |k|
-          data = y_data[k].joins("LEFT JOIN #{has_models} ON #{has_models}.#{model_string}_id = #{model_string.pluralize}.id")
-                     .group("#{model_string.pluralize}.id")
-                     .having("#{has_models}.#{sub_attribute}": date..next_date)
+          # data = y_data[k].joins("LEFT JOIN #{has_models} ON #{has_models}.#{model_string}_id = #{model_string.pluralize}.id")
+          #            .group("#{model_string.pluralize}.id")
+          #            .having("#{has_models}.#{sub_attribute}": date..next_date)
 
-          total_count = 0
-          data.count.each { |key, count| total_count += count }
-          datasets[k].push(total_count)
+          # total_count = 0
+          # data.count.each { |key, count| total_count += count }
+          # datasets[k].push(total_count)
+
+          filtered_model_ids = attribute_model.where("#{sub_attribute}": date..next_date).pluck("#{model_string}_id")
+
+          datasets[i].push(count_values_in_common(model_ids[i], filtered_model_ids))
         end
       end
 
@@ -407,7 +417,7 @@ module DashCreator
 
       datasets = []
       0.upto(y_data.length-1).each {datasets.push([])}
-      labels = x_data['labels-corres'].empty? ? x_data['labels'] : x_data['labels-corres']
+      labels = x_data['labels-corres'].blank? ? x_data['labels'] : x_data['labels-corres']
 
       x_data['labels'].each do |l|
         0.upto(y_data.length-1).each do |i|
@@ -428,13 +438,18 @@ module DashCreator
       x_data = data['x_data']
       y_data = data['y_data']
 
-      has_models = x_data['attribute'].pluralize
       model_string = y_data.first.first.class.name.underscore
+      attribute_model = x_data['attribute'].classify.safe_constantize
       sub_attribute = x_data['sub_attribute']
 
       datasets = []
-      0.upto(y_data.length-1).each {datasets.push([])}
-      labels = x_data['labels-corres'].empty? ? x_data['labels'] : x_data['labels-corres']
+      model_ids = []
+      0.upto(y_data.length-1).each do |i|
+          datasets.push([])
+          model_ids.push(y_data[i].pluck(:id).uniq)
+      end
+
+      labels = x_data['labels-corres'].blank? ? x_data['labels'] : x_data['labels-corres']
 
       x_data['labels'].each do |l|
         0.upto(y_data.length-1).each do |i|
@@ -443,18 +458,12 @@ module DashCreator
           high = split.length == 2 ? split[1] : low
 
           if l[-1] == '+'
-            data = y_data[i].joins("LEFT JOIN #{has_models} ON #{has_models}.#{model_string}_id = #{model_string.pluralize}.id")
-                       .group("#{model_string.pluralize}.id, #{has_models}.#{sub_attribute}")
-                       .having("#{has_models}.#{sub_attribute} >= ?", low)
+            filtered_model_ids = attribute_model.where("#{sub_attribute} >= ?", low).pluck("#{model_string}_id")
           else
-            data = y_data[i].joins("LEFT JOIN #{has_models} ON #{has_models}.#{model_string}_id = #{model_string.pluralize}.id")
-                       .group("#{model_string.pluralize}.id, #{has_models}.#{sub_attribute}")
-                       .having("#{has_models}.#{sub_attribute}": low..high)
+            filtered_model_ids = attribute_model.where("#{sub_attribute}": low..high).pluck("#{model_string}_id")
           end
 
-          sum = 0
-          data.count.each { |key, count| sum += count }
-          datasets[i].push(sum)
+          datasets[i].push(count_values_in_common(model_ids[i], filtered_model_ids))
         end
       end
 
@@ -470,7 +479,7 @@ module DashCreator
 
       datasets = []
       0.upto(y_data.length-1).each {datasets.push([])}
-      labels = x_data['labels-corres'].empty? ? x_data['labels'] : x_data['labels-corres']
+      labels = x_data['labels-corres'].blank? ? x_data['labels'] : x_data['labels-corres']
 
       x_data['labels'].each do |l|
         0.upto(y_data.length-1).each do |i|
@@ -505,7 +514,7 @@ module DashCreator
 
       datasets = []
       0.upto(y_data.length-1).each {datasets.push([])}
-      labels = x_data['labels-corres'].empty? ? x_data['labels'] : x_data['labels-corres']
+      labels = x_data['labels-corres'].blank? ? x_data['labels'] : x_data['labels-corres']
 
       x_data['labels'].each do |l|
         0.upto(y_data.length-1).each do |i|
@@ -522,23 +531,24 @@ module DashCreator
       x_data = data['x_data']
       y_data = data['y_data']
 
-      has_models = x_data['attribute'].pluralize
       model_string = y_data.first.first.class.name.underscore
+      attribute_model = x_data['attribute'].classify.safe_constantize
       sub_attribute = x_data['sub_attribute']
 
       datasets = []
-      0.upto(y_data.length-1).each {datasets.push([])}
-      labels = x_data['labels-corres'].empty? ? x_data['labels'] : x_data['labels-corres']
+      model_ids = []
+      0.upto(y_data.length-1).each do |i|
+        datasets.push([])
+        model_ids.push(y_data[i].pluck(:id).uniq)
+      end
+
+      labels = x_data['labels-corres'].blank? ? x_data['labels'] : x_data['labels-corres']
 
       x_data['labels'].each do |l|
         0.upto(y_data.length-1).each do |i|
-          data = y_data[i].joins("LEFT JOIN #{has_models} ON #{has_models}.#{model_string}_id = #{model_string.pluralize}.id")
-                     .group("#{model_string.pluralize}.id, #{has_models}.#{sub_attribute}")
-                     .having("#{has_models}.#{sub_attribute}": true_string?(l))
+          filtered_model_ids = attribute_model.where("#{sub_attribute}": true_string?(l)).pluck("#{model_string}_id")
 
-          sum = 0
-          data.count.each { |key, count| sum += count }
-          datasets[i].push(sum)
+          datasets[i].push(count_values_in_common(model_ids[i], filtered_model_ids))
         end
       end
 
@@ -554,7 +564,7 @@ module DashCreator
 
       datasets = []
       0.upto(y_data.length-1).each {datasets.push([])}
-      labels = x_data['labels-corres'].empty? ? x_data['labels'] : x_data['labels-corres']
+      labels = x_data['labels-corres'].blank? ? x_data['labels'] : x_data['labels-corres']
 
       x_data['labels'].each do |l|
         0.upto(y_data.length-1).each do |i|
@@ -597,23 +607,24 @@ module DashCreator
       x_data = data['x_data']
       y_data = data['y_data']
 
-      has_models = x_data['attribute'].pluralize
       model_string = y_data.first.first.class.name.underscore
+      attribute_model = x_data['attribute'].classify.safe_constantize
       sub_attribute = x_data['sub_attribute']
 
       datasets = []
-      0.upto(y_data.length-1).each {datasets.push([])}
+      model_ids = []
+      0.upto(y_data.length-1).each do |i|
+        datasets.push([])
+        model_ids.push(y_data[i].pluck(:id).uniq)
+      end
 
       labels = get_or_pluck_labels(x_data, y_data)
 
       labels.each do |l|
         0.upto(y_data.length-1).each do |i|
-          data = y_data[i].joins("LEFT JOIN #{has_models} ON #{has_models}.#{model_string}_id = #{model_string.pluralize}.id")
-                     .group("#{model_string.pluralize}.id, #{has_models}.#{sub_attribute}")
-                     .having("#{has_models}.#{sub_attribute} = #{l}")
-          sum = 0
-          data.count.each { |key, count| sum += count }
-          datasets[i].push(sum)
+          filtered_model_ids = attribute_model.where("#{sub_attribute}": l).pluck("#{model_string}_id")
+
+          datasets[i].push(count_values_in_common(model_ids[i], filtered_model_ids))
         end
       end
 
@@ -648,9 +659,16 @@ module DashCreator
 
       has_models = x_data['attribute'].pluralize
       model_string = y_data.first.first.class.name.underscore
+      # attribute_model = x_data['attribute'].classify.safe_constantize
 
       datasets = []
-      0.upto(y_data.length-1).each {datasets.push([])}
+      # model_ids = []
+      0.upto(y_data.length-1).each do |i|
+        datasets.push([])
+        # model_ids.push(y_data[i].pluck(:id).uniq)
+      end
+      # filtered_model_ids = attribute_model.pluck("#{model_string}_id")
+      # count_hash = count_hash(filtered_model_ids)
 
       labels = x_data['labels']
       labels.each do |l|
@@ -663,12 +681,15 @@ module DashCreator
             data = y_data[i].joins("LEFT JOIN #{has_models} ON #{has_models}.#{model_string}_id = #{model_string.pluralize}.id")
                        .group("#{model_string.pluralize}.id")
                        .having("count(#{has_models}.id) >= ?", low)
+            # count = count_hash.select{ |k, v| v >= low<to_i }.count
           else
             data = y_data[i].joins("LEFT JOIN #{has_models} ON #{has_models}.#{model_string}_id = #{model_string.pluralize}.id")
                        .group("#{model_string.pluralize}.id")
                        .having("count(#{has_models}.id) BETWEEN ? AND ?", low, high)
+            # count = count_hash.select{ |k, v| v >= low.to_i && v <= high.to_i }.count
           end
 
+          # datasets[i].push(count)
           sum = 0
           data.count.each { |key, count| sum += count }
           datasets[i].push(sum)
@@ -738,6 +759,21 @@ module DashCreator
           labels = x_data['labels']
       end
       labels
+    end
+
+    def count_values_in_common(model_ids, filtered_model_ids)
+      values_in_common = (model_ids & filtered_model_ids)
+
+      count_hash = count_hash(filtered_model_ids)
+
+      count = 0
+      values_in_common.each { |v| count += count_hash[v] }
+
+      count
+    end
+
+    def count_hash(array)
+      array.group_by(&:itself).map { |k,v| [k, v.count] }.to_h
     end
 
     include FilterHelper
