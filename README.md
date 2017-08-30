@@ -154,6 +154,8 @@ Don't plot charts using filters with a defined number of records.
 Result will be wrong and not limited to the wanted number.
 
 ## TODO List
+Fix partial templates copying with generator
+
 - It would be good to find an alternative to redis to store chart_data
 - Add a share chart function (send chart id with a temporary hash stored in redis), export chart as image
 - Allow different filters using same model at once

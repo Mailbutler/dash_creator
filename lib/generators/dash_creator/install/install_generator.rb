@@ -56,11 +56,14 @@ module DashCreator
       end
 
       def add_template_dashboard_views
-        template 'dashboard.html.erb', 'app/views/user/dashboard.html.erb'
-        template '_section_card.html.erb', 'app/views/user/_section_card.html.erb'
-        template '_chart.html.erb', 'app/views/dash_creator/dashboard_object/_chart.html.erb'
-        template '_stat.html.erb', 'app/views/dash_creator/dashboard_object/_stat.html.erb'
-        template '_table.html.erb', 'app/views/dash_creator/dashboard_object/_table.html.erb'
+        path = File.dirname(__FILE__) + '/templates/'
+        user_views_path = 'app/views/user/'
+        dashboard_objects_path = 'app/views/dash_creator/dashboard_object/'
+        create_file user_views_path + 'dashboard.html.erb', File.read(path + 'dashboard.html.erb')
+        create_file user_views_path + '_section_card.html.erb', File.read(path + '_section_card.html.erb')
+        create_file dashboard_objects_path + '_chart.html.erb', File.read(path + '_chart.html.erb')
+        create_file dashboard_objects_path + '_stat.html.erb', File.read(path + '_stat.html.erb')
+        create_file dashboard_objects_path + '_table.html.erb', File.read(path + '_table.html.erb')
       end
     end
   end
