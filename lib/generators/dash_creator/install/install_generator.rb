@@ -60,6 +60,7 @@ module DashCreator
         template '_section_card.html.erb', 'app/views/user/_section_card.html.erb'
         template '_chart.html.erb', 'app/views/dash_creator/dashboard_object/_chart.html.erb'
         template '_stat.html.erb', 'app/views/dash_creator/dashboard_object/_stat.html.erb'
+        template '_table.html.erb', 'app/views/dash_creator/dashboard_object/_table.html.erb'
       end
     end
   end

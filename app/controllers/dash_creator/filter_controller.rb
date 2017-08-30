@@ -26,7 +26,10 @@ module DashCreator
     def filtering_result
       return render json: {models: nil} if params[:filters].nil?
 
-      render 'dash_creator/filter/apply_filtering', locals: {data: params['filters']}
+      numeric_types = Numeric.descendants.map{ |n| n.name.underscore }
+      @starting_types = numeric_types + %w(string date datetime)
+
+      render 'dash_creator/filter/apply_filtering', locals: {data: params['filters'], id: params['id']}
     end
 
     def download_csv

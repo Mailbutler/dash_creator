@@ -1,0 +1,16 @@
+<% filter = DashCreator::Filter.find(table['id']) %>
+
+<div class="col-md-<%= table['size'] %> offset-md-<%= table['offset'] %>" style="margin-bottom: 50px;">
+  <div class="table-wrapper" data-id="<%= table['id'] %>" style="padding: 20px;">
+
+    <h3><%= filter.name + ' - Table' %></h3><br>
+
+    <script>
+        var params = {
+            filters: <%= raw filter.options.to_json %>,
+            id: '<%= table['id'] %>'
+        };
+        $.post('<%= filtering_result_path %>', params);
+    </script>
+  </div>
+</div>

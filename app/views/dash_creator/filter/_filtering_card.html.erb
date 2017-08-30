@@ -23,17 +23,6 @@
 </div>
 
 <script>
-    // --------------- Add/remove columns to result tables ---------------
-
-    $('div#result-container').on('change', 'input[type="checkbox"]', function() {
-        var name = $(this).attr("name"), value = $(this).attr("value");
-        var change_column = $('#result-container').find('table[name="' + name + '"]').find('[value="' + value + '"]');
-        if (this.checked) {change_column.show();}
-        else {change_column.hide();}
-    });
-</script>
-
-<script>
     var filters = <%= raw @filters %>;
 
     var models_data = <%= raw @models_data.to_json %>;
@@ -50,7 +39,10 @@
     // --------------- Send data ---------------
     $('#apply-btn').click(sendFilterData);
     function sendFilterData() {
-        var params = {filters: filter_creator.getFiltersData()};
+        var params = {
+            filters: filter_creator.getFiltersData(),
+            id: 0
+        };
 
         // Post filters
         $.post("<%= filtering_result_path %>", params);

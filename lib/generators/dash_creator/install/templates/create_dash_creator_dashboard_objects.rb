@@ -27,6 +27,7 @@ class CreateDashCreatorDashboardObjects < ActiveRecord::Migration[5.1]
 
     DashCreator::DashboardObject.create(name: 'Chart', code: 'chart', related_model: 'DashCreator::Chart', options: {})
     DashCreator::DashboardObject.create(name: 'Stat', code: 'stat', related_model: 'DashCreator::Filter', options: {})
+    DashCreator::DashboardObject.create(name: 'Table', code: 'table', related_model: 'DashCreator::Filter', options: {})
   end
 
   def self.down

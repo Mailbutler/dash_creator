@@ -13,9 +13,8 @@ module DashCreator
     end
 
     def save_dashboard
-      # user = user_for_dash_creator
-      # dashboard = DashCreator::Dashboard.all.where(user_id: user.id).create(name: params[:dashboard_name], options: params[:options])
-      dashboard = DashCreator::Dashboard.all.create(name: params[:dashboard_name], options: params[:options])
+      user = user_for_dash_creator
+      dashboard = DashCreator::Dashboard.all.where(user_id: user.id).create(name: params[:dashboard_name], options: params[:options])
 
       render json: {dashboard_id: dashboard.id}
     end

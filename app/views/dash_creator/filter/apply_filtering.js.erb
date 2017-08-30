@@ -1,16 +1,26 @@
+var in_creator = <%= id == 0 %>;
+
 <% mods = filter_data(data) %>
 
-var result_container = $('#result-container');
+var result_container = in_creator ? $('#result-container') : $('.table-wrapper[data-id="<%= id %>"]');
 
 var results_string = '<%= raw "#{render 'result_tables', {mods: mods}}".gsub("\n", '') %>';
 result_container.children().remove();
 $(results_string).appendTo(result_container);
 
-function calcColumns() {
+result_container.find('[type="checkbox"]').each(updateTableColumns);
+
+function updateTableColumns() {
+    var name = $(this).attr("name"), value = $(this).attr("value");
+    var change_column = result_container.find('table[name="' + name + '"]').find('[value="' + value + '"]');
+    this.checked ? change_column.show() : change_column.hide();
+}
+
+function downloadCSV() {
     <% mods.each do |model, objects| %>
 
     var columns = [];
-    result_container.find("[name=<%= model %>]:checked").each(function() {
+    result_container.find('[name="<%= model %>"]:checked').each(function() {
         columns.push($(this).val());
     });
 
@@ -23,16 +33,14 @@ function calcColumns() {
     };
     var url_params = $.param(params);
 
-    var a_string = '<a href="/download_csv?' + url_params + '" target="_blank" class="btn btn-primary" data-turbolinks="false">Download CSV</a>';
-    var download_csv_container = result_container.find("#<%= model %>-csv-btn-container");
-    download_csv_container.children().remove();
-    $(a_string).appendTo(download_csv_container);
+    var link = '<%= download_csv_path %>?' + url_params;
+    var download_csv_link = result_container.find('[data-model="<%= model %>"]');
+    download_csv_link.attr("href", link);
 
     <% end %>
 }
 
-calcColumns();
-
 result_container
     .off("click")
-    .on("click", '[type="checkbox"]', calcColumns);
+    .on("click", '[type="checkbox"]', updateTableColumns)
+    .on("click", '.csv-download', downloadCSV);

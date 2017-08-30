@@ -1,26 +1,37 @@
 <% unless mods.nil? %>
   <% mods.each do |model, objects| %>
     <% next if objects.nil? || objects.empty? %>
+
+    <% model_attributes = objects.first.class.columns_hash %>
+
     <div class="row">
       <div class="col-md-12">
         <h3 class="text-center"><%= model %></h3><br>
 
-        <div id="<%= model %>-csv-btn-container">
-
+        <div>
+          <a href="" target="_blank" class="btn btn-primary csv-download" data-model="<%= model %>" data-turbolinks="false">Download CSV</a>
         </div>
+
       </div>
       <div class="col-md-2">
-        <% objects.first.attributes.each do |pairkv| %>
-            <input type="checkbox" name="<%= model %>" value="<%= pairkv[0] %>" checked="checked">
-            <label><%= pairkv[0].to_s.humanize %></label><br>
+        <% model_attributes.each do |attribute, value| %>
+            <% if @starting_types.include?(value.type.to_s) %>
+                <input type="checkbox" name="<%= model %>" value="<%= attribute %>" checked="checked">
+
+            <% else %>
+                <input type="checkbox" name="<%= model %>" value="<%= attribute %>">
+
+            <% end %>
+
+            <label><%= attribute.humanize %></label><br>
         <% end %>
       </div>
-      <div class="col-md-10">
+      <div class="offset-md-2 col-md-8">
         <table class="table table-hover table-outline mb-0 hidden-sm-down" name="<%= model %>">
           <thead class="thead-default">
           <tr>
-            <% objects.first.attributes.each do |pairkv| %>
-                <th class="text-center" value="<%= pairkv[0] %>"><%= pairkv[0].to_s.humanize %></th>
+            <% model_attributes.each do |attribute, value| %>
+                <th class="text-center" value="<%= attribute %>"><%= attribute.humanize %></th>
             <% end %>
           </tr>
           </thead>
