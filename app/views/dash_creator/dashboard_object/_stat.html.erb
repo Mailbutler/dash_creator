@@ -5,14 +5,14 @@
 
     <h3><%= filter.name %></h3><br>
 
-    <div class="pull-right">
+    <% filter.options.keys.each do |k| %>
+        <strong class="filter-count" data-key="<%= k %>"></strong><br>
+    <% end %>
+
+    <div class="refresh-container" style="margin-top: 30px;">
       <span id="last-updated"></span>
       <button id="stat-refresh-btn">Refresh</button>
     </div>
-
-    <% filter.options.keys.each do |k| %>
-        <span class="filter-count" data-key="<%= k %>"></span><br>
-    <% end %>
 
     <script>
       var params = {
